@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For Khushi Didi ♡</title>
+<title>Happy Birthday Khushi Didi</title>
 
 <style>
 *{
@@ -18,503 +19,461 @@ html{
 }
 
 body{
-    min-height:100vh;
-    font-family:Georgia,serif;
-    color:#fff8ed;
-    background:
-        radial-gradient(circle at 50% 0%,#63351c 0%,#241109 35%,#090504 85%);
-    overflow-x:hidden;
+    background:#101010;
+    color:#f5f5f5;
+    font-family:Arial, sans-serif;
 }
 
-/* ---------- BACKGROUND ---------- */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    background:
-        radial-gradient(circle at 20% 30%,rgba(255,180,80,.08),transparent 25%),
-        radial-gradient(circle at 80% 70%,rgba(255,120,50,.06),transparent 30%);
-    z-index:-2;
-}
-
-.stars{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:-1;
-}
-
-.star{
-    position:absolute;
-    width:3px;
-    height:3px;
-    background:#ffd99a;
-    border-radius:50%;
-    opacity:.5;
-    animation:twinkle 3s infinite alternate;
-}
-
-@keyframes twinkle{
-    from{opacity:.15;transform:scale(.7);}
-    to{opacity:.9;transform:scale(1.5);}
-}
-
-/* ---------- PETALS ---------- */
-
-.petal{
-    position:fixed;
-    top:-30px;
-    pointer-events:none;
-    z-index:5;
-    animation:fall linear forwards;
-}
-
-@keyframes fall{
-    0%{
-        transform:translateY(-40px) rotate(0deg);
-        opacity:0;
-    }
-    15%{opacity:.8;}
-    100%{
-        transform:translateY(110vh) rotate(500deg);
-        opacity:0;
-    }
-}
-
-/* ---------- HERO ---------- */
+/* HERO */
 
 .hero{
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
-    padding:25px;
+    align-items:center;
     text-align:center;
+    padding:30px;
+    background:
+    radial-gradient(circle at top left,#3b2b20,transparent 35%),
+    radial-gradient(circle at bottom right,#25202b,transparent 35%),
+    #101010;
 }
 
-.card{
-    width:min(720px,100%);
-    padding:55px 25px;
-    border-radius:35px;
-
-    background:rgba(45,20,10,.62);
-    border:1px solid rgba(255,210,140,.3);
-
-    box-shadow:
-        0 0 80px rgba(255,150,60,.1),
-        inset 0 0 40px rgba(255,200,120,.03);
-
-    backdrop-filter:blur(15px);
-
-    animation:cardIn 1.5s ease;
-}
-
-@keyframes cardIn{
-    from{
-        opacity:0;
-        transform:translateY(40px) scale(.95);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-.topline{
-    font-size:11px;
-    letter-spacing:5px;
-    color:#dcb88b;
-    margin-bottom:25px;
-}
-
-.ganesh{
-    font-size:82px;
-    filter:drop-shadow(0 0 20px rgba(255,160,60,.6));
-    animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-    50%{transform:translateY(-10px);}
-}
-
-h1{
-    margin-top:20px;
-    font-size:clamp(42px,10vw,76px);
-    line-height:1;
-}
-
-h1 span{
-    display:inline-block;
-    margin-top:8px;
-    color:#ffc56f;
-    text-shadow:0 0 25px rgba(255,180,80,.2);
-}
-
-.subtitle{
-    margin-top:25px;
-    font-size:17px;
-    line-height:1.8;
-    color:#e8d6c1;
-}
-
-.open-btn{
-    margin-top:35px;
-    padding:15px 30px;
-    border:1px solid rgba(255,210,140,.4);
-    border-radius:50px;
-    background:linear-gradient(135deg,#d88935,#a95c20);
-    color:white;
-    font-size:15px;
-    cursor:pointer;
-    transition:.35s;
-}
-
-.open-btn:hover{
-    transform:translateY(-3px) scale(1.04);
-    box-shadow:0 0 30px rgba(255,170,70,.3);
-}
-
-/* ---------- REVEAL ---------- */
-
-.hidden{
-    display:none;
-}
-
-.reveal{
-    animation:reveal 1.2s ease forwards;
-}
-
-@keyframes reveal{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* ---------- MESSAGE ---------- */
-
-.section{
-    width:min(850px,90%);
-    margin:0 auto;
-    padding:90px 20px;
-    text-align:center;
+.hero-content{
+    max-width:800px;
 }
 
 .label{
-    letter-spacing:4px;
-    font-size:11px;
-    color:#d5ad78;
-    margin-bottom:15px;
+    font-size:12px;
+    letter-spacing:5px;
+    color:#b9a48c;
+    margin-bottom:30px;
 }
 
-.section h2{
-    font-size:clamp(30px,7vw,48px);
-    color:#ffc875;
+.hero h1{
+    font-size:clamp(50px,10vw,95px);
+    font-weight:300;
+    line-height:.95;
 }
 
-.line{
-    width:70px;
-    height:1px;
-    background:#d99a52;
-    margin:25px auto;
+.hero h1 span{
+    color:#d9ad76;
+    font-family:Georgia,serif;
+    font-style:italic;
 }
 
-.message-text{
-    font-size:18px;
-    line-height:2;
-    color:#eadccc;
-}
-
-/* ---------- SPECIAL QUOTE ---------- */
-
-.quote{
-    margin-top:45px;
-    padding:35px 25px;
-    border-left:2px solid #d99a52;
-    border-right:2px solid #d99a52;
-    background:rgba(255,255,255,.025);
-    border-radius:20px;
-}
-
-.quote p{
-    font-size:24px;
-    line-height:1.6;
-    color:#ffe0ad;
-}
-
-.quote small{
-    display:block;
-    margin-top:15px;
-    color:#a9947f;
-}
-
-/* ---------- ARTIST ---------- */
-
-.artist-card{
-    margin-top:35px;
-    padding:45px 25px;
-    border-radius:30px;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,190,100,.07),
-            rgba(255,255,255,.025)
-        );
-    border:1px solid rgba(255,210,140,.2);
-}
-
-.art{
-    font-size:60px;
-    margin-bottom:20px;
-}
-
-.artist-card p{
-    color:#d9c8b5;
-    line-height:1.9;
+.hero p{
+    max-width:600px;
+    margin:35px auto;
+    color:#aaa;
+    line-height:1.8;
     font-size:17px;
 }
 
-/* ---------- WISHES ---------- */
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    border:1px solid #806b55;
+    color:#e8d5bf;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#d9ad76;
+    color:#111;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title small{
+    color:#a58d73;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+.title h2{
+    margin-top:15px;
+    font-size:45px;
+    font-weight:300;
+}
+
+/* LETTER */
+
+.letter{
+    background:#f1e8dc;
+    color:#29231e;
+    padding:45px;
+    line-height:2;
+    font-family:Georgia,serif;
+    box-shadow:0 20px 60px #0005;
+}
+
+.letter p{
+    margin-bottom:20px;
+}
+
+.signature{
+    text-align:right;
+    color:#876b50;
+    font-style:italic;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    padding:35px 25px;
+    min-height:210px;
+    border:1px solid #292929;
+    background:#151515;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#806b55;
+}
+
+.card-number{
+    color:#c89d6c;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.card h3{
+    margin:25px 0 15px;
+    font-size:22px;
+    font-weight:400;
+}
+
+.card p{
+    color:#999;
+    line-height:1.7;
+}
+
+/* ARTIST */
+
+.artist{
+    text-align:center;
+}
+
+.artist p{
+    max-width:700px;
+    margin:25px auto;
+    color:#aaa;
+    font-family:Georgia,serif;
+    font-size:19px;
+    line-height:2;
+}
+
+.quote{
+    margin-top:40px;
+    color:#d9ad76;
+    font-family:Georgia,serif;
+    font-size:27px;
+    font-style:italic;
+}
+
+/* WISHES */
 
 .wishes{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-top:35px;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
 }
 
 .wish{
     padding:25px 10px;
-    border-radius:20px;
-    background:rgba(255,255,255,.035);
-    border:1px solid rgba(255,210,140,.12);
-    transition:.3s;
+    text-align:center;
+    border:1px solid #292929;
 }
 
-.wish:hover{
-    transform:translateY(-5px);
-    background:rgba(255,190,100,.06);
-}
-
-.wish span{
-    font-size:30px;
+.wish .emoji{
+    font-size:28px;
+    margin-bottom:12px;
 }
 
 .wish p{
-    margin-top:10px;
-    color:#d9c8b5;
+    color:#aaa;
+    font-size:14px;
 }
 
-/* ---------- FINAL ---------- */
+/* FINAL */
 
 .final{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:100px 20px 80px;
-}
-
-.final .om{
-    font-size:45px;
-    color:#ffc875;
-    margin-bottom:20px;
+    background:#0b0b0b;
 }
 
 .final h2{
-    font-size:clamp(30px,7vw,48px);
-    color:#ffc875;
+    font-size:clamp(45px,9vw,85px);
+    font-weight:300;
+    line-height:1;
+}
+
+.final h2 span{
+    color:#d9ad76;
+    font-family:Georgia,serif;
+    font-style:italic;
 }
 
 .final p{
-    margin-top:20px;
-    color:#cdbbaa;
-}
-
-.bappa{
-    margin-top:35px;
-    font-size:21px;
+    max-width:600px;
+    margin:30px auto;
+    color:#999;
     line-height:1.8;
-    color:#ffe0ad;
 }
 
-/* ---------- MUSIC BUTTON ---------- */
+/* MOBILE */
 
-.music{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    border:1px solid rgba(255,210,140,.3);
-    background:rgba(40,18,10,.8);
-    color:#ffc875;
-    cursor:pointer;
-    z-index:20;
+@media(max-width:700px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .wishes{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .letter{
+        padding:28px;
+    }
+
+    .title h2{
+        font-size:35px;
+    }
 }
 </style>
 </head>
 
+
 <body>
-
-<!-- Stars -->
-<div class="stars">
-    <i class="star" style="left:8%;top:15%;animation-delay:.3s"></i>
-    <i class="star" style="left:22%;top:35%;animation-delay:1s"></i>
-    <i class="star" style="left:42%;top:12%;animation-delay:1.7s"></i>
-    <i class="star" style="left:67%;top:25%;animation-delay:.7s"></i>
-    <i class="star" style="left:88%;top:18%;animation-delay:2s"></i>
-    <i class="star" style="left:75%;top:55%;animation-delay:1.2s"></i>
-    <i class="star" style="left:15%;top:70%;animation-delay:2.3s"></i>
-</div>
-
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="card">
+<div class="hero-content">
 
-    <div class="topline">
-        GANESH CHATURTHI • A LITTLE SURPRISE
-    </div>
+<div class="label">
+A SMALL SURPRISE FOR YOU
+</div>
 
-    <div class="ganesh">🐘</div>
+<h1>
+Happy Birthday<br>
+<span>Khushi Didi</span>
+</h1>
 
-    <h1>
-        Happy Birthday<br>
-        <span>Khushi Didi ♡</span>
-    </h1>
+<p>
+Some people create art on a canvas.
+Some create beautiful moments in the lives of others.
+Today is simply a little reminder of how special you are.
+</p>
 
-    <p class="subtitle">
-        Aaj ka din sirf birthday nahi...<br>
-        ek chhoti si dua bhi hai. 🪔
-    </p>
-
-    <button class="open-btn" onclick="openSurprise()">
-        ✨ Open Your Surprise
-    </button>
+<a href="#message" class="btn">
+Open Your Birthday Message ↓
+</a>
 
 </div>
 
 </section>
 
 
-<!-- MAIN CONTENT -->
+<!-- MESSAGE -->
 
-<div id="content" class="hidden">
+<section id="message">
+
+<div class="container">
+
+<div class="title">
+<small>A MESSAGE FOR YOU</small>
+<h2>Dear Khushi Didi,</h2>
+</div>
+
+<div class="letter">
+
+<p>
+On your special day, I wish you a life filled with happiness,
+peace, meaningful experiences and countless reasons to smile.
+</p>
+
+<p>
+May you continue to move forward in life with confidence,
+learn something new every day and never stop believing
+in your own potential.
+</p>
+
+<p>
+There will be beautiful days and difficult days,
+but I hope you always find the courage to keep going,
+the patience to keep growing and the creativity
+to make every chapter of your life meaningful.
+</p>
+
+<p>
+<strong>
+Life mein hamesha aage badhte raho,
+apne dreams ko chase karo,
+khush raho, haste raho
+aur jo bhi karo dil se karo.
+</strong>
+</p>
+
+<p>
+May this new year of your life open doors to new
+opportunities, new achievements and beautiful memories.
+</p>
+
+<div class="signature">
+With the warmest birthday wishes ✨
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
-<section class="section">
+<!-- LIFE -->
 
-    <div class="label">A LITTLE WISH</div>
+<section>
 
-    <h2>For You, Didi 🌸</h2>
+<div class="container">
 
-    <div class="line"></div>
+<div class="title">
+<small>YOUR NEXT CHAPTER</small>
+<h2>Dream. Create. Grow.</h2>
+</div>
 
-    <p class="message-text">
+<div class="cards">
 
-        Ganpati Bappa se bas itni si dua hai —
-        aapki life hamesha khushiyon se bhari rahe,
-        har sapna apna khoobsurat rang paaye,
-        aur aapki smile kabhi kam na ho. 🤍
+<div class="card">
+<div class="card-number">01</div>
+<h3>Dream Bigger</h3>
+<p>
+Never limit your dreams because of where you are today.
+Your future can be much bigger than you imagine.
+</p>
+</div>
 
-        <br><br>
+<div class="card">
+<div class="card-number">02</div>
+<h3>Create More</h3>
+<p>
+Keep creating, experimenting and expressing yourself.
+Your creativity is something worth protecting.
+</p>
+</div>
 
-        Khush raho, haste-khelte raho,
-        aur hamesha aise hi shine karti raho. ✨
+<div class="card">
+<div class="card-number">03</div>
+<h3>Keep Growing</h3>
+<p>
+Every experience teaches something.
+Keep learning, improving and becoming better every day.
+</p>
+</div>
 
-    </p>
+</div>
 
-
-    <div class="quote">
-
-        <p>
-            “Kuch log colours se paintings banate hain,
-            aur kuch log apni smile se
-            poori duniya colourful bana dete hain.”
-        </p>
-
-        <small>— A little birthday thought ♡</small>
-
-    </div>
+</div>
 
 </section>
 
 
 <!-- ARTIST -->
 
-<section class="section">
+<section>
 
-    <div class="label">FOR THE ARTIST</div>
+<div class="container artist">
 
-    <h2>Keep Creating 🎨</h2>
+<div class="title">
+<small>FOR THE ARTIST</small>
+<h2>A Life Like a Canvas</h2>
+</div>
 
-    <div class="artist-card">
+<p>
+A blank canvas doesn't tell you what it will become.
+The artist decides where the first colour goes.
+</p>
 
-        <div class="art">
-            🎨 🖌️ 🌸
-        </div>
+<p>
+Life is a little like that too.
+You don't need to know every step of the journey.
+Just keep creating, keep learning and keep moving forward.
+</p>
 
-        <p>
+<div class="quote">
+"Make your story worth remembering."
+</div>
 
-            Aapke liye colours sirf colours nahi,
-            ek feeling hain.
-
-            <br><br>
-
-            May every new canvas bring
-            a new dream, every dream bring
-            a new smile, and every smile
-            bring another beautiful memory.
-
-            <br><br>
-
-            <b>Keep creating. Keep dreaming. Keep shining.</b>
-
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
 <!-- WISHES -->
 
-<section class="section">
+<section>
 
-    <div class="label">BAPPA'S BLESSINGS</div>
+<div class="container">
 
-    <h2>For Your New Chapter 🪔</h2>
+<div class="title">
+<small>THIS YEAR</small>
+<h2>I Wish You...</h2>
+</div>
 
-    <div class="wishes">
+<div class="wishes">
 
-        <div class="wish">
-            <span>🤍</span>
-            <p>Happiness</p>
-        </div>
+<div class="wish">
+<div class="emoji">✨</div>
+<p>New Opportunities</p>
+</div>
 
-        <div class="wish">
-            <span>🌸</span>
-            <p>Peace</p>
-        </div>
+<div class="wish">
+<div class="emoji">🎨</div>
+<p>Endless Creativity</p>
+</div>
 
-        <div class="wish">
-            <span>✨</span>
-            <p>Success</p>
-        </div>
+<div class="wish">
+<div class="emoji">🌷</div>
+<p>Peace & Happiness</p>
+</div>
 
-        <div class="wish">
-            <span>🎨</span>
-            <p>Creativity</p>
-        </div>
+<div class="wish">
+<div class="emoji">⭐</div>
+<p>Beautiful Achievements</p>
+</div>
 
-    </div>
+</div>
+
+</div>
 
 </section>
 
@@ -523,86 +482,31 @@ h1 span{
 
 <section class="final">
 
-    <div class="om">ॐ</div>
+<div>
 
-    <h2>May Bappa Always Bless You</h2>
+<div class="label">
+THE NEXT CHAPTER STARTS NOW
+</div>
 
-    <p>
-        Stay happy. Stay creative. Stay you. ♡
-    </p>
+<h2>
+Keep Going.<br>
+Keep Growing.<br>
+<span>Keep Shining.</span>
+</h2>
 
-    <div class="bappa">
+<p>
+May you always have the courage to chase your dreams,
+the strength to overcome challenges,
+and the happiness to enjoy the journey.
+</p>
 
-        गणपति बप्पा मोरया ❤️
-        <br>
-
-        🎂 Happy Birthday, Khushi Didi! 🎂
-
-    </div>
-
-</section>
+<p>
+🎂 Happy Birthday, Khushi Didi. ✨
+</p>
 
 </div>
 
-
-<button class="music" onclick="createPetals()" title="More blessings">
-    🪔
-</button>
-
-
-<script>
-
-function openSurprise(){
-
-    const content=document.getElementById("content");
-
-    content.classList.remove("hidden");
-    content.classList.add("reveal");
-
-    createPetals();
-
-    setTimeout(function(){
-
-        content.scrollIntoView({
-            behavior:"smooth"
-        });
-
-    },300);
-}
-
-
-/* Falling petals */
-
-function createPetals(){
-
-    const flowers=["🌸","🌼","🪷","✨"];
-
-    for(let i=0;i<18;i++){
-
-        const petal=document.createElement("div");
-
-        petal.className="petal";
-
-        petal.innerText=
-            flowers[Math.floor(Math.random()*flowers.length)];
-
-        petal.style.left=Math.random()*100+"%";
-
-        petal.style.fontSize=
-            (14+Math.random()*15)+"px";
-
-        petal.style.animationDuration=
-            (5+Math.random()*5)+"s";
-
-        document.body.appendChild(petal);
-
-        setTimeout(()=>{
-            petal.remove();
-        },10000);
-    }
-}
-
-</script>
+</section>
 
 </body>
 </html>
