@@ -1,662 +1,475 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>✨ Shubh Deepawali | Aditya Singh</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>शुभ दीपावली | आदित्य सिंह</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --gold:#ffd700;
-  --gold-glow:#ffaa00;
-  --bg-deep:#0d0614;
-  --bg-card:rgba(255,255,255,0.05);
-  --border-gold:rgba(255,215,0,0.3);
-}
-
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:'Poppins',sans-serif;
-  background:var(--bg-deep);
+  background:#0b0314;
   color:#fff;
   overflow-x:hidden;
 }
 html{scroll-behavior:smooth}
 
-/* Global Typography & Buttons */
 h1,h2,h3{font-family:'Cinzel',serif}
-h2{font-size:clamp(26px,5vw,36px);color:var(--gold);margin-bottom:12px;text-align:center;text-shadow:0 0 15px rgba(255,215,0,0.4)}
-p{line-height:1.8;color:#f3dcbf}
-section{padding:80px 20px;text-align:center;position:relative}
+h2{font-size:clamp(24px,4vw,34px);color:#ffd700;margin-bottom:12px;text-align:center;text-shadow:0 0 15px rgba(255,215,0,0.4)}
+p{line-height:1.7;color:#f3dcbf}
+section{padding:60px 15px;text-align:center}
 
 .btn{
   border:0;
-  padding:14px 30px;
-  border-radius:35px;
+  padding:12px 24px;
+  border-radius:30px;
   background:linear-gradient(135deg,#ff9900,#ffd700);
   color:#3a1200;
   font-weight:700;
   cursor:pointer;
-  margin:10px;
-  font-size:15px;
-  box-shadow:0 5px 20px rgba(255,160,0,0.45);
-  transition:all 0.25s ease;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
+  margin:8px;
+  font-size:14px;
+  box-shadow:0 4px 15px rgba(255,160,0,0.4);
+  transition:transform 0.2s;
+  display:inline-block;
   user-select:none;
-  -webkit-tap-highlight-color:transparent;
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,170,0,0.6)}
-.btn:active{transform:scale(0.97)}
+.btn:active{transform:scale(0.96)}
 
 .btn-secondary{
   background:rgba(255,255,255,0.08);
   color:#ffd700;
-  border:1px solid var(--border-gold);
+  border:1px solid rgba(255,215,0,0.3);
   box-shadow:none;
 }
-.btn-secondary:hover{background:rgba(255,215,0,0.15)}
 
 .card{
-  max-width:850px;
-  margin:25px auto;
-  padding:32px 25px;
-  background:var(--bg-card);
-  border:1px solid var(--border-gold);
-  border-radius:24px;
-  backdrop-filter:blur(14px);
-  box-shadow:0 10px 40px rgba(0,0,0,0.4);
+  max-width:750px;
+  margin:20px auto;
+  padding:25px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,215,0,0.3);
+  border-radius:20px;
 }
 
-/* Floating Audio Switch */
-#musicToggle{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:999;
-  padding:10px 18px;
-  font-size:13px;
-  border-radius:30px;
-  backdrop-filter:blur(10px);
-}
-
-/* 1. Hero & 3D Double Door */
+/* 1. Hero & Doors */
 .hero{
-  min-height:100vh;
+  min-height:90vh;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
-  background:radial-gradient(circle at center,#5c1f0f 0%,#1a0924 60%,#09030e 100%);
-  position:relative;
-  overflow:hidden;
-  padding:40px 20px;
+  background:radial-gradient(circle at center,#5c1f0f 0%,#1a0924 70%);
+  padding:30px 15px;
 }
-.hero h3{letter-spacing:5px;color:#ffdf9e;font-size:clamp(13px,3vw,17px);margin-bottom:8px}
+.hero h3{letter-spacing:3px;color:#ffdf9e;font-size:14px;margin-bottom:8px}
 .hero h1{
   font-family:'Great Vibes',cursive;
-  font-size:clamp(60px,14vw,115px);
+  font-size:clamp(55px,12vw,100px);
   color:#ffe8a1;
-  text-shadow:0 0 35px var(--gold-glow);
-  margin-bottom:10px;
+  text-shadow:0 0 30px #ffaa00;
 }
-.door-portal{
-  perspective:1200px;
-  width:260px;
-  height:320px;
-  margin:30px auto 20px;
-  position:relative;
-}
-.door-frame{
-  width:100%;
-  height:100%;
-  border:7px solid #d49339;
-  border-radius:130px 130px 0 0;
-  box-shadow:0 0 45px rgba(255,160,0,0.6);
+.door-container{
+  width:220px;
+  height:260px;
+  margin:25px auto;
   position:relative;
   display:flex;
+  border:6px solid #d49339;
+  border-radius:110px 110px 0 0;
+  background:#260a0f;
   overflow:hidden;
-  background:radial-gradient(circle,#4e1a12,#120517);
+  box-shadow:0 0 35px rgba(255,160,0,0.5);
 }
 .door-leaf{
   width:50%;
   height:100%;
   background:linear-gradient(135deg,#7e2e17,#3e140b);
-  border:2px solid #e09f47;
-  transition:transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  box-shadow:inset 0 0 20px rgba(0,0,0,0.7);
+  border:1px solid #e09f47;
+  transition:transform 1s ease-in-out;
 }
-.door-left{transform-origin:left center;border-right:1px solid #ffcc66}
-.door-right{transform-origin:right center;border-left:1px solid #ffcc66}
-.door-knob{
-  width:14px;
-  height:14px;
-  border-radius:50%;
-  background:#ffd700;
-  box-shadow:0 0 10px #ffbb00;
-  position:absolute;
-}
-.door-left .door-knob{right:12px}
-.door-right .door-knob{left:12px}
+.door-left{transform-origin:left center}
+.door-right{transform-origin:right center}
+.door-open .door-left{transform:scaleX(0)}
+.door-open .door-right{transform:scaleX(0)}
 
-.door-portal.open .door-left{transform:rotateY(-125deg)}
-.door-portal.open .door-right{transform:rotateY(125deg)}
-.door-inner-glow{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:55px;
-  animation:pulseGlow 2s infinite alternate;
-}
-@keyframes pulseGlow{from{transform:scale(0.9);opacity:0.7}to{transform:scale(1.1);opacity:1}}
-
-/* 2. Sanctum & Interactive Aarti */
+/* 2. Sanctum */
 .mandir-section{
   background:linear-gradient(180deg,#1c0924 0%,#3d141e 50%,#110517 100%);
-  border-top:2px solid var(--border-gold);
 }
-.shloka{
-  font-size:clamp(15px,3.5vw,19px);
-  color:#ffeaab;
-  font-style:italic;
-  max-width:700px;
-  margin:15px auto 30px;
-  padding:15px;
-  border-left:3px solid var(--gold);
-  border-right:3px solid var(--gold);
-  background:rgba(255,215,0,0.04);
-}
-.deities-container{
+.deities{
   display:flex;
   justify-content:center;
-  align-items:center;
-  gap:clamp(15px,5vw,50px);
+  gap:20px;
   flex-wrap:wrap;
-  margin:35px 0;
+  margin:25px 0;
 }
-.deity-shrine{
-  background:radial-gradient(circle,#3a1420 30%,rgba(20,5,25,0.7) 80%);
+.deity-card{
+  background:rgba(0,0,0,0.4);
   border:2px solid #ffc857;
-  border-radius:24px;
-  padding:25px;
-  width:280px;
-  box-shadow:0 0 35px rgba(255,165,0,0.3);
-  position:relative;
-  transition:transform 0.3s;
+  border-radius:18px;
+  padding:20px;
+  width:240px;
 }
-.deity-shrine:hover{transform:translateY(-5px);box-shadow:0 0 50px rgba(255,170,0,0.5)}
-.halo{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:radial-gradient(circle,#ffe082 20%,rgba(255,160,0,0.4) 60%,transparent 80%);
-  position:absolute;
-  top:20px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:0;
-  animation:haloPulse 3s infinite alternate;
-}
-@keyframes haloPulse{from{transform:translateX(-50%) scale(0.95);opacity:0.7}to{transform:translateX(-50%) scale(1.1);opacity:1}}
-.deity-svg{
-  width:160px;
-  height:180px;
-  position:relative;
-  z-index:1;
-  filter:drop-shadow(0 0 10px rgba(255,215,0,0.6));
-}
-.deity-name{
-  font-size:20px;
-  color:#ffe28a;
-  margin-top:15px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-.deity-desc{font-size:13px;color:#d8baa0;margin-top:5px}
+.deity-icon{font-size:75px;margin-bottom:10px;display:block}
 
-/* Aarti Thali Interaction */
-.thali-stage{
-  position:relative;
-  width:230px;
-  height:230px;
-  margin:40px auto 25px;
-}
-.aarti-thali{
+.thali-container{margin:25px auto;width:160px;height:160px}
+.thali{
   width:100%;
   height:100%;
   border-radius:50%;
-  background:radial-gradient(circle,#ffd700 0%,#d88a18 70%,#793b04 100%);
-  border:7px solid #ffe89e;
-  box-shadow:0 0 45px rgba(255,170,0,0.7), inset 0 0 25px rgba(0,0,0,0.5);
+  background:radial-gradient(circle,#ffd700,#b87304);
+  border:5px solid #ffe89e;
+  box-shadow:0 0 30px rgba(255,170,0,0.6);
   display:flex;
   align-items:center;
   justify-content:center;
-  cursor:grab;
-  position:absolute;
-  user-select:none;
+  font-size:50px;
 }
-.aarti-thali.active-aarti{
-  animation:aartiRotate 4s linear infinite;
-}
-@keyframes aartiRotate{
-  0%{transform:rotate(0deg) scale(1.05)}
-  100%{transform:rotate(360deg) scale(1.05)}
-}
-.thali-flame{
-  font-size:55px;
-  filter:drop-shadow(0 0 20px #ff6600);
-  animation:flicker 0.25s infinite alternate;
-}
-@keyframes flicker{from{transform:scale(0.95)}to{transform:scale(1.05)}}
+.thali.rotating{animation:spinThali 3s linear infinite}
+@keyframes spinThali{to{transform:rotate(360deg)}}
 
-/* Flower Petal Fall Animation */
-.petal{
-  position:fixed;
-  top:-40px;
-  pointer-events:none;
-  z-index:9999;
-  animation:fall linear forwards;
-}
-@keyframes fall{
-  to{transform:translateY(110vh) rotate(540deg);opacity:0}
-}
-
-/* 3. 7 Sacred Diyas */
+/* 3. Diyas */
 .diyas-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
-  gap:18px;
-  max-width:980px;
-  margin:35px auto;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  max-width:800px;
+  margin:25px auto;
 }
 .diya-card{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,215,0,0.2);
-  border-radius:18px;
-  padding:20px 10px;
+  border-radius:14px;
+  padding:15px;
+  width:100px;
   cursor:pointer;
-  transition:all 0.3s;
-  -webkit-tap-highlight-color:transparent;
 }
-.diya-card:hover{transform:translateY(-4px);border-color:var(--gold)}
 .diya-symbol{
-  font-size:48px;
-  filter:grayscale(1) brightness(0.5);
-  transition:all 0.4s;
+  font-size:42px;
+  filter:grayscale(1) brightness(0.4);
+  transition:0.3s;
   display:block;
-  margin-bottom:8px;
 }
 .diya-card.lit .diya-symbol{
   filter:none;
-  transform:scale(1.2);
-  text-shadow:0 0 25px #ff7700, 0 0 50px #ffaa00;
+  text-shadow:0 0 25px #ff7700;
+  transform:scale(1.15);
 }
-.diya-card.lit{
-  background:radial-gradient(circle,rgba(255,160,0,0.18),rgba(255,255,255,0.03));
-  border-color:#ffae19;
-  box-shadow:0 0 25px rgba(255,140,0,0.3);
-}
-.diya-title{font-size:15px;color:#ffda7b;font-weight:600}
-.diya-meaning{font-size:12px;color:#d3b89e;margin-top:4px}
 
-/* 4. Fireworks Sky Canvas */
-.canvas-wrapper{
-  position:relative;
-  max-width:900px;
-  height:440px;
-  margin:25px auto;
-  border-radius:22px;
-  border:2px solid var(--border-gold);
-  overflow:hidden;
-  box-shadow:0 0 40px rgba(0,0,0,0.6);
+/* 4. Canvas Boxes */
+canvas{
   background:#05020a;
-}
-#fireworksCanvas{
-  width:100%;
-  height:100%;
+  border:2px solid rgba(255,215,0,0.3);
+  border-radius:15px;
   display:block;
-  cursor:crosshair;
-}
-.cracker-dock{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:15px;
-}
-.cracker-btn{
-  padding:10px 18px;
-  border-radius:20px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,215,0,0.3);
-  color:#fff;
-  cursor:pointer;
-  font-size:14px;
-  font-weight:500;
-}
-.cracker-btn.active{
-  background:linear-gradient(45deg,#ff8800,#ffd000);
-  color:#3a1200;
-  font-weight:700;
-  border-color:transparent;
+  margin:15px auto;
+  max-width:100%;
 }
 
-/* 5. Custom Rangoli Studio */
-.rangoli-box{
-  max-width:700px;
-  margin:25px auto;
-  border-radius:24px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid var(--border-gold);
-  padding:20px;
-}
-#rangoliCanvas{
-  background:#0b0413;
-  border:2px solid #582414;
-  border-radius:50%;
-  margin:10px auto;
-  display:block;
-  cursor:crosshair;
-  touch-action:none;
-  box-shadow:0 0 35px rgba(255,140,0,0.3);
-}
-.palette{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  margin:15px 0;
-  flex-wrap:wrap;
-}
-.color-dot{
-  width:32px;
-  height:32px;
-  border-radius:50%;
-  border:2px solid #fff;
-  cursor:pointer;
-  transition:transform 0.2s;
-}
-.color-dot.active{transform:scale(1.25);box-shadow:0 0 15px currentColor}
-
-/* 6. Wishes & Floating Lanterns */
-textarea{
-  width:100%;
-  padding:16px;
-  margin:15px 0;
-  border-radius:14px;
-  border:1px solid #ffbe4d;
-  background:rgba(20,8,30,0.8);
-  color:#fff;
-  font-family:inherit;
-  font-size:15px;
-  outline:none;
-  resize:vertical;
-}
-textarea:focus{border-color:#ffa500;box-shadow:0 0 15px rgba(255,165,0,0.4)}
-.lantern{
-  position:fixed;
-  bottom:-80px;
-  font-size:42px;
-  animation:floatSky 8s linear forwards;
-  pointer-events:none;
-  z-index:999;
-  filter:drop-shadow(0 0 20px #ff9400);
-}
-@keyframes floatSky{
-  0%{transform:translateY(0) scale(0.7);opacity:0}
-  15%{opacity:1}
-  100%{transform:translateY(-130vh) translateX(60px) scale(1.1);opacity:0}
-}
-
-/* 7. Royal Greeting Envelope */
-.envelope-container{margin:30px auto}
-.envelope{
-  font-size:95px;
-  cursor:pointer;
-  transition:transform 0.3s;
-  display:inline-block;
-}
-.envelope:hover{transform:scale(1.12)}
-.letter-parchment{
+/* 5. Envelope & Letter */
+.letter-box{
   display:none;
-  max-width:680px;
-  margin:25px auto 0;
-  padding:35px 30px;
-  background:linear-gradient(135deg,#fff8ea,#f7e5c6);
+  max-width:600px;
+  margin:20px auto;
+  padding:25px;
+  background:#fff8ea;
   color:#552112;
-  border-radius:18px;
-  border:2px solid #d4a04d;
-  box-shadow:0 12px 40px rgba(0,0,0,0.5);
+  border-radius:14px;
   text-align:left;
-  animation:unfold 0.6s ease forwards;
 }
-@keyframes unfold{
-  from{opacity:0;transform:translateY(-20px) scale(0.96)}
-  to{opacity:1;transform:translateY(0) scale(1)}
-}
-.letter-parchment h3{color:#68220f;font-size:24px;margin-bottom:15px}
-.letter-parchment p{color:#572417;font-size:15px;line-height:1.9}
 
-/* Responsive */
-@media(max-width:600px){
-  section{padding:50px 15px}
-  .card{padding:22px 16px}
-  .door-portal{width:210px;height:270px}
+.petal{
+  position:fixed;
+  top:-30px;
+  pointer-events:none;
+  animation:petalFall 4s linear forwards;
+  z-index:9999;
+}
+@keyframes petalFall{
+  to{transform:translateY(105vh) rotate(360deg);opacity:0}
 }
 </style>
 </head>
 
 <body>
 
-<!-- Ambient Audio Switch -->
-<button class="btn btn-secondary" id="musicToggle">🎵 Devotional Music: OFF</button>
+<!-- 1. Hero -->
+<section class="hero">
+  <h3>✨ शुभ दीपावली ✨</h3>
+  <h1>Happy Diwali</h1>
+  <p>सुख, शांति और समृद्धि का पावन पर्व</p>
 
-<!-- 1. Hero & Temple Entrance -->
-<section class="hero" id="hero">
-  <h3>✨ ॐ महालक्ष्म्यै च विद्महे विष्णुपत्नी च धीमहि तन्नो लक्ष्मीः प्रचोदयात् ✨</h3>
-  <h1>Shubh Deepawali</h1>
-  <p>A Divine Celebration of Light, Prosperity & Eternal Peace</p>
-
-  <div class="door-portal" id="doorPortal">
-    <div class="door-inner-glow">🪷</div>
-    <div class="door-frame">
-      <div class="door-leaf door-left"><div class="door-knob"></div></div>
-      <div class="door-leaf door-right"><div class="door-knob"></div></div>
-    </div>
+  <div class="door-container" id="doorPortal">
+    <div class="door-leaf door-left"></div>
+    <div class="door-leaf door-right"></div>
   </div>
 
-  <button class="btn" id="openDoorBtn">🚪 Mandir Mein Pravesh Karein</button>
-  <p id="doorNote" style="font-size:13px;opacity:0.8;margin-top:5px">Tap to open the holy sanctum...</p>
+  <button class="btn" id="doorBtn">🚪 मंदिर का द्वार खोलें</button>
+  <p id="doorStatus" style="font-size:13px;margin-top:6px">द्वार खोलने के लिए बटन दबाएं</p>
 </section>
 
-<!-- 2. Temple Sanctum & Aarti -->
-<section class="mandir-section" id="mandir">
-  <h2>🛕 Shri Ganesha & Maa Lakshmi Sanctum</h2>
-  <div class="shloka">
-    "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥"<br>
-    "नमस्तेस्तु महामाये श्रीपीठे सुरपूजिते। शङ्खचक्रगदाहस्ते महालक्ष्मि नमोस्तुते॥"
-  </div>
+<!-- 2. Mandir -->
+<section class="mandir-section" id="mandirSection">
+  <h2>🛕 श्री गणेश एवं माँ लक्ष्मी गर्भगृह</h2>
+  <p style="font-style:italic">"वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥"</p>
 
-  <div class="deities-container">
-    <!-- Shri Ganesha -->
-    <div class="deity-shrine">
-      <div class="halo"></div>
-      <svg class="deity-svg" viewBox="0 0 200 220">
-        <!-- Crown (Mukut) -->
-        <polygon points="100,10 65,70 135,70" fill="#ffd700" stroke="#b27b00" stroke-width="3"/>
-        <circle cx="100" cy="25" r="8" fill="#ff3300"/>
-        <!-- Face & Ears -->
-        <ellipse cx="100" cy="115" rx="42" ry="48" fill="#e57a3b"/>
-        <path d="M 60 90 C 25 80, 25 140, 62 135 Z" fill="#e57a3b" stroke="#ffd700" stroke-width="2"/>
-        <path d="M 140 90 C 175 80, 175 140, 138 135 Z" fill="#e57a3b" stroke="#ffd700" stroke-width="2"/>
-        <!-- Trunk -->
-        <path d="M 94 135 Q 94 180 120 180 Q 130 180 130 168" fill="none" stroke="#e57a3b" stroke-width="14" stroke-linecap="round"/>
-        <!-- Tilak & Tusk -->
-        <path d="M 88 85 Q 100 75 112 85" stroke="#ffe082" stroke-width="4" fill="none"/>
-        <line x1="100" y1="80" x2="100" y2="105" stroke="#ff1100" stroke-width="4"/>
-        <path d="M 80 145 L 68 152 L 80 156 Z" fill="#fff"/>
-      </svg>
-      <div class="deity-name">विघ्नहर्ता श्री गणेश</div>
-      <div class="deity-desc">Wisdom, Intellect & Auspicious Beginnings</div>
+  <div class="deities">
+    <div class="deity-card">
+      <span class="deity-icon">🐘</span>
+      <h3 style="color:#ffd700">श्री गणेश जी</h3>
+      <p style="font-size:13px">बुद्धि, विवेक और शुभता</p>
     </div>
-
-    <!-- Maa Mahalakshmi -->
-    <div class="deity-shrine">
-      <div class="halo"></div>
-      <svg class="deity-svg" viewBox="0 0 200 220">
-        <!-- Golden Halo & Mukut -->
-        <polygon points="100,12 70,65 130,65" fill="#ffd700" stroke="#b27b00" stroke-width="3"/>
-        <circle cx="100" cy="35" r="7" fill="#ff0055"/>
-        <!-- Face & Features -->
-        <ellipse cx="100" cy="110" rx="38" ry="44" fill="#fcd7b0"/>
-        <path d="M 68 100 Q 100 150 132 100" fill="#cc1133"/>
-        <circle cx="100" cy="98" r="4" fill="#ff0033"/>
-        <!-- Lotus Hands -->
-        <circle cx="48" cy="120" r="16" fill="#ff5d8f"/>
-        <circle cx="152" cy="120" r="16" fill="#ff5d8f"/>
-        <!-- Abhaya Mudra & Gold Coins -->
-        <circle cx="100" cy="165" r="9" fill="#ffd700" stroke="#b27b00" stroke-width="2"/>
-        <circle cx="85" cy="175" r="7" fill="#ffd700"/>
-        <circle cx="115" cy="175" r="7" fill="#ffd700"/>
-      </svg>
-      <div class="deity-name">माता महालक्ष्मी</div>
-      <div class="deity-desc">Wealth, Abundance & Spiritual Radiance</div>
+    <div class="deity-card">
+      <span class="deity-icon">🪷</span>
+      <h3 style="color:#ffd700">माँ लक्ष्मी जी</h3>
+      <p style="font-size:13px">धन, वैभव और शांति</p>
     </div>
   </div>
 
-  <!-- Interactive Aarti Thali -->
-  <div class="card" style="max-width:650px">
-    <h3>🙏 Divine Aarti & Archana</h3>
-    <p>Perform the holy circumambulation (Parikrama) and offer your devotion.</p>
-    
-    <div class="thali-stage">
-      <div class="aarti-thali" id="aartiThali">
-        <span class="thali-flame">🪔</span>
-      </div>
+  <div class="card">
+    <h3>🙏 दिव्य आरती</h3>
+    <div class="thali-container">
+      <div class="thali" id="aartiThali">🪔</div>
     </div>
-
-    <div>
-      <button class="btn" id="startAartiBtn">✨ Perform Aarti (आरती करें)</button>
-      <button class="btn btn-secondary" id="ringBellBtn">🔔 Temple Bell (घंटी)</button>
-      <button class="btn btn-secondary" id="showerFlowersBtn">🌸 Pushpa Vrishti (पुष्प वर्षा)</button>
-    </div>
-    <p id="aartiStatus" style="color:#ffd700;margin-top:15px;font-weight:600">Click to start the sacred ritual 🪔</p>
+    <button class="btn" id="aartiBtn">✨ आरती शुरू करें</button>
+    <button class="btn btn-secondary" id="flowerBtn">🌸 पुष्प वर्षा</button>
+    <p id="aartiText" style="color:#ffd700;margin-top:10px">आरती के लिए बटन दबाएं</p>
   </div>
 </section>
 
-<!-- 3. 7 Sacred Musical Diyas -->
+<!-- 3. Diyas -->
 <section>
-  <h2>🪔 Jyot Se Jyot Jalaate Chalo</h2>
-  <p>Touch each sacred diya to ignite divine virtues into your life.</p>
-
-  <div class="diyas-grid" id="diyasContainer">
-    <div class="diya-card" data-idx="0">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">प्रेम (Love)</div>
-      <div class="diya-meaning">Harmonious family bonds</div>
-    </div>
-    <div class="diya-card" data-idx="1">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">स्वास्थ्य (Health)</div>
-      <div class="diya-meaning">Vitality & resilience</div>
-    </div>
-    <div class="diya-card" data-idx="2">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">समृद्धि (Prosperity)</div>
-      <div class="diya-meaning">Noble abundance</div>
-    </div>
-    <div class="diya-card" data-idx="3">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">शान्ति (Peace)</div>
-      <div class="diya-meaning">Inner serenity</div>
-    </div>
-    <div class="diya-card" data-idx="4">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">ज्ञान (Wisdom)</div>
-      <div class="diya-meaning">Truth and clarity</div>
-    </div>
-    <div class="diya-card" data-idx="5">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">सफलता (Success)</div>
-      <div class="diya-meaning">Honorable endeavors</div>
-    </div>
-    <div class="diya-card" data-idx="6">
-      <span class="diya-symbol">🪔</span>
-      <div class="diya-title">आनन्द (Joy)</div>
-      <div class="diya-meaning">Eternal contentment</div>
-    </div>
+  <h2>🪔 7 पवित्र दीपक जलाएं</h2>
+  <p>दीपक पर टच करके उसे प्रज्वलित करें</p>
+  <div class="diyas-grid">
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">प्रेम</p></div>
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">स्वास्थ्य</p></div>
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">समृद्धि</p></div>
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">शांति</p></div>
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">ज्ञान</p></div>
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">सफलता</p></div>
+    <div class="diya-card"><span class="diya-symbol">🪔</span><p style="font-size:12px">आनंद</p></div>
   </div>
-  <p id="diyaCounterText" style="color:#ffd700;font-weight:600;font-size:16px">0 of 7 Diyas Glowing ✨</p>
+  <p id="diyaCounter" style="color:#ffd700;font-weight:600">0 / 7 दीपक प्रज्वलित ✨</p>
 </section>
 
-<!-- 4. Digital Eco-Friendly Fireworks -->
-<section style="background:linear-gradient(180deg,#09030e,#190924)">
-  <h2>🎆 Eco-Friendly Digital Fireworks</h2>
-  <p>Burst joyful fireworks in the night sky with zero smoke and complete peace!</p>
-
-  <div class="cracker-dock">
-    <button class="cracker-btn active" data-type="rocket">🚀 Golden Rocket</button>
-    <button class="cracker-btn" data-type="anaar">🎇 Sparkling Anaar</button>
-    <button class="cracker-btn" data-type="chakri">💥 Royal Chakri</button>
-    <button class="cracker-btn" data-type="sparkler">✨ Phuljhadi Trail</button>
-  </div>
-
-  <div class="canvas-wrapper">
-    <canvas id="fireworksCanvas"></canvas>
-  </div>
-  <p style="font-size:13px;opacity:0.8">Click or drag anywhere inside the sky to trigger fireworks! 🎆</p>
+<!-- 4. Crackers -->
+<section style="background:#07020d">
+  <h2>🎆 डिजिटल पटाखे</h2>
+  <p>नीचे काले बॉक्स में कहीं भी क्लिक या टच करें और आतिशबाजी देखें</p>
+  <canvas id="fireCanvas" width="340" height="240"></canvas>
 </section>
 
-<!-- 5. Radial Symmetry Rangoli Studio -->
+<!-- 5. Rangoli -->
 <section>
-  <h2>🌸 Srijan: Digital Rangoli Studio</h2>
-  <p>Create traditional 8-fold radial symmetry designs with your fingertip or mouse.</p>
-
-  <div class="rangoli-box">
-    <div class="palette" id="colorPalette">
-      <div class="color-dot active" style="background:#ff0055" data-color="#ff0055"></div>
-      <div class="color-dot" style="background:#ffd700" data-color="#ffd700"></div>
-      <div class="color-dot" style="background:#00f2fe" data-color="#00f2fe"></div>
-      <div class="color-dot" style="background:#38ef7d" data-color="#38ef7d"></div>
-      <div class="color-dot" style="background:#b800e6" data-color="#b800e6"></div>
-      <div class="color-dot" style="background:#ff7700" data-color="#ff7700"></div>
-    </div>
-
-    <canvas id="rangoliCanvas" width="340" height="340"></canvas>
-
-    <div style="margin-top:15px">
-      <button class="btn btn-secondary" id="clearRangoliBtn">🧹 Clear Canvas</button>
-      <button class="btn" id="downloadRangoliBtn">📥 Save Rangoli</button>
-    </div>
+  <h2>🌸 डिजिटल रंगोली</h2>
+  <p>बॉक्स के अंदर उंगली या माउस घुमाकर रंगोली बनाएं</p>
+  <div style="margin:10px 0">
+    <button class="btn btn-secondary" onclick="setRangoliColor('#ff0055')">गुलाबी</button>
+    <button class="btn btn-secondary" onclick="setRangoliColor('#ffd700')">पीला</button>
+    <button class="btn btn-secondary" onclick="setRangoliColor('#00ffff')">नीला</button>
+    <button class="btn btn-secondary" onclick="setRangoliColor('#00ff66')">हरा</button>
+    <button class="btn btn-secondary" onclick="clearRangoli()">साफ करें</button>
   </div>
+  <canvas id="rangoliCanvas" width="300" height="300"></canvas>
 </section>
 
-<!-- 6. Sky Lantern Wishes -->
-<section style="background:radial-gradient(circle at bottom,#3a1420 0%,#0e0517 70%)">
-  <h2>🏮 Wish Upon a Lantern</h2>
-  <p>Release your heartfelt prayer into the glowing sky.</p>
-
-  <div class="card" style="max-width:650px">
-    <textarea id="wishMsg" rows="3" placeholder="Write your heartfelt wish for family, health, or friends..."></textarea>
-    <button class="btn" id="releaseLanternBtn">🏮 Release My Glowing Lantern</button>
-    <p id="wishEcho" style="color:#ffd700;margin-top:12px;font-weight:600"></p>
-  </div>
-</section>
-
-<!-- 7. Secret Envelope & Family Greeting Letter -->
+<!-- 6. Greeting Letter -->
 <section>
-  <h2>💌 A Warm Festive Greeting</h2>
-  <p>An envelope full of heartfelt prayers and memories awaits you.</p>
+  <h2>💌 शुभकामना संदेश</h2>
+  <div style="font-size:80px;cursor:pointer;margin:15px 0" id="letterIcon">✉️</div>
+  <p style="color:#ffd700">पत्र खोलने के लिए लिफाफे पर टच करें</p>
 
-  <div class="envelope-container">
-    <div class="envelope" id="secretEnvelope">💌</div>
-    <p style="font-size:14px;color:#ffda7b">Tap the envelope to unseal the letter</
+  <div class="letter-box" id="letterBox">
+    <h3 style="color:#68220f;margin-bottom:10px">प्रिय मित्र एवं परिवारजन ❤️</h3>
+    <p style="color:#572417">
+      दीपावली का यह पावन पर्व आपके और आपके परिवार के जीवन में सुख, शांति, अच्छा स्वास्थ्य और अपार खुशियां लेकर आए। 
+      आपके घर में माता लक्ष्मी और विघ्नहर्ता गणेश जी की कृपा सदैव बनी रहे।
+      <br><br>
+      <strong>शुभ दीपावली!</strong><br>
+      सस्नेह,<br>
+      <strong>आदित्य सिंह ❤️</strong>
+    </p>
+  </div>
+</section>
+
+<footer style="padding:30px;background:#030106;border-top:1px solid #331505">
+  <p>✨ Made with Love by Aditya Singh ✨</p>
+</footer>
+
+<script>
+// safe sound engine (No crash)
+function playTone(freq, duration) {
+  try {
+    var AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    var ctx = new AudioCtx();
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.1, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+  } catch(e) {}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  // 1. Door
+  var doorBtn = document.getElementById('doorBtn');
+  var doorPortal = document.getElementById('doorPortal');
+  var doorStatus = document.getElementById('doorStatus');
+  var mandirSection = document.getElementById('mandirSection');
+
+  doorBtn.onclick = function() {
+    doorPortal.classList.toggle('door-open');
+    playTone(587, 1);
+    doorStatus.innerText = "द्वार खुल गया! जय श्री गणेश, जय माँ लक्ष्मी! 🙏";
+    setTimeout(function() {
+      mandirSection.scrollIntoView({ behavior: 'smooth' });
+    }, 400);
+  };
+
+  // 2. Aarti
+  var aartiBtn = document.getElementById('aartiBtn');
+  var aartiThali = document.getElementById('aartiThali');
+  var aartiText = document.getElementById('aartiText');
+  var isAarti = false;
+
+  aartiBtn.onclick = function() {
+    isAarti = !isAarti;
+    if (isAarti) {
+      aartiThali.classList.add('rotating');
+      aartiText.innerText = "🔔 आरती हो रही है... जय माँ लक्ष्मी! 🪔";
+      playTone(880, 0.8);
+    } else {
+      aartiThali.classList.remove('rotating');
+      aartiText.innerText = "आरती पूर्ण हुई। सदा मंगल हो! 🙏";
+    }
+  };
+
+  // Flowers
+  document.getElementById('flowerBtn').onclick = function() {
+    playTone(659, 0.3);
+    for (var i = 0; i < 20; i++) {
+      var p = document.createElement('div');
+      p.className = 'petal';
+      p.innerText = ['🌸','🌺','🌼'][Math.floor(Math.random()*3)];
+      p.style.left = (Math.random() * 90) + 'vw';
+      p.style.fontSize = (20 + Math.random() * 15) + 'px';
+      document.body.appendChild(p);
+      setTimeout(function(el) { el.remove(); }, 4000, p);
+    }
+  };
+
+  // 3. Diyas
+  var diyaCards = document.querySelectorAll('.diya-card');
+  var diyaCounter = document.getElementById('diyaCounter');
+
+  diyaCards.forEach(function(card) {
+    card.onclick = function() {
+      card.classList.toggle('lit');
+      playTone(784, 0.2);
+      var lit = document.querySelectorAll('.diya-card.lit').length;
+      diyaCounter.innerText = lit + " / 7 दीपक प्रज्वलित ✨";
+      if (lit === 7) {
+        diyaCounter.innerText = "🌟 सभी 7 दीपक प्रज्वलित हो गए! शुभ दीपावली! 🌟";
+      }
+    };
+  });
+
+  // 4. Letter
+  document.getElementById('letterIcon').onclick = function() {
+    playTone(523, 0.4);
+    document.getElementById('letterBox').style.display = 'block';
+  };
+
+  // 5. Crackers Canvas
+  var fCanvas = document.getElementById('fireCanvas');
+  var fCtx = fCanvas.getContext('2d');
+  var sparks = [];
+
+  function addBurst(x, y) {
+    playTone(200, 0.15);
+    var colors = ['#ffd700','#ff3300','#00ffff','#ff00aa','#ffffff'];
+    for (var i = 0; i < 25; i++) {
+      var ang = Math.random() * Math.PI * 2;
+      var spd = Math.random() * 4 + 1;
+      sparks.push({
+        x: x, y: y,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd,
+        alpha: 1,
+        color: colors[Math.floor(Math.random()*colors.length)]
+      });
+    }
+  }
+
+  function fireClick(e) {
+    var r = fCanvas.getBoundingClientRect();
+    var x = (e.clientX || (e.touches && e.touches[0].clientX)) - r.left;
+    var y = (e.clientY || (e.touches && e.touches[0].clientY)) - r.top;
+    addBurst(x, y);
+  }
+  fCanvas.onmousedown = fireClick;
+  fCanvas.ontouchstart = function(e){ fireClick(e); };
+
+  function loopCrackers() {
+    fCtx.fillStyle = 'rgba(5, 2, 10, 0.25)';
+    fCtx.fillRect(0, 0, fCanvas.width, fCanvas.height);
+    for (var i = sparks.length - 1; i >= 0; i--) {
+      var s = sparks[i];
+      s.x += s.vx;
+      s.y += s.vy;
+      s.alpha -= 0.02;
+      fCtx.fillStyle = s.color;
+      fCtx.globalAlpha = Math.max(0, s.alpha);
+      fCtx.beginPath();
+      fCtx.arc(s.x, s.y, 2.5, 0, Math.PI * 2);
+      fCtx.fill();
+      if (s.alpha <= 0) sparks.splice(i, 1);
+    }
+    fCtx.globalAlpha = 1;
+    requestAnimationFrame(loopCrackers);
+  }
+  loopCrackers();
+
+  // 6. Rangoli Canvas
+  var rCanvas = document.getElementById('rangoliCanvas');
+  var rCtx = rCanvas.getContext('2d');
+  var drawing = false;
+  window.rangColor = '#ff0055';
+
+  window.setRangoliColor = function(c) { window.rangColor = c; };
+  window.clearRangoli = function() { rCtx.clearRect(0, 0, rCanvas.width, rCanvas.height); };
+
+  function drawR(e) {
+    if (!drawing) return;
+    var r = rCanvas.getBoundingClientRect();
+    var x = (e.clientX || (e.touches && e.touches[0].clientX)) - r.left;
+    var y = (e.clientY || (e.touches && e.touches[0].clientY)) - r.top;
+    rCtx.fillStyle = window.rangColor;
+    rCtx.beginPath();
+    rCtx.arc(x, y, 4, 0, Math.PI*2);
+    rCtx.fill();
+  }
+
+  rCanvas.onmousedown = function() { drawing = true; };
+  window.onmouseup = function() { drawing = false; };
+  rCanvas.onmousemove = drawR;
+
+  rCanvas.ontouchstart = function() { drawing = true; };
+  window.ontouchend = function() { drawing = false; };
+  rCanvas.ontouchmove = drawR;
+
+});
+</script>
+</body>
+</html>
