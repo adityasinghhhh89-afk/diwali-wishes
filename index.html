@@ -1,490 +1,535 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#09080d">
-<title>✨ Shubh Deepawali | By Aditya Singh</title>
-
-<!-- Fonts & Tailwind CSS CDN -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
+<title>✨ Happy Diwali | Aditya Singh</title>
 
 <style>
-:root {
-  --gold: #f8db8c;
-  --gold-glow: #e6b244;
-  --dark: #08060c;
-  --panel: #16121d;
-  --cream: #fff5e0;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#100817;
+  color:#fff;
+  overflow-x:hidden;
+}
+html{scroll-behavior:smooth}
+section{padding:70px 20px;text-align:center;position:relative}
+h2{font-size:32px;color:#ffd47b;margin-bottom:20px}
+p{line-height:1.8;color:#f4dcbf}
+
+button{
+  border:0;
+  padding:14px 28px;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff9d00,#ffe09a);
+  color:#421500;
+  font-weight:700;
+  cursor:pointer;
+  margin:10px;
+  font-size:15px;
+  box-shadow:0 4px 15px rgba(255,157,0,0.4);
+  transition:transform 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color:transparent;
+}
+button:active{transform:scale(0.96)}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:radial-gradient(circle at center,#713017,#190b22 75%);
+  position:relative;
+  overflow:hidden;
+  padding:30px 20px;
+}
+.hero h1{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(52px,12vw,95px);
+  color:#ffdc83;
+  text-shadow:0 0 25px #ff9d00;
+  margin:10px 0;
+}
+.hero h3{letter-spacing:4px;color:#ffe9c2;font-size:16px}
+
+/* 3D Door Frame */
+.door-frame{
+  perspective:1000px;
+  margin:25px auto;
+  width:180px;
+  height:260px;
+}
+.door{
+  width:100%;
+  height:100%;
+  border:7px solid #e8a746;
+  border-radius:90px 90px 0 0;
+  background:linear-gradient(90deg,#4b180d,#a34a19,#4b180d);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:52px;
+  box-shadow:0 0 35px #ff9e29;
+  transform-origin:left center;
+  transition:transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position:relative;
+}
+.door:after{
+  content:"";
+  position:absolute;
+  right:16px;
+  top:50%;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#ffdb71;
+  box-shadow:0 0 8px #ffdb71;
+}
+.door.open{
+  transform:rotateY(-115deg);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background-color: var(--dark);
-  color: var(--cream);
-  font-family: 'Georgia', serif;
-  overflow-x: hidden;
+.stars{
+  position:absolute;
+  color:#ffda7a;
+  pointer-events:none;
+  animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.2;transform:scale(.5)}}
+
+.card{
+  max-width:680px;
+  margin:25px auto;
+  padding:28px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,206,114,0.3);
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+}
+.temple{background:linear-gradient(#210e29,#511d24,#170b19)}
+.temple-art{font-size:90px;margin:20px 0}
+
+.diyas{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin:25px auto;
+  max-width:550px;
+}
+.diya{
+  font-size:48px;
+  cursor:pointer;
+  transition:transform 0.3s, filter 0.3s;
+  filter:grayscale(1) brightness(0.6);
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.diya.lit{
+  filter:none;
+  text-shadow:0 0 25px #ff9d00, 0 0 45px #ff6600;
+  transform:scale(1.22);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #08060c; }
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f3cf7a, #a67323);
-  border-radius: 4px;
+.rangoli{
+  width:min(270px,78vw);
+  height:min(270px,78vw);
+  border-radius:50%;
+  margin:25px auto;
+  border:5px dashed #ffc75b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:repeating-conic-gradient(#e94b79 0 10deg,#f6b33d 10deg 20deg,#6134a4 20deg 30deg);
+  box-shadow:0 0 35px rgba(255,178,45,0.6);
+  transition:background 0.5s ease;
+}
+.rangoli span{
+  font-size:70px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  padding:20px;
 }
 
-/* Starfield / Sparkles Background Canvas */
-#bgCanvas, #fireworkCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
+textarea{
+  width:100%;
+  padding:14px;
+  margin:15px 0;
+  border-radius:12px;
+  border:1px solid #ffc65d;
+  background:#26162d;
+  color:#fff;
+  font-family:inherit;
+  font-size:15px;
+  resize:vertical;
 }
-#bgCanvas { z-index: 1; }
-#fireworkCanvas { z-index: 60; }
+textarea:focus{outline:none;border-color:#ffa500;box-shadow:0 0 10px #ffa500}
 
-/* Buttons & Components */
-.btn-gold {
-  border: 1px solid #d4a34b;
-  background: linear-gradient(135deg, #fae29f 0%, #cf9c3e 50%, #996216 100%);
-  color: #211100;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  box-shadow: 0 4px 18px rgba(222, 162, 57, 0.28);
-  cursor: pointer;
+.envelope{
+  font-size:85px;
+  cursor:pointer;
+  transition:transform 0.3s;
+  user-select:none;
+  display:inline-block;
+  margin:15px 0;
 }
-.btn-gold:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 28px rgba(235, 178, 69, 0.55);
+.envelope:hover{transform:scale(1.15)}
+.letter{
+  display:none;
+  padding:25px;
+  background:#fff0d5;
+  color:#682b21;
+  border-radius:15px;
+  margin-top:20px;
+  text-align:left;
+  animation:fadeDown 0.6s ease;
 }
-.btn-gold:active { transform: translateY(0) scale(0.98); }
+@keyframes fadeDown{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:translateY(0)}}
+.letter p{color:#682b21;font-size:15px}
 
-.btn-outline {
-  border: 1px solid rgba(246, 212, 122, 0.5);
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
-  color: var(--gold);
-  padding: 11px 22px;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+.lantern{
+  position:fixed;
+  bottom:-100px;
+  font-size:38px;
+  animation:fly 6.5s linear forwards;
+  pointer-events:none;
+  z-index:99;
 }
-.btn-outline:hover {
-  background: rgba(246, 212, 122, 0.15);
-  border-color: var(--gold);
-  transform: translateY(-2px);
-  box-shadow: 0 0 16px rgba(246, 212, 122, 0.3);
+@keyframes fly{
+  to{transform:translateY(-125vh) translateX(50px);opacity:0}
 }
 
-/* Glass Card */
-.glass-panel {
-  background: linear-gradient(145deg, rgba(31, 23, 38, 0.78), rgba(16, 12, 21, 0.88));
-  border: 1px solid rgba(212, 163, 75, 0.3);
-  backdrop-filter: blur(14px);
-  border-radius: 24px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 235, 180, 0.15);
+footer{
+  padding:35px 20px;
+  text-align:center;
+  background:#08040c;
+  color:#eac17d;
+  font-size:14px;
 }
-
-/* 3D Mandir Door */
-.door-perspective {
-  perspective: 1200px;
-}
-.mandir-portal {
-  position: relative;
-  width: min(300px, 80vw);
-  height: 420px;
-  max-height: 60vh;
-  margin: 0 auto;
-  border: 9px solid #b8863b;
-  border-radius: 150px 150px 14px 14px;
-  background: radial-gradient(circle at center, #ffe08d 0%, #e09424 45%, #2a110a 100%);
-  box-shadow: 0 0 60px rgba(229, 161, 53, 0.45), inset 0 0 25px rgba(0,0,0,0.6);
-  cursor: pointer;
-  overflow: hidden;
-}
-.door-panel {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(135deg, #642010 0%, #3e1207 100%);
-  border: 2px solid #b8863b;
-  transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  transform-style: preserve-3d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 20;
-}
-.door-left {
-  left: 0;
-  transform-origin: left center;
-  border-top-left-radius: 140px;
-}
-.door-right {
-  right: 0;
-  transform-origin: right center;
-  border-top-right-radius: 140px;
-}
-.door-handle {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fff3a6, #c27f1c);
-  box-shadow: 0 0 10px #ffe57f;
-}
-.mandir-portal.is-open .door-left {
-  transform: rotateY(-110deg);
-}
-.mandir-portal.is-open .door-right {
-  transform: rotateY(110deg);
-}
-
-/* Aarti Animation */
-.aarti-ring {
-  animation: aartiRotate 3.2s ease-in-out infinite alternate;
-}
-@keyframes aartiRotate {
-  0% { transform: scale(1) rotate(-8deg); filter: drop-shadow(0 0 20px #ff9e22); }
-  50% { transform: scale(1.1) rotate(0deg); filter: drop-shadow(0 0 45px #ff5900); }
-  100% { transform: scale(1) rotate(8deg); filter: drop-shadow(0 0 25px #ffb300); }
-}
-
-/* Diya Lamp Item */
-.diya-badge {
-  width: 78px;
-  height: 72px;
-  border-radius: 50% 50% 40% 40%;
-  background: linear-gradient(180deg, #57331e 0%, #291207 100%);
-  border: 1px solid rgba(230, 178, 68, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  user-select: none;
-  filter: grayscale(0.85) opacity(0.55);
-}
-.diya-badge.lit {
-  filter: grayscale(0) opacity(1);
-  background: linear-gradient(180deg, #ffc966 0%, #a44810 100%);
-  border-color: #ffd875;
-  transform: translateY(-6px) scale(1.18);
-  box-shadow: 0 0 25px #ff9a1f, 0 0 45px rgba(255, 115, 0, 0.6);
-}
-
-/* Floating Sky Lantern in Wishes Section */
-.sky-container {
-  height: 280px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  background: radial-gradient(ellipse at bottom, #2b153b 0%, #0d0a17 75%, #05040a 100%);
-  border: 1px solid rgba(212, 163, 75, 0.4);
-}
-.sky-lantern-item {
-  position: absolute;
-  bottom: 0;
-  font-size: 38px;
-  pointer-events: none;
-  filter: drop-shadow(0 0 16px #ffaa22);
-  animation: floatUpwards 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-@keyframes floatUpwards {
-  0% { transform: translateY(0) scale(0.65); opacity: 0.95; }
-  50% { transform: translateY(-140px) translateX(30px) scale(1.1); opacity: 0.9; }
-  100% { transform: translateY(-320px) translateX(-15px) scale(0.3); opacity: 0; }
-}
-
-/* Envelope Flip Animation */
-.letter-box {
-  display: none;
-  animation: unfoldLetter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-.letter-box.open { display: block; }
-@keyframes unfoldLetter {
-  from { opacity: 0; transform: translateY(18px) scale(0.96); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* Toast Message */
-#appToast {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+#music{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  z-index:100;
+  margin:0;
+  padding:12px 20px;
+  font-size:14px;
 }
 </style>
 </head>
 
-<body class="selection:bg-amber-400 selection:text-black">
+<body>
 
-<!-- Interactive Particle Starfield -->
-<canvas id="bgCanvas"></canvas>
-<!-- Fireworks Burst Canvas -->
-<canvas id="fireworkCanvas"></canvas>
+<button id="music">🎵 Music ON</button>
 
-<!-- Top Fixed Navigation -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-[#09070df0] backdrop-blur-md border-b border-[#cca04944] px-4 md:px-8 py-3 flex items-center justify-between">
-  <div class="flex items-center gap-2">
-    <span class="text-xl text-amber-400 animate-spin" style="animation-duration: 12s;">🪔</span>
-    <span class="font-bold tracking-widest text-amber-200 text-sm md:text-base" style="font-family:'Cinzel Decorative', serif;">DEEPAWALI</span>
+<section class="hero" id="heroSection">
+  <h3>✨ THE FESTIVAL OF LIGHTS ✨</h3>
+  <h1>Happy Diwali</h1>
+  <p>A festival of love, light, happiness and new beginnings.</p>
+
+  <div class="door-frame">
+    <div class="door" id="door">🪔</div>
   </div>
 
-  <div class="flex items-center gap-2 sm:gap-4 text-xs md:text-sm font-medium">
-    <a href="#entrance" class="text-amber-100/80 hover:text-amber-300 transition-colors hidden sm:inline">Temple</a>
-    <a href="#diya" class="text-amber-100/80 hover:text-amber-300 transition-colors">Diyas</a>
-    <a href="#rangoli" class="text-amber-100/80 hover:text-amber-300 transition-colors">Rangoli</a>
-    <a href="#wishes" class="text-amber-100/80 hover:text-amber-300 transition-colors">Wishes</a>
-    <button onclick="toggleMusic()" id="navMusicBtn" class="px-3 py-1.5 rounded-full border border-amber-400/50 bg-amber-400/10 text-amber-300 hover:bg-amber-400/20 transition-all flex items-center gap-1.5 text-xs">
-      <span id="musicGlyph">♫</span>
-      <span id="musicText">BGM: Off</span>
-    </button>
+  <button id="openDoorBtn">🚪 Open The Temple Door</button>
+  <p id="doorText" style="margin-top:10px">A little magic is waiting for you...</p>
+</section>
+
+<section class="temple" id="mandir">
+  <h2>🛕 A Divine Beginning</h2>
+  <div class="temple-art">🙏 🪷 🙏</div>
+  <h2>शुभ दीपावली</h2>
+  <p>May Lord Ganesha and Goddess Lakshmi bless your home with happiness and prosperity.</p>
+  <button id="aartiBtn">🔔 Perform Aarti</button>
+  <p id="aartiText" style="margin-top:10px">Tap to begin your prayer 🪔</p>
+</section>
+
+<section>
+  <h2>🪔 Light Up Your Happiness</h2>
+  <p>Touch each diya to spread the light of happiness.</p>
+  <div class="diyas">
+    <span class="diya">🪔</span>
+    <span class="diya">🪔</span>
+    <span class="diya">🪔</span>
+    <span class="diya">🪔</span>
+    <span class="diya">🪔</span>
+    <span class="diya">🪔</span>
+    <span class="diya">🪔</span>
   </div>
-</nav>
+  <p id="diyaText">Every little light makes the world brighter. ✨</p>
+</section>
 
-<!-- Notification Toast -->
-<div id="appToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 bg-gradient-to-r from-amber-700 via-yellow-700 to-amber-800 text-amber-100 rounded-full shadow-2xl opacity-0 pointer-events-none text-xs md:text-sm flex items-center gap-2 border border-amber-300/40">
-  <span id="toastIcon">✨</span>
-  <span id="toastMsg">Diwali greetings</span>
-</div>
-
-<!-- ================= 1. HERO SECTION ================= -->
-<header id="home" class="relative min-h-screen flex items-center justify-center text-center px-4 pt-24 pb-16 overflow-hidden">
-  <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-    <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-amber-400/40 bg-amber-500/10 text-amber-300 text-xs tracking-widest uppercase">
-      <span>✦</span> FESTIVAL OF LIGHT • LOVE • HAPPINESS <span>✦</span>
-    </div>
-
-    <h1 class="text-6xl sm:text-8xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffe89d] via-[#f5bf47] to-[#ffd070] drop-shadow-[0_0_40px_rgba(240,180,50,0.6)]" style="font-family:'Great Vibes', cursive;">
-      शुभ दीपावली
-    </h1>
-
-    <h2 class="text-xl sm:text-3xl md:text-4xl text-amber-200 font-semibold" style="font-family:'Rozha One', serif;">
-      May Your Life Shine Like A Million Diyas ✨
-    </h2>
-
-    <p class="max-w-2xl mx-auto text-amber-100/80 text-sm sm:text-base leading-relaxed">
-      Welcome to this sacred festive sanctuary. May Goddess Lakshmi bestow wealth, good health, and sweet togetherness, and may Lord Ganesha eliminate every hurdle from your journey.
-    </p>
-
-    <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-      <a href="#entrance" class="btn-gold">
-        <span>🚪</span> Enter The Sacred Celebration
-      </a>
-      <button onclick="toggleMusic()" class="btn-outline">
-        <span>♫</span> Play Instrumental Raag
-      </button>
-      <button onclick="triggerGlobalFireworks()" class="btn-outline text-amber-300">
-        <span>🎆</span> Launch Fireworks
-      </button>
-    </div>
-
-    <p class="text-xs text-amber-300/70 italic pt-2">
-      Tap "Play Instrumental Raag" for ambient Tanpura & Sitar melodies crafted through Web Audio
-    </p>
+<section>
+  <h2>🌸 Create Your Digital Rangoli</h2>
+  <p>Choose your favourite design and decorate your festive home.</p>
+  <div class="rangoli" id="rangoli"><span>🌺</span></div>
+  <div>
+    <button onclick="design(1)">🌸 Pink</button>
+    <button onclick="design(2)">🌼 Golden</button>
+    <button onclick="design(3)">💜 Purple</button>
+    <button onclick="design(4)">🌈 Rainbow</button>
   </div>
-</header>
+</section>
 
-<!-- ================= 2. 3D TEMPLE ENTRANCE ================= -->
-<section id="entrance" class="py-24 px-4 text-center relative z-10 scroll-mt-16">
-  <div class="max-w-3xl mx-auto space-y-6">
-    <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">A Little Magic Awaits You</p>
-    <h2 class="text-3xl sm:text-5xl text-amber-200" style="font-family:'Rozha One', serif;">Open The Sacred Doors</h2>
-    <p class="text-amber-100/70 text-sm sm:text-base max-w-lg mx-auto">
-      Touch the ornate gilded temple doors to step inside the divine prayer sanctum.
-    </p>
+<section>
+  <h2>🏮 Send Your Wish To The Sky</h2>
+  <div class="card">
+    <p>Write a beautiful wish for someone special.</p>
+    <textarea id="wish" rows="3" placeholder="May everyone stay happy and blessed..."></textarea>
+    <button id="sendWishBtn">Release My Lantern 🏮</button>
+    <p id="wishText" style="margin-top:10px"></p>
+  </div>
+</section>
 
-    <!-- 3D Door Portal -->
-    <div class="door-perspective py-6">
-      <div id="templeDoor" class="mandir-portal" onclick="openTemple()">
-        <div class="door-panel door-left">
-          <div class="door-handle"></div>
-        </div>
-        <div class="door-panel door-right">
-          <div class="door-handle"></div>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-          <span class="text-6xl animate-bounce">🪷</span>
-          <span class="text-amber-950 font-bold text-sm tracking-wider mt-2" style="font-family:'Yatra One', cursive;">जय माँ लक्ष्मी</span>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <button onclick="openTemple()" class="btn-gold">
-        <span>🛕</span> Open Mandir Doors
-      </button>
+<section>
+  <h2>💌 A Little Surprise For You</h2>
+  <p>Someone has a beautiful message for you...</p>
+  <div class="card">
+    <div class="envelope" id="envelopeBtn">💌</div>
+    <p>Tap the envelope to open your surprise</p>
+    <div class="letter" id="letter">
+      <h2 style="color:#682b21;margin-bottom:12px">Dear Friends & Family ❤️</h2>
+      <p>
+        May this Diwali bring endless smiles, beautiful memories,
+        good health and new opportunities into your life.
+        <br><br>
+        May your family always stay together, laughing,
+        loving and supporting each other.
+        <br><br>
+        May your home always shine with happiness.
+        <br><br>
+        With lots of love,<br>
+        <strong>Aditya Singh</strong>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ================= 3. MANDIR SANCTUM & AARTI ================= -->
-<section id="mandirSanctum" class="hidden py-24 px-4 text-center relative z-10 bg-gradient-to-b from-[#180e1c] via-[#291321] to-[#0e0814] border-y border-amber-500/30">
-  <div class="max-w-4xl mx-auto space-y-6">
-    <div class="text-amber-400 text-3xl sm:text-4xl" style="font-family:'Rozha One', serif;">
-      ॥ श्री गणेशाय नमः • ॐ श्री महालक्ष्म्यै नमः ॥
-    </div>
-
-    <div class="text-7xl sm:text-9xl py-4 flex items-center justify-center gap-6">
-      <span class="cursor-pointer hover:scale-110 transition-transform" onclick="ringTempleBell('Ganesha')">🐘</span>
-      <div id="aartiPlate" class="aarti-ring p-3 rounded-full bg-amber-500/20 border-2 border-amber-400 cursor-pointer" onclick="startAarti()">
-        <span>🪷</span>
-      </div>
-      <span class="cursor-pointer hover:scale-110 transition-transform" onclick="ringTempleBell('Lakshmi')">🪙</span>
-    </div>
-
-    <p class="text-amber-100/90 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-      May Maa Lakshmi bless every household with unending prosperity, love, and contentment, and may Lord Ganesha clear every hurdle from your journey.
-    </p>
-
-    <div class="flex flex-wrap justify-center gap-4 pt-3">
-      <button onclick="startAarti()" class="btn-gold">
-        <span>🔔</span> Perform Digital Aarti
-      </button>
-      <button onclick="showerPetals()" class="btn-outline">
-        <span>🌸</span> Offer Pushparpanam (Flowers)
-      </button>
-      <a href="#diya" class="btn-outline">
-        <span>🪔</span> Go Light Diyas
-      </a>
-    </div>
-
-    <p id="aartiMessage" class="text-amber-300 font-semibold text-sm sm:text-base min-h-[24px] pt-2 animate-pulse"></p>
-  </div>
+<section class="hero" style="min-height:55vh">
+  <h1 style="font-size:clamp(45px,10vw,65px)">Shubh Deepawali</h1>
+  <p>May the lights of Diwali guide you towards a beautiful tomorrow.</p>
+  <h2 style="margin-top:25px">With Love ❤️</h2>
+  <h3 style="letter-spacing:4px">ADITYA SINGH</h3>
 </section>
 
-<!-- ================= 4. DIYAS LIGHTING ================= -->
-<section id="diya" class="py-24 px-4 text-center relative z-10 scroll-mt-16">
-  <div class="max-w-4xl mx-auto space-y-6">
-    <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">Ignite Hope</p>
-    <h2 class="text-3xl sm:text-5xl text-amber-200" style="font-family:'Rozha One', serif;">Light Up Your Happiness 🪔</h2>
-    <p class="text-amber-100/80 max-w-xl mx-auto text-sm sm:text-base">
-      Every lamp dispels gloom and ignites optimism. Tap each diya to kindle the warmth of Diwali.
-    </p>
+<footer>
+  ✨ Made with Love by Aditya Singh ✨
+  <p style="margin-top:5px;font-size:13px;opacity:0.8">Wishing You & Your Family A Very Happy Diwali 🪔</p>
+</footer>
 
-    <!-- Diya Grid -->
-    <div class="flex justify-center items-center flex-wrap gap-4 sm:gap-6 py-6" id="diyaRow">
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-      <div class="diya-badge" onclick="toggleDiyaBadge(this)">🪔</div>
-    </div>
+<script>
+// Web Audio Synthesizer (Zero External Dependencies, Guaranteed Audio)
+let audioCtx = null;
 
-    <div class="flex flex-wrap justify-center gap-4">
-      <button onclick="lightAllDiyas()" class="btn-gold text-xs sm:text-sm">
-        <span>✨</span> Light All Diyas
-      </button>
-      <button onclick="resetAllDiyas()" class="btn-outline text-xs sm:text-sm">
-        <span>🌙</span> Reset Diyas
-      </button>
-    </div>
+function getAudioContext() {
+  if (!audioCtx) {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AudioContext();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  return audioCtx;
+}
 
-    <p id="diyaSummary" class="text-xs sm:text-sm text-amber-300 font-medium">
-      0 of 8 Diyas lit. Tap to illuminate the night!
-    </p>
-  </div>
-</section>
+// 1. Temple Bell Sound (Realistic brass chime decay)
+function playTempleBell() {
+  try {
+    const ctx = getAudioContext();
+    const now = ctx.currentTime;
+    
+    // Fundamental frequencies of brass bells (Harmonics)
+    const freqs = [587.33, 1174.66, 1760.00, 2349.32];
+    freqs.forEach((freq, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      
+      osc.type = idx === 0 ? 'sine' : 'triangle';
+      osc.frequency.setValueAtTime(freq, now);
+      
+      const volume = idx === 0 ? 0.3 : 0.1 / idx;
+      gain.gain.setValueAtTime(volume, now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.5);
+      
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      
+      osc.start(now);
+      osc.stop(now + 2.5);
+    });
+  } catch(e) {
+    console.log("Audio unlock needed:", e);
+  }
+}
 
-<!-- ================= 5. FESTIVE WISDOM QUOTE ================= -->
-<section class="py-20 px-4 relative z-10 bg-[#0e0915] border-y border-amber-500/20 text-center">
-  <div class="max-w-3xl mx-auto space-y-5">
-    <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">Words Of Radiance</p>
-    <blockquote id="quoteText" class="text-xl sm:text-3xl text-amber-200 italic font-serif leading-relaxed px-4">
-      "Let the light within you shine brighter than the lights around you."
-    </blockquote>
-    <p id="quoteAuthor" class="text-xs sm:text-sm text-amber-300/80 font-medium">— Diwali Wisdom</p>
-    <div class="pt-3">
-      <button onclick="generateNewQuote()" class="btn-outline">
-        <span>✨</span> Read Another Thought
-      </button>
-    </div>
-  </div>
-</section>
+// 2. Chime sound for Diyas
+function playChime(freq = 880) {
+  try {
+    const ctx = getAudioContext();
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, now);
+    osc.frequency.exponentialRampToValueAtTime(freq * 1.5, now + 0.3);
+    
+    gain.gain.setValueAtTime(0.15, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+    
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    
+    osc.start(now);
+    osc.stop(now + 0.5);
+  } catch(e) {}
+}
 
-<!-- ================= 6. INTERACTIVE RANGOLI STUDIO ================= -->
-<section id="rangoli" class="py-24 px-4 relative z-10 text-center scroll-mt-16">
-  <div class="max-w-4xl mx-auto space-y-6">
-    <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">Artistic Celebrations</p>
-    <h2 class="text-3xl sm:text-5xl text-amber-200" style="font-family:'Rozha One', serif;">Create Your Own Rangoli 🌸</h2>
-    <p class="text-amber-100/80 max-w-xl mx-auto text-sm sm:text-base">
-      Draw with mouse or finger, stamp symmetrical flowers and concentric rings, then download your creation!
-    </p>
+// 3. Ambient Festive Drone (Tanpura style chord instead of irritating beep)
+let droneOscs = [];
+let droneGain = null;
+let isMusicPlaying = false;
 
-    <div class="glass-panel p-4 sm:p-8 max-w-2xl mx-auto">
-      <!-- Toolbar -->
-      <div class="flex flex-wrap items-center justify-center gap-3 pb-4 border-b border-amber-500/20 text-xs sm:text-sm">
-        <label class="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full border border-amber-400/40 cursor-pointer">
-          <span>Palette</span>
-          <input type="color" id="paintColor" value="#ffc043" class="w-7 h-7 rounded-full border-0 bg-transparent cursor-pointer">
-        </label>
+function toggleAmbientDrone() {
+  const ctx = getAudioContext();
+  const musicBtn = document.getElementById('music');
 
-        <div class="inline-flex rounded-full bg-black/40 border border-amber-400/30 p-1">
-          <button onclick="setBrushSize(4)" class="px-3 py-1 rounded-full hover:bg-amber-500/20 active:bg-amber-500/40 text-xs">Small</button>
-          <button onclick="setBrushSize(10)" class="px-3 py-1 rounded-full hover:bg-amber-500/20 active:bg-amber-500/40 text-xs font-bold text-amber-300">Med</button>
-          <button onclick="setBrushSize(22)" class="px-3 py-1 rounded-full hover:bg-amber-500/20 active:bg-amber-500/40 text-xs">Large</button>
-        </div>
+  if (isMusicPlaying) {
+    if (droneGain) {
+      droneGain.gain.linearRampToValueAtTime(0.0001, ctx.currentTime + 0.5);
+      setTimeout(() => {
+        droneOscs.forEach(o => o.stop());
+        droneOscs = [];
+      }, 500);
+    }
+    isMusicPlaying = false;
+    musicBtn.innerText = "🎵 Music ON";
+  } else {
+    // Raga Sa-Pa Drone (Calming Tanpura Meditative frequencies: 146.83Hz D3, 220Hz A3, 293.66Hz D4)
+    droneGain = ctx.createGain();
+    droneGain.gain.setValueAtTime(0.0001, ctx.currentTime);
+    droneGain.gain.linearRampToValueAtTime(0.08, ctx.currentTime + 1.2);
+    droneGain.connect(ctx.destination);
 
-        <button onclick="addFlowerStamp()" class="btn-outline text-xs py-1.5 px-3">🌸 Flower</button>
-        <button onclick="addCircleStamp()" class="btn-outline text-xs py-1.5 px-3">⭕ Circle</button>
-        <button onclick="undoRangoli()" class="btn-outline text-xs py-1.5 px-3">↩ Undo</button>
-        <button onclick="clearRangoliCanvas()" class="btn-outline text-xs py-1.5 px-3">🗑️ Clear</button>
-      </div>
+    const notes = [146.83, 220.00, 293.66];
+    droneOscs = notes.map(n => {
+      const o = ctx.createOscillator();
+      o.type = 'sine';
+      o.frequency.setValueAtTime(n, ctx.currentTime);
+      o.connect(droneGain);
+      o.start();
+      return o;
+    });
 
-      <!-- Canvas -->
-      <div class="py-4 flex justify-center">
-        <canvas id="rangoliCanvas" width="600" height="600" class="w-full max-w-[500px] aspect-square rounded-2xl bg-[#0c0912] border-2 border-amber-400/60 shadow-[0_0_30px_rgba(240,180,50,0.2)] touch-none cursor-crosshair"></canvas>
-      </div>
+    isMusicPlaying = true;
+    musicBtn.innerText = "🔇 Music OFF";
+  }
+}
 
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-amber-200/70">
-        <p>Tip: Draw smoothly on touchscreen or mouse</p>
-        <button onclick="downloadRangoliArt()" class="btn-gold text-xs py-2 px-5">
-          <span>📥</span> Save Rangoli (PNG)
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+// Global UI Listeners
+document.addEventListener('DOMContentLoaded', () => {
 
-<!-- ================= 7. SKY LANTERN WISHES ================= -->
-<section id="wishes" class="py-24 px-4 relative z-10 text-center bg-[#0d0914] border-t border-amber-500/20 scroll-mt-16">
-  <div class="max-w-2xl mx-auto space-y-6">
-    <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">Celestial Wishes</p>
-    <h2 class="text-3xl sm:text-5xl text-amber-200" style="font-family:'Rozha One', serif;">Send A Wish To The Universe 🏮</h2>
-    <p class="text-amber-100/80 text-sm sm:text-base">
-      Write your heartfelt blessing and watch your lantern ascend among the stars.
-    </p>
+  // Auto-unlock audio on first touch/click anywhere on page
+  document.body.addEventListener('click', () => {
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }, { once: true });
 
-    <div class="glass-panel p-6 sm:p-8 space-y-4">
-      <div class="flex flex-col sm:flex-row gap-2">
-        <input id="wishInput" maxlength="120" placeholder="Type a warm blessing (e.g. Health, laughter, and unity)..." class="flex-1 p-3.5 rounded-xl bg-black/60 border border-amber-400/40 text-amber-100 placeholder-amber-200/40 focus:outline-none focus:border-amber-400 text-sm">
-        <button onclick="releaseSkyLantern()" class="btn-gold text-sm whitespace-nowrap">
-          <span>🏮</span> Release Lantern
-        </button>
-      </div>
+  // Music Toggle
+  document.getElementById('music').addEventListener('click', toggleAmbientDrone);
 
-      <!-- Sky View -->
-      <div class="sky-container mt-4" id="skyArea">
-        <div class="absolute top-3 left-4 text-xs text-amber-300/60 pointer-events-none"
+  // 1. Temple Door
+  const door = document.getElementById('door');
+  const doorBtn = document.getElementById('openDoorBtn');
+  doorBtn.addEventListener('click', () => {
+    door.classList.add('open');
+    playTempleBell();
+    document.getElementById('doorText').innerText = "Welcome to the divine celebration! ❤️";
+    setTimeout(() => {
+      document.getElementById('mandir').scrollIntoView({ behavior: 'smooth' });
+    }, 450);
+  });
+
+  // 2. Aarti
+  const aartiBtn = document.getElementById('aartiBtn');
+  aartiBtn.addEventListener('click', () => {
+    playTempleBell();
+    document.getElementById('aartiText').innerText = "🔔 जय श्री गणेश! जय माता लक्ष्मी! 🙏 🪔";
+  });
+
+  // 3. Diyas with dynamic chime scale
+  const diyas = document.querySelectorAll('.diya');
+  const diyaText = document.getElementById('diyaText');
+  const scale = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77];
+
+  diyas.forEach((d, i) => {
+    d.addEventListener('click', () => {
+      d.classList.toggle('lit');
+      if (d.classList.contains('lit')) {
+        playChime(scale[i % scale.length]);
+      }
+      const litTotal = document.querySelectorAll('.diya.lit').length;
+      diyaText.innerText = litTotal === diyas.length 
+        ? "🌟 All 7 diyas are glowing bright! Happy Diwali! 🌟" 
+        : `✨ ${litTotal} diya(s) glowing! Spread the light!`;
+    });
+  });
+
+  // 4. Send Lantern Wish
+  document.getElementById('sendWishBtn').addEventListener('click', () => {
+    const val = document.getElementById('wish').value.trim();
+    if (!val) {
+      alert("Please write a wish first ❤️");
+      return;
+    }
+    playChime(659.25);
+    document.getElementById('wishText').innerText = "Your wish is flying into the sky! 🏮✨";
+    document.getElementById('wish').value = "";
+
+    const l = document.createElement('div');
+    l.className = 'lantern';
+    l.innerText = '🏮';
+    l.style.left = (15 + Math.random() * 70) + '%';
+    document.body.appendChild(l);
+    setTimeout(() => l.remove(), 6800);
+  });
+
+  // 5. Envelope
+  document.getElementById('envelopeBtn').addEventListener('click', () => {
+    playChime(783.99);
+    document.getElementById('letter').style.display = 'block';
+  });
+
+  // 6. Stars
+  const hero = document.getElementById('heroSection');
+  for (let i = 0; i < 30; i++) {
+    const s = document.createElement('span');
+    s.className = 'stars';
+    s.innerText = '✦';
+    s.style.left = Math.random() * 95 + '%';
+    s.style.top = Math.random() * 95 + '%';
+    s.style.fontSize = (10 + Math.random() * 12) + 'px';
+    s.style.animationDelay = (Math.random() * 3) + 's';
+    hero.appendChild(s);
+  }
+});
+
+// 7. Rangoli Switcher
+function design(n) {
+  const colors = [
+    "repeating-conic-gradient(#e94b79 0 10deg, #f6b33d 10deg 20deg, #6134a4 20deg 30deg)",
+    "repeating-conic-gradient(#ffd700 0 10deg, #ff7b00 10deg 20deg, #fff0a0 20deg 30deg)",
+    "repeating-conic-gradient(#a855f7 0 10deg, #43218b 10deg 20deg, #ecb6ff 20deg 30deg)",
+    "repeating-conic-gradient(#ff3366 0 10deg, #ffbb00 10deg 20deg, #00d2ff 20deg 30deg, #00ff88 30deg 40deg)"
+  ];
+  document.getElementById('rangoli').style.background = colors[n - 1];
+  playChime(523.25 + (n * 80));
+}
+</script>
+</body>
+</html>
