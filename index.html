@@ -870,4 +870,826 @@ footer {
             <circle cx="50" cy="16" r="3" fill="#e91e63"/>
             <!-- Face -->
             <circle cx="50" cy="42" r="16" fill="#ffe0b2"/>
-            <circle cx="44" cy="40" r="2" fill="#212
+            <circle cx="44" cy="40" r="2" 
+              fill="#212121"/>
+            <circle cx="56" cy="40" r="2" fill="#212121"/>
+            <circle cx="50" cy="35" r="2.5" fill="#d50000"/> <!-- Bindi -->
+            <!-- Golden Ornaments & Lotus in Hands -->
+            <ellipse cx="50" cy="54" rx="14" ry="6" fill="#ffb300"/>
+            <!-- Red/Pink Saree Drape -->
+            <path d="M 35 55 Q 50 50 65 55 L 72 82 Q 50 88 28 82 Z" fill="#d81b60"/>
+            <!-- Twin Lotuses -->
+            <path d="M 24 50 C 20 42, 28 36, 26 48 Z" fill="#ff4081"/>
+            <circle cx="26" cy="48" r="4" fill="#ff80ab"/>
+            <path d="M 76 50 C 72 42, 80 36, 78 48 Z" fill="#ff4081"/>
+            <circle cx="74" cy="48" r="4" fill="#ff80ab"/>
+            <!-- Golden Coins Shower -->
+            <circle cx="48" cy="70" r="3" fill="#ffd700"/>
+            <circle cx="54" cy="74" r="3" fill="#ffd700"/>
+            <circle cx="44" cy="76" r="2.5" fill="#ffd700"/>
+          </svg>
+        </div>
+        <div class="deity-name">माँ महालक्ष्मी</div>
+        <div class="deity-title">धन, वैभव एवं सौभाग्य दात्री</div>
+      </div>
+
+    </div>
+
+    <!-- 360 Degree Parikrama Aarti Track -->
+    <div class="aarti-track" id="aartiTrack">
+      <div class="aarti-thali">🪔</div>
+    </div>
+
+    <!-- Sacred Stuti & Shloka -->
+    <div class="shloka-box">
+      <strong>॥ महालक्ष्मी स्तुति ॥</strong><br>
+      नमस्तेस्तु महामाये श्रीपीठे सुरपूजिते। शङ्खचक्रगदाहस्ते महालक्ष्मि नमोस्तुते॥<br>
+      <span style="font-size:12px; opacity:0.85; display:inline-block; margin-top:5px;">
+        May both deities illuminate your consciousness with divine peace, auspiciousness, and joy.
+      </span>
+    </div>
+
+    <!-- Interactive Aarti Actions -->
+    <div>
+      <button class="btn-gold" id="btnPerformAarti">🪔 Perform Aarti Parikrama</button>
+      <button class="btn-gold btn-outline" id="btnRingBell">🔔 Ring Temple Bell</button>
+      <button class="btn-gold btn-outline" id="btnShowerFlowers">🌸 Shower Flower Petals</button>
+    </div>
+    <p id="aartiStatus" style="font-size:13px; color:#ffcf56; margin-top:12px;">Tap 'Perform Aarti' to begin divine parikrama...</p>
+  </div>
+</section>
+
+<!-- SECTION 3: 7 SACRED DIGITAL DIYAS (JYOT SE JYOT) -->
+<section id="diyasSection">
+  <h2 class="section-title">🪔 Jyot Se Jyot – Light the 7 Sacred Diyas</h2>
+  <p class="subtitle">Each diya is a prayer for a distinct virtue in your family's life. Touch every diya to illuminate all seven.</p>
+
+  <div class="diyas-grid">
+    <!-- Diya 1 -->
+    <div class="diya-card" data-tone="523.25" data-meaning="Prem (Love)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">प्रेम (Love)</div>
+      <div class="diya-meaning">Affection & Harmony</div>
+    </div>
+    <!-- Diya 2 -->
+    <div class="diya-card" data-tone="587.33" data-meaning="Swasthya (Health)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">स्वास्थ्य (Health)</div>
+      <div class="diya-meaning">Vitality & Wellness</div>
+    </div>
+    <!-- Diya 3 -->
+    <div class="diya-card" data-tone="659.25" data-meaning="Samriddhi (Wealth)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">समृद्धि (Wealth)</div>
+      <div class="diya-meaning">Abundance & Grace</div>
+    </div>
+    <!-- Diya 4 -->
+    <div class="diya-card" data-tone="783.99" data-meaning="Shanti (Peace)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">शान्ति (Peace)</div>
+      <div class="diya-meaning">Calm & Serenity</div>
+    </div>
+    <!-- Diya 5 -->
+    <div class="diya-card" data-tone="880.00" data-meaning="Gyan (Wisdom)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">ज्ञान (Wisdom)</div>
+      <div class="diya-meaning">Intellect & Truth</div>
+    </div>
+    <!-- Diya 6 -->
+    <div class="diya-card" data-tone="987.77" data-meaning="Safalta (Success)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">सफलता (Success)</div>
+      <div class="diya-meaning">Triumph & Victory</div>
+    </div>
+    <!-- Diya 7 -->
+    <div class="diya-card" data-tone="1046.50" data-meaning="Aanand (Joy)">
+      <span class="diya-icon">🪔</span>
+      <div class="diya-title">आनन्द (Joy)</div>
+      <div class="diya-meaning">Celebration & Bliss</div>
+    </div>
+  </div>
+
+  <div class="diya-counter-badge" id="diyaCounter">0 of 7 Diyas Glowing</div>
+  <p id="diyaStatusMessage" style="font-size:14px; color:#ffe8c2; margin-top:12px;">Light up each sacred diya to begin the festival of lights!</p>
+</section>
+
+<!-- SECTION 4: DIGITAL CRACKERS SKY (ECO-FRIENDLY) -->
+<section class="crackers-section" id="crackersSection">
+  <h2 class="section-title">🎆 Eco-Friendly Digital Fireworks</h2>
+  <p class="subtitle">Celebrate clean and green! Tap or click anywhere on the dark sky below to burst festive crackers with audio effects.</p>
+
+  <div class="canvas-wrapper">
+    <div class="canvas-hint">✨ Click or Tap anywhere in the sky ✨</div>
+    <canvas id="fireworksCanvas"></canvas>
+  </div>
+
+  <div class="cracker-toolbar">
+    <button class="cracker-btn active" data-type="rocket">🚀 Rocket Burst</button>
+    <button class="cracker-btn" data-type="anaar">🎇 Anaar Fountain</button>
+    <button class="cracker-btn" data-type="chakri">🌀 Chakri Spinner</button>
+    <button class="cracker-btn" data-type="sparkler">✨ Phuljhadi Trail</button>
+  </div>
+</section>
+
+<!-- SECTION 5: CUSTOM RANGOLI STUDIO -->
+<section id="rangoliSection">
+  <h2 class="section-title">🌸 Srijan – Custom Rangoli Studio</h2>
+  <p class="subtitle">Draw with 8-fold radial symmetry. Pick vibrant festival powders and unleash your artistic creativity.</p>
+
+  <div class="rangoli-container">
+    <div class="rangoli-canvas-box">
+      <canvas id="rangoliCanvas"></canvas>
+    </div>
+
+    <!-- Palette Colors -->
+    <div class="palette-bar">
+      <div class="color-dot active" style="background:#e91e63;" data-color="#e91e63" title="Kumkum Pink"></div>
+      <div class="color-dot" style="background:#ffd700;" data-color="#ffd700" title="Haldi Yellow"></div>
+      <div class="color-dot" style="background:#ff5722;" data-color="#ff5722" title="Sindoor Orange"></div>
+      <div class="color-dot" style="background:#00e676;" data-color="#00e676" title="Mehendi Green"></div>
+      <div class="color-dot" style="background:#00b0ff;" data-color="#00b0ff" title="Peacock Blue"></div>
+      <div class="color-dot" style="background:#9c27b0;" data-color="#9c27b0" title="Royal Violet"></div>
+      <div class="color-dot" style="background:#ffffff;" data-color="#ffffff" title="Rice Flour White"></div>
+    </div>
+
+    <!-- Controls -->
+    <div>
+      <button class="btn-gold" id="btnClearRangoli">🧹 Clear Canvas</button>
+      <button class="btn-gold btn-outline" id="btnDownloadRangoli">📥 Save Rangoli (PNG)</button>
+    </div>
+    <p style="font-size:12px; color:#ffcf56; margin-top:10px;">Pro-Tip: Draw from the center outwards to create symmetric mandalas!</p>
+  </div>
+</section>
+
+<!-- SECTION 6: SKY LANTERNS (AKASH DEEP) -->
+<section id="lanternsSection">
+  <h2 class="section-title">🏮 Akash Deep – Release Your Wish</h2>
+  <p class="subtitle">Send prayers of wellness and dreams into the cosmic universe through floating glowing lanterns.</p>
+
+  <div class="wish-card">
+    <div class="form-group">
+      <label for="senderName">Your Name / Family Name</label>
+      <input type="text" id="senderName" class="form-control" placeholder="e.g. Aditya & Family" maxlength="40">
+    </div>
+
+    <div class="form-group">
+      <label for="wishMessage">Your Diwali Wish or Prayer</label>
+      <textarea id="wishMessage" class="form-control" rows="3" placeholder="May every household be blessed with health, peace, and abundance..."></textarea>
+    </div>
+
+    <button class="btn-gold" id="btnReleaseLantern" style="width:100%; margin: 10px 0 0 0;">
+      🏮 Release Glowing Lantern to the Sky
+    </button>
+    <p id="wishReleaseStatus" style="font-size:13px; color:#ffcf56; margin-top:10px;"></p>
+  </div>
+</section>
+
+<!-- SECTION 7: SURPRISE ENVELOPE GREETING -->
+<section id="envelopeSection">
+  <h2 class="section-title">💌 A Personal Diwali Surprise</h2>
+  <p class="subtitle">A special sealed festive letter has arrived for you. Tap the royal envelope to break the seal.</p>
+
+  <div class="envelope-container">
+    <div class="envelope-wrapper" id="envelopeIcon" title="Click to open letter">
+      ✉️
+    </div>
+    <p style="font-size:13px; color:#ffcf56; font-weight:600;">Tap the envelope to open</p>
+
+    <!-- Revealed Letter -->
+    <div class="parchment-letter" id="parchmentLetter">
+      <div class="letter-title">शुभ दीपावली – A Letter of Gratitude & Love</div>
+      <div class="letter-body">
+        Dearest Family, Mentors, and Friends,
+        <br><br>
+        On this auspicious evening of Diwali, as millions of diyas brighten our skies, I send my heartfelt wishes and respect to you and your loved ones.
+        <br><br>
+        May Lord Ganesha dissolve all obstacles from your journey, and may Goddess Mahalakshmi illuminate your life with radiant health, enduring wealth, and profound serenity. May our bonds of affection grow deeper with every passing year.
+        <br><br>
+        Thank you for being a cherished light in my life!
+        <br><br>
+        Warmest regards and celebrations,
+      </div>
+      <div class="letter-signature">Aditya Singh ❤️</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: DIWALI REFLECTIONS & BLESSINGS -->
+<section id="thoughtsSection">
+  <h2 class="section-title">✨ Sacred Festival Thoughts</h2>
+  <p class="subtitle">Timeless wisdom celebrating the triumph of light, virtue, and togetherness.</p>
+
+  <div class="thoughts-grid">
+    <div class="thought-card">
+      <h3>"The Inner Diya"</h3>
+      <p>True Diwali begins when we ignite compassion in our hearts, dispelling the darkness of ego, grievance, and despair in others.</p>
+    </div>
+    <div class="thought-card">
+      <h3>"The Power of Togetherness"</h3>
+      <p>A single diya lights a corner, but hundreds coming together turn the darkest Amavasya night into a dazzling ocean of light.</p>
+    </div>
+    <div class="thought-card">
+      <h3>"Prosperity with Dharma"</h3>
+      <p>May wealth always be accompanied by righteousness, humility, and generosity to uplift the community around us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-credit">✨ Designed & Crafted with Devotion by Aditya Singh ❤️ ✨</div>
+  <div class="footer-sub">Shubh Deepawali 2026 • May Peace, Light & Prosperity Prevail Across the Universe</div>
+</footer>
+
+<!-- COMPLETE ZERO-GLITCH JAVASCRIPT ENGINE -->
+<script>
+/**
+ * PURE WEB AUDIO SYNTHESIZER
+ * Zero external MP3 downloads. Works offline and is 100% bug-free on GitHub Pages / Mobile.
+ */
+class DiwaliAudioEngine {
+  constructor() {
+    this.ctx = null;
+    this.isDroneActive = false;
+    this.droneGain = null;
+    this.droneOscillators = [];
+  }
+
+  init() {
+    if (!this.ctx) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      this.ctx = new AudioCtx();
+    }
+    if (this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+  }
+
+  // Realistic Brass Temple Bell with multiple acoustic harmonics
+  playTempleBell() {
+    this.init();
+    const now = this.ctx.currentTime;
+    // Harmonic frequencies typical of Indian temple bells
+    const bellHarmonics = [587.33, 1174.66, 1760.00, 2349.32, 2936.65];
+
+    bellHarmonics.forEach((freq, idx) => {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+
+      osc.type = idx === 0 ? 'sine' : 'triangle';
+      osc.frequency.setValueAtTime(freq, now);
+
+      const amp = idx === 0 ? 0.35 : (0.15 / (idx + 1));
+      gain.gain.setValueAtTime(amp, now);
+      gain.gain.exponentialRampToValueAtTime(0.00001, now + 3.2);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 3.2);
+    });
+  }
+
+  // Pure musical tone for Diya Lighting
+  playDiyaChime(frequency) {
+    this.init();
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(frequency, now);
+    osc.frequency.exponentialRampToValueAtTime(frequency * 1.5, now + 0.35);
+
+    gain.gain.setValueAtTime(0.25, now);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.6);
+
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+
+    osc.start(now);
+    osc.stop(now + 0.6);
+  }
+
+  // Procedural Fireworks Cracker Audio (Pops, Booms, Crackles)
+  playFireworkSound(type = 'pop') {
+    this.init();
+    const now = this.ctx.currentTime;
+
+    if (type === 'pop' || type === 'boom') {
+      // Low boom
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(140, now);
+      osc.frequency.exponentialRampToValueAtTime(30, now + 0.4);
+
+      gain.gain.setValueAtTime(0.3, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.4);
+    }
+
+    // High sparkle noise burst
+    const bufferSize = this.ctx.sampleRate * 0.25;
+    const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      data[i] = Math.random() * 2 - 1;
+    }
+
+    const noise = this.ctx.createBufferSource();
+    noise.buffer = buffer;
+
+    const filter = this.ctx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.setValueAtTime(1800, now);
+    filter.Q.setValueAtTime(3, now);
+
+    const noiseGain = this.ctx.createGain();
+    noiseGain.gain.setValueAtTime(0.18, now);
+    noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.25);
+
+    noise.connect(filter);
+    filter.connect(noiseGain);
+    noiseGain.connect(this.ctx.destination);
+
+    noise.start(now);
+    noise.stop(now + 0.25);
+  }
+
+  // Meditative Tanpura Sa-Pa (D-A-D) Chord Drone
+  toggleTanpuraDrone() {
+    this.init();
+    const now = this.ctx.currentTime;
+
+    if (this.isDroneActive) {
+      if (this.droneGain) {
+        this.droneGain.gain.linearRampToValueAtTime(0.0001, now + 0.6);
+        setTimeout(() => {
+          this.droneOscillators.forEach(o => {
+            try { o.stop(); } catch(e) {}
+          });
+          this.droneOscillators = [];
+        }, 600);
+      }
+      this.isDroneActive = false;
+      return false;
+    } else {
+      this.droneGain = this.ctx.createGain();
+      this.droneGain.gain.setValueAtTime(0.0001, now);
+      this.droneGain.gain.linearRampToValueAtTime(0.09, now + 1.5);
+      this.droneGain.connect(this.ctx.destination);
+
+      // Notes: D3, A3, D4
+      const notes = [146.83, 220.00, 293.66];
+      this.droneOscillators = notes.map(freq => {
+        const osc = this.ctx.createOscillator();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+        osc.connect(this.droneGain);
+        osc.start();
+        return osc;
+      });
+
+      this.isDroneActive = true;
+      return true;
+    }
+  }
+}
+
+const audio = new DiwaliAudioEngine();
+
+// Safe DOM initialization
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Global user interaction unblocks audio
+  document.body.addEventListener('click', () => {
+    audio.init();
+  }, { once: true });
+
+  // 1. Audio Toggle Button
+  const musicToggle = document.getElementById('musicToggle');
+  musicToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isPlaying = audio.toggleTanpuraDrone();
+    musicToggle.innerText = isPlaying ? "🔇 Peaceful Tanpura OFF" : "🎵 Peaceful Tanpura ON";
+    musicToggle.style.background = isPlaying ? "rgba(255, 157, 0, 0.9)" : "rgba(18, 6, 26, 0.85)";
+    musicToggle.style.color = isPlaying ? "#3b1202" : "var(--gold)";
+  });
+
+  // 2. Temple Gate 3D Door Open & Auto-Scroll
+  const templeGate = document.getElementById('templeGate');
+  const btnEnterMandir = document.getElementById('btnEnterMandir');
+  const gateStatusText = document.getElementById('gateStatusText');
+  const garbhagriha = document.getElementById('garbhagriha');
+
+  btnEnterMandir.addEventListener('click', () => {
+    templeGate.classList.add('doors-open');
+    audio.playTempleBell();
+    gateStatusText.innerText = "🌟 Sanctum Doors Opened! Welcome to Garbhagriha...";
+    
+    // Smooth scroll down to Sanctum
+    setTimeout(() => {
+      garbhagriha.scrollIntoView({ behavior: 'smooth' });
+    }, 550);
+  });
+
+  // 3. Aarti Parikrama, Bell, and Flower Petals
+  const aartiTrack = document.getElementById('aartiTrack');
+  const btnPerformAarti = document.getElementById('btnPerformAarti');
+  const btnRingBell = document.getElementById('btnRingBell');
+  const btnShowerFlowers = document.getElementById('btnShowerFlowers');
+  const aartiStatus = document.getElementById('aartiStatus');
+
+  btnPerformAarti.addEventListener('click', () => {
+    aartiTrack.classList.add('active-aarti');
+    audio.playTempleBell();
+    aartiStatus.innerText = "🪔 Aarti Parikrama in progress... ॐ जय जगदीश हरे! 🔔";
+    triggerFlowerShower();
+  });
+
+  btnRingBell.addEventListener('click', () => {
+    audio.playTempleBell();
+    aartiStatus.innerText = "🔔 Sacred Temple Bell Rung! Negative energies dissipated.";
+  });
+
+  btnShowerFlowers.addEventListener('click', () => {
+    audio.playDiyaChime(880);
+    triggerFlowerShower();
+    aartiStatus.innerText = "🌸 Divine Pushpa Vrishti offered to deities!";
+  });
+
+  function triggerFlowerShower() {
+    const petals = ['🌸', '🌺', '🌼', '🏵️', '🪷'];
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'flower-petal';
+      p.innerText = petals[Math.floor(Math.random() * petals.length)];
+      p.style.left = (Math.random() * 95) + 'vw';
+      p.style.fontSize = (18 + Math.random() * 18) + 'px';
+      p.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+      p.style.animationDelay = (Math.random() * 0.5) + 's';
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 4800);
+    }
+  }
+
+  // 4. 7 Sacred Diyas Lighting with Musical Scale & Confetti
+  const diyaCards = document.querySelectorAll('.diya-card');
+  const diyaCounter = document.getElementById('diyaCounter');
+  const diyaStatusMessage = document.getElementById('diyaStatusMessage');
+
+  diyaCards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('lit');
+      const tone = parseFloat(card.getAttribute('data-tone'));
+
+      if (card.classList.contains('lit')) {
+        audio.playDiyaChime(tone);
+      }
+
+      const totalLit = document.querySelectorAll('.diya-card.lit').length;
+      diyaCounter.innerText = `${totalLit} of 7 Diyas Glowing`;
+
+      if (totalLit === 7) {
+        diyaStatusMessage.innerText = "🌟 All 7 Sacred Diyas are lit! May your life be illuminated with eternal peace and wealth! 🌟";
+        launchConfettiExplosion();
+      } else {
+        diyaStatusMessage.innerText = `✨ ${totalLit} Diya(s) shining bright! Keep lighting the path!`;
+      }
+    });
+  });
+
+  function launchConfettiExplosion() {
+    audio.playTempleBell();
+    const colors = ['#ffd700', '#ff5722', '#e91e63', '#00e676', '#00b0ff', '#ffffff'];
+    for (let i = 0; i < 80; i++) {
+      const c = document.createElement('div');
+      c.className = 'confetti-piece';
+      c.style.background = colors[Math.floor(Math.random() * colors.length)];
+      c.style.width = (6 + Math.random() * 8) + 'px';
+      c.style.height = c.style.width;
+      c.style.left = '50vw';
+      c.style.top = '50vh';
+      const tx = (Math.random() - 0.5) * window.innerWidth * 0.9 + 'px';
+      const ty = (Math.random() - 0.5) * window.innerHeight * 0.9 + 'px';
+      c.style.setProperty('--tx', tx);
+      c.style.setProperty('--ty', ty);
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 2000);
+    }
+  }
+  // 5. Digital Fireworks Sky Engine (HTML5 Canvas)
+  initFireworksCanvas();
+
+  // 6. 8-Fold Radial Symmetry Rangoli Canvas Engine
+  initRangoliStudio();
+
+  // 7. Sky Lantern Wish Release
+  const btnReleaseLantern = document.getElementById('btnReleaseLantern');
+  const senderNameInput = document.getElementById('senderName');
+  const wishMessageInput = document.getElementById('wishMessage');
+  const wishReleaseStatus = document.getElementById('wishReleaseStatus');
+
+  btnReleaseLantern.addEventListener('click', () => {
+    const sender = senderNameInput.value.trim() || "Devotee";
+    const msg = wishMessageInput.value.trim();
+
+    if (!msg) {
+      alert("Please write a festive wish or prayer first ❤️");
+      return;
+    }
+
+    audio.playDiyaChime(783.99);
+    wishReleaseStatus.innerText = `🏮 ${sender}'s wish has been released into the night sky!`;
+    wishMessageInput.value = "";
+
+    // Spawn 2 floating lanterns
+    for (let i = 0; i < 2; i++) {
+      const lantern = document.createElement('div');
+      lantern.className = 'floating-lantern';
+      lantern.innerText = '🏮';
+      lantern.style.left = (15 + Math.random() * 70) + '%';
+      lantern.style.animationDuration = (6 + Math.random() * 3) + 's';
+      document.body.appendChild(lantern);
+      setTimeout(() => lantern.remove(), 9000);
+    }
+  });
+
+  // 8. Royal Envelope Flip Open
+  const envelopeIcon = document.getElementById('envelopeIcon');
+  const parchmentLetter = document.getElementById('parchmentLetter');
+
+  envelopeIcon.addEventListener('click', () => {
+    audio.playDiyaChime(880);
+    envelopeIcon.innerText = '💌';
+    parchmentLetter.style.display = 'block';
+  });
+
+});
+/**
+ * DIGITAL FIREWORKS ENGINE
+ */
+function initFireworksCanvas() {
+  const canvas = document.getElementById('fireworksCanvas');
+  const ctx = canvas.getContext('2d');
+  let selectedMode = 'rocket';
+
+  function resize() {
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Switcher Toolbar
+  const btns = document.querySelectorAll('.cracker-btn');
+  btns.forEach(b => {
+    b.addEventListener('click', () => {
+      btns.forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      selectedMode = b.getAttribute('data-type');
+    });
+  });
+  let particles = [];
+
+  class Particle {
+    constructor(x, y, color, vx, vy, life, size = 3) {
+      this.x = x;
+      this.y = y;
+      this.color = color;
+      this.vx = vx;
+      this.vy = vy;
+      this.life = life;
+      this.maxLife = life;
+      this.size = size;
+      this.gravity = 0.05;
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.vy += this.gravity;
+      this.life--;
+    }
+    draw(context) {
+      const alpha = Math.max(0, this.life / this.maxLife);
+      context.save();
+      context.globalAlpha = alpha;
+      context.fillStyle = this.color;
+      context.shadowBlur = 10;
+      context.shadowColor = this.color;
+      context.beginPath();
+      context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      context.fill();
+      context.restore();
+    }
+  }
+
+  function launchFirework(x, y) {
+    audio.playFireworkSound(selectedMode === 'rocket' ? 'boom' : 'pop');
+    const colors = ['#ff3b30', '#ff9500', '#ffd60a', '#34c759', '#00c7be', '#af52de', '#ffffff'];
+    const chosenColor = colors[Math.floor(Math.random() * colors.length)];
+
+    if (selectedMode === 'rocket') {
+      const count = 55;
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 / count) * i;
+        const speed = 2 + Math.random() * 4.5;
+        particles.push(new Particle(x, y, chosenColor, Math.cos(angle) * speed, Math.sin(angle) * speed, 45 + Math.random() * 20));
+      }
+    } else if (selectedMode === 'anaar') {
+      for (let i = 0; i < 45; i++) {
+        const vx = (Math.random() - 0.5) * 4;
+        const vy = -(3 + Math.random() * 6);
+        particles.push(new Particle(x, y + 20, '#ffd700', vx, vy, 40 + Math.random() * 25, 2.5));
+      }
+    } else if (selectedMode === 'chakri') {
+      for (let i = 0; i < 40; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 1.5 + Math.random() * 3.5;
+        particles.push(new Particle(x, y, '#ff007f', Math.cos(angle) * speed, Math.sin(angle) * speed, 35, 3));
+      }
+    } else { // sparkler
+      for (let i = 0; i < 25; i++) {
+        const vx = (Math.random() - 0.5) * 5;
+        const vy = (Math.random() - 0.5) * 5;
+        particles.push(new Particle(x, y, '#ffe600', vx, vy, 30, 2));
+      }
+    }
+  }
+
+  function handleInteraction(e) {
+    const rect = canvas.getBoundingClientRect();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+    launchFirework(x, y);
+  }
+
+  canvas.addEventListener('click', handleInteraction);
+  canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    handleInteraction(e);
+  }, { passive: false });
+
+  // Animation Loop
+  function animate() {
+    ctx.fillStyle = 'rgba(6, 1, 10, 0.2)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      particles[i].update();
+      particles[i].draw(ctx);
+      if (particles[i].life <= 0) {
+        particles.splice(i, 1);
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+/**
+ 8-FOLD RADIAL SYMMETRY RANGOLI STUDIO
+ */
+function initRangoliStudio() {
+  const canvas = document.getElementById('rangoliCanvas');
+  const ctx = canvas.getContext('2d');
+  let currentColor = '#e91e63';
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  function resizeRangoli() {
+    const size = canvas.parentElement.clientWidth;
+    canvas.width = size;
+    canvas.height = size;
+    clearBoard();
+  }
+
+  function clearBoard() {
+    ctx.fillStyle = '#15091e';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // Draw guide center point
+    ctx.fillStyle = 'rgba(255, 207, 86, 0.4)';
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2, 4, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  resizeRangoli();
+  window.addEventListener('resize', resizeRangoli);
+
+  // Color selection
+  const dots = document.querySelectorAll('.color-dot');
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+      currentColor = dot.getAttribute('data-color');
+    });
+  });
+
+  // 8-Fold Radial Symmetry Drawing Function
+  function drawSymmetricLine(x1, y1, x2, y2) {
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    const symmetry = 8;
+    const angleStep = (Math.PI * 2) / symmetry;
+
+    ctx.save();
+    ctx.strokeStyle = currentColor;
+    ctx.lineWidth = 3.5;
+    ctx.lineCap = 'round';
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = currentColor;
+
+    for (let i = 0; i < symmetry; i++) {
+      ctx.translate(cx, cy);
+      ctx.rotate(angleStep);
+      ctx.translate(-cx, -cy);
+
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+
+      // Mirror reflection across line
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.scale(1, -1);
+      ctx.translate(-cx, -cy);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+      ctx.restore();
+    }
+    ctx.restore();
+  }
+
+  function startDraw(e) {
+    isDrawing = true;
+    const rect = canvas.getBoundingClientRect();
+    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+    const cy = e.touches ? e.touches[0].clientY : e.clientY;
+    lastX = cx - rect.left;
+    lastY = cy - rect.top;
+  }
+
+  function moveDraw(e) {
+    if (!isDrawing) return;
+    const rect = canvas.getBoundingClientRect();
+    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+    const cy = e.touches ? e.touches[0].clientY : e.clientY;
+    const currentX = cx - rect.left;
+    const currentY = cy - rect.top;
+
+    drawSymmetricLine(lastX, lastY, currentX, currentY);
+    lastX = currentX;
+    lastY = currentY;
+  }
+
+  function stopDraw() {
+    isDrawing = false;
+  }
+
+  canvas.addEventListener('mousedown', startDraw);
+  canvas.addEventListener('mousemove', moveDraw);
+  window.addEventListener('mouseup', stopDraw);
+
+  canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    startDraw(e);
+  }, { passive: false });
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    moveDraw(e);
+  }, { passive: false });
+  window.addEventListener('touchend', stopDraw);
+
+  // Clear Canvas Button
+  document.getElementById('btnClearRangoli').addEventListener('click', () => {
+    clearBoard();
+  });
+
+  // Download Rangoli as PNG
+  document.getElementById('btnDownloadRangoli').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.download = 'My_Diwali_Rangoli_2026.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+}
+</script>
+</body>
+</html>
+```
+
+  
