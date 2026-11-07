@@ -3,506 +3,871 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#100419">
-<title>Shubh Deepawali 2026 | Aditya Singh</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>✨ Shubh Deepawali 2026 | Aditya Singh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
 
 <style>
 :root {
- --gold:#ffcf56;
- --orange:#ff9200;
- --bg:#0c0414;
- --card:rgba(255,255,255,.055);
- --border:rgba(255,207,86,.3);
+  --gold: #ffcf56;
+  --gold-glow: #ff9d00;
+  --deep-bg: #0c0414;
+  --sanctum-bg: radial-gradient(circle at center, #3d141e 0%, #15061b 85%);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 207, 86, 0.25);
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- font-family:Poppins,sans-serif;background:var(--bg);
- color:white;overflow-x:hidden;
-}
-button{font-family:inherit;cursor:pointer}
-section{padding:80px 18px;text-align:center;position:relative}
-.section-title{
- font-family:'Rozha One',serif;color:var(--gold);
- font-size:clamp(28px,6vw,43px);
- text-shadow:0 0 20px #ff910066;margin-bottom:12px
-}
-.subtitle{color:#f5d8b5;line-height:1.9;
- max-width:680px;margin:0 auto 25px;font-size:14px}
-.gold-btn{
- border:0;border-radius:50px;padding:13px 25px;
- background:linear-gradient(135deg,#ffe28b,#ff9200);
- color:#381000;font-weight:800;margin:6px;
- box-shadow:0 5px 22px #ff910055;
- transition:.3s
-}
-.gold-btn:hover{transform:translateY(-3px)}
-.outline-btn{
- background:#ffffff0c;color:var(--gold);
- border:1px solid var(--border);box-shadow:none
-}
-#musicToggle{
- position:fixed;right:14px;bottom:16px;z-index:1000;
- border:1px solid var(--gold);border-radius:30px;
- padding:12px 17px;background:#180b24ed;
- color:var(--gold);font-weight:700;backdrop-filter:blur(10px)
-}
-.hero{
- min-height:100svh;display:flex;flex-direction:column;
- justify-content:center;align-items:center;overflow:hidden;
- background:radial-gradient(circle at 50% 35%,#641c32,#18051e 70%,#08020e);
-}
-.hero:before,.hero:after{
- content:"✦";position:absolute;color:#ffd46c;
- animation:twinkle 3s infinite alternate;
- font-size:35px;top:12%;left:12%
-}
-.hero:after{top:24%;left:auto;right:12%;animation-delay:1s}
-@keyframes twinkle{to{opacity:.2;transform:scale(.6)}}
-.banner{
- border:1px solid var(--border);background:#ffcf5610;
- border-radius:30px;padding:9px 18px;color:#ffe3ae;
- font-size:12px;letter-spacing:1px;margin-bottom:18px
-}
-.hero h1{
- font:clamp(60px,15vw,115px)/1.1 'Great Vibes',cursive;
- color:var(--gold);text-shadow:0 0 35px #ff9200;
-}
-.hero-sub{font-family:'Rozha One',serif;letter-spacing:3px;
- color:#ffe8c2;font-size:14px;margin:12px}
-.gate{
- width:min(300px,85vw);height:270px;
- position:relative;perspective:1200px;margin:20px auto;
-}
-.arch{
- position:absolute;inset:0;border:6px solid #d99d41;
- border-radius:150px 150px 0 0;
- background:radial-gradient(circle,#ffedaf,#ff9800 50%,#4a111e);
- display:grid;place-content:center;color:#4a1700;
- box-shadow:0 0 45px #ff9800aa
-}
-.arch span{font-size:70px}
-.door{
- position:absolute;top:0;width:50%;height:100%;z-index:3;
- background:linear-gradient(130deg,#45130e,#9a351c,#47120a);
- border:4px solid #e5b04d;
- display:grid;place-items:center;
- transition:transform 1.6s cubic-bezier(.2,.8,.2,1);
- box-shadow:inset 0 0 25px #000
-}
-.left{left:0;border-radius:150px 0 0 0;transform-origin:left}
-.right{right:0;border-radius:0 150px 0 0;transform-origin:right}
-.left span,.right span{font-size:35px;color:var(--gold)}
-.gate.open .left{transform:rotateY(-125deg)}
-.gate.open .right{transform:rotateY(125deg)}
-.gate-handle{position:absolute;width:17px;height:17px;
- border-radius:50%;background:var(--gold);top:58%}
-.left .gate-handle{right:9px}.right .gate-handle{left:9px}
 
-.sanctum{
- background:radial-gradient(circle,#421525,#18071e 75%);
- border-block:1px solid var(--border)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
-.deities{display:flex;justify-content:center;gap:35px;
- flex-wrap:wrap;margin:35px auto}
-.deity{
- width:150px;height:175px;display:grid;place-content:center;
- border-radius:90px 90px 30px 30px;
- background:linear-gradient(145deg,#9c4528,#441025);
- border:3px solid var(--gold);
- box-shadow:0 0 30px #ffcf5644;
-}
-.deity .emoji{font-size:75px;filter:drop-shadow(0 0 15px gold)}
-.deity strong{color:var(--gold);font-family:'Rozha One';margin-top:8px}
-.aarti-ring{
- width:180px;height:180px;border:2px dashed #ffcf5688;
- border-radius:50%;margin:25px auto;position:relative;
- display:grid;place-items:center
-}
-.aarti-ring.active{animation:rotate 7s linear infinite}
-.aarti-ring span{font-size:48px}
-@keyframes rotate{to{transform:rotate(360deg)}}
 
-.diyas{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));
- gap:15px;max-width:850px;margin:35px auto
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--deep-bg);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
 }
-.diya{
- padding:20px 8px;background:var(--card);
- border:1px solid var(--border);border-radius:18px;
- transition:.3s
-}
-.diya .flame{font-size:45px;filter:grayscale(1);opacity:.4}
-.diya.lit{background:#ff920020;box-shadow:0 0 22px #ff920044}
-.diya.lit .flame{
- filter:none;opacity:1;animation:flicker 1s infinite alternate;
- text-shadow:0 0 20px orange
-}
-@keyframes flicker{to{transform:scale(1.2) rotate(4deg)}}
-.diya strong{display:block;color:var(--gold);font-size:14px}
-.diya small{color:#d5b69b;font-size:11px}
-.counter{color:var(--gold);margin-top:15px}
 
-.crackers{background:radial-gradient(circle,#1d0a30,#08020e)}
-.canvas-box{
- max-width:850px;height:390px;margin:25px auto;
- border:1px solid var(--border);border-radius:20px;
- overflow:hidden;background:#06010c
+html {
+  scroll-behavior: smooth;
 }
-#fireworks{width:100%;height:100%;display:block;touch-action:pan-y}
-.rangoli-box,.wish-box,.letter-box{
- max-width:720px;margin:auto;padding:25px 18px;
- border:1px solid var(--border);border-radius:22px;
- background:var(--card)
+
+/* Universal Typography & Sections */
+section {
+  padding: 85px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
-.rangoli-canvas{
- width:min(340px,85vw);height:min(340px,85vw);
- display:block;margin:20px auto;border:3px dashed var(--gold);
- border-radius:50%;background:#16091e;touch-action:none
+
+h2.section-title {
+  font-family: 'Rozha One', serif;
+  font-size: clamp(28px, 6vw, 42px);
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(255, 157, 0, 0.6);
+  margin-bottom: 12px;
 }
-.palette{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.color{
- width:32px;height:32px;border-radius:50%;
- border:2px solid white;cursor:pointer
+
+p.subtitle {
+  font-size: clamp(14px, 3.5vw, 17px);
+  color: #f7ddb8;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  line-height: 1.8;
+  font-weight: 300;
 }
-.color.selected{outline:3px solid var(--gold);transform:scale(1.2)}
-input,textarea{
- width:100%;padding:14px;border-radius:12px;
- background:#1a0a26;color:white;border:1px solid var(--border);
- font:14px Poppins;margin:9px 0 16px
+
+/* Festive Buttons */
+.btn-gold {
+  border: 0;
+  padding: 13px 26px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ffd768, #ff8c00);
+  color: #380f00;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 157, 0, 0.45);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 6px;
 }
-textarea{resize:vertical;min-height:90px}
-label{display:block;text-align:left;color:var(--gold);font-size:13px}
-.letter{display:none;background:#fff5df;color:#542015;
- padding:28px;border-radius:15px;text-align:left;margin-top:20px;
- line-height:1.9;animation:appear .7s}
-.letter.show{display:block}
-@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-.envelope{font-size:85px;cursor:pointer;display:inline-block;margin:20px}
-.thoughts{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:18px;max-width:950px;margin:30px auto
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 157, 0, 0.65);
 }
-.thought{
- text-align:left;padding:25px;border:1px solid var(--border);
- border-radius:18px;background:var(--card)
+
+.btn-gold:active {
+  transform: scale(0.96);
 }
-.thought h3{color:var(--gold);font-family:'Rozha One';margin-bottom:10px}
-.thought p{font-size:13px;color:#f5d8b5;line-height:1.8}
-.lantern{
- position:fixed;bottom:-80px;z-index:999;
- font-size:42px;pointer-events:none;
- animation:float 9s linear forwards
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gold);
+  border: 1px solid var(--card-border);
+  box-shadow: none;
 }
-@keyframes float{to{transform:translateY(-120vh) rotate(15deg);opacity:0}}
-footer{padding:45px 15px;background:#07020a;text-align:center;
- border-top:1px solid var(--border)}
-footer strong{color:var(--gold)}
-footer p{font-size:12px;color:#d1b199;margin-top:8px}
-#toast{
- position:fixed;top:20px;left:50%;transform:translateX(-50%);
- background:#3c1b28;border:1px solid var(--gold);
- padding:12px 22px;border-radius:30px;z-index:2000;
- display:none;color:#ffe6ac;font-size:13px
+.btn-outline:hover {
+  background: rgba(255, 215, 104, 0.2);
 }
-@media(max-width:500px){
- section{padding:65px 15px}
- .canvas-box{height:300px}
- .deity{width:130px;height:155px}
+
+/* Floating Audio Switch */
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 12px 20px;
+  border-radius: 40px;
+  background: rgba(18, 6, 26, 0.85);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 13px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 157, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50% 30%, #561a29 0%, #100418 80%);
+  overflow: hidden;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.shloka-banner {
+  font-size: clamp(12px, 3.2vw, 15px);
+  color: #ffdeb3;
+  letter-spacing: 2px;
+  background: rgba(255, 207, 86, 0.08);
+  border: 1px solid rgba(255, 207, 86, 0.25);
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(62px, 15vw, 115px);
+  color: var(--gold);
+  text-shadow: 0 0 35px rgba(255, 145, 0, 0.8), 0 0 10px #ffebb3;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  font-family: 'Rozha One', serif;
+  letter-spacing: 4px;
+  font-size: clamp(13px, 3.8vw, 18px);
+  color: #ffe8c2;
+  margin-bottom: 25px;
+}
+
+/* 3D DUAL SPLIT TEMPLE DOORS */
+.temple-gate-container {
+  width: min(300px, 85vw);
+  height: 270px;
+  perspective: 1200px;
+  margin: 15px auto 25px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.temple-arch-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 140px 140px 0 0;
+  background: radial-gradient(circle, #ffe699 0%, #ff8c00 45%, #3c0c16 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 45px rgba(255, 157, 0, 0.8);
+  border: 6px solid #d49838;
+}
+
+.inner-deity-peek {
+  font-size: 58px;
+  filter: drop-shadow(0 0 15px #fff);
+  animation: gentlePulse 2s infinite ease-in-out;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.door-leaf {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(135deg, #5a1910, #882b17 50%, #46110a);
+  border: 4px solid #e8a746;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 5px 25px rgba(0,0,0,0.7);
+  z-index: 5;
+}
+
+.door-left {
+  left: 0;
+  border-radius: 140px 0 0 0;
+  transform-origin: left center;
+}
+
+.door-right {
+  right: 0;
+  border-radius: 0 140px 0 0;
+  transform-origin: right center;
+}
+
+.door-handle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff, #ffae19);
+  box-shadow: 0 0 12px #ffba26;
+  position: absolute;
+  top: 55%;
+}
+
+.door-left .door-handle { right: 12px; }
+.door-right .door-handle { left: 12px; }
+
+.door-pattern {
+  font-size: 32px;
+  color: #ffcf56;
+  opacity: 0.85;
+}
+
+.temple-gate-container.doors-open .door-left {
+  transform: rotateY(-125deg);
+}
+.temple-gate-container.doors-open .door-right {
+  transform: rotateY(125deg);
+}
+
+/* SECTION 2: GARBHAGRIHA & AARTI */
+.garbhagriha {
+  background: var(--sanctum-bg);
+  border-top: 2px solid var(--card-border);
+  border-bottom: 2px solid var(--card-border);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sanctum-frame {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.mandir-halo {
+  position: absolute;
+  width: min(340px, 85vw);
+  height: min(340px, 85vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 207, 86, 0.35) 0%, rgba(255, 140, 0, 0.15) 50%, transparent 70%);
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(25px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.deities-stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(15px, 6vw, 50px);
+  margin: 30px auto 45px auto;
+  min-height: 220px;
+}
+
+.deity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.deity-svg-wrapper {
+  width: clamp(125px, 32vw, 175px);
+  height: clamp(125px, 32vw, 175px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #5b1a26, #210714);
+  border: 4px solid #ffcf56;
+  box-shadow: 0 0 30px rgba(255, 207, 86, 0.5), inset 0 0 20px rgba(255, 157, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.deity-svg-wrapper:hover {
+  transform: scale(1.04);
+}
+
+.deity-name {
+  font-family: 'Rozha One', serif;
+  font-size: clamp(18px, 4.5vw, 22px);
+  color: var(--gold);
+  margin-top: 14px;
+  text-shadow: 0 0 10px rgba(255, 157, 0, 0.8);
+}
+
+.deity-title {
+  font-size: 13px;
+  color: #ffdbaa;
+  letter-spacing: 1px;
+}
+
+/* Rotating Aarti Thali */
+.aarti-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(340px, 90vw);
+  height: min(340px, 90vw);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 207, 86, 0.35);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.aarti-thali {
+  position: absolute;
+  top: -24px;
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 16px #ff9e00);
+}
+
+.aarti-track.active-aarti {
+  animation: aartiRotate 7s linear infinite;
+}
+
+@keyframes aartiRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.shloka-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--card-border);
+  padding: 16px 22px;
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 650px;
+  font-size: clamp(13px, 3.2vw, 15px);
+  color: #ffeac7;
+  line-height: 1.9;
+}
+
+/* SECTION 3: 7 SACRED DIYAS */
+.diyas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 35px auto 25px auto;
+}
+
+.diya-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 20px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diya-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.diya-icon {
+  font-size: 46px;
+  filter: grayscale(1) opacity(0.45);
+  transition: all 0.4s ease;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.diya-card.lit .diya-icon {
+  filter: grayscale(0) opacity(1) drop-shadow(0 0 20px #ff9400) drop-shadow(0 0 40px #ff6600);
+  transform: scale(1.18);
+  animation: flameFlicker 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes flameFlicker {
+  0% { transform: scale(1.15) rotate(-1deg); }
+  50% { transform: scale(1.22) rotate(1.5deg); }
+  100% { transform: scale(1.18) rotate(-1deg); }
+}
+
+.diya-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffdeb3;
+  margin-bottom: 3px;
+}
+
+.diya-meaning {
+  font-size: 11px;
+  color: #d1b59c;
+}
+
+.diya-card.lit {
+  background: rgba(255, 157, 0, 0.12);
+  border-color: #ffa41c;
+  box-shadow: 0 0 20px rgba(255, 157, 0, 0.35);
+}
+
+.diya-counter-badge {
+  display: inline-block;
+  background: rgba(255, 207, 86, 0.15);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* SECTION 4: DIGITAL CRACKERS CANVAS */
+.crackers-section {
+  background: radial-gradient(circle at 50% 50%, #1c092a 0%, #08020e 80%);
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  height: 440px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--card-border);
+  box-shadow: 0 0 35px rgba(255, 140, 0, 0.25);
+  background: #06010a;
+}
+
+#fireworksCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+
+.canvas-hint {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ffcf56;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.cracker-toolbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cracker-btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.07);
+  color: #f7ddb8;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cracker-btn.active, .cracker-btn:hover {
+  background: var(--gold);
+  color: #3b1102;
+  box-shadow: 0 0 15px rgba(255, 207, 86, 0.6);
+  border-color: var(--gold);
+}
+
+/* SECTION 5: RANGOLI STUDIO */
+.rangoli-container {
+  max-width: 820px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 24px 16px;
+}
+
+.rangoli-canvas-box {
+  width: min(340px, 85vw);
+  height: min(340px, 85vw);
+  margin: 15px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px dashed #ffc642;
+  box-shadow: 0 0 30px rgba(255, 178, 45, 0.4);
+  background: #15091e;
+  position: relative;
+}
+
+#rangoliCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+
+.palette-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.color-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-dot.active {
+  transform: scale(1.28);
+  box-shadow: 0 0 15px #fff;
+}
+
+/* SECTION 6: SKY LANTERNS (AKASH DEEP) */
+.wish-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 30px 22px;
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: #1c0a27;
+  border: 1px solid rgba(255, 207, 86, 0.35);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ffa81c;
+  box-shadow: 0 0 12px rgba(255, 168, 28, 0.4);
+}
+
+.floating-lantern {
+  position: fixed;
+  bottom: -90px;
+  font-size: 42px;
+  pointer-events: none;
+  z-index: 999;
+  filter: drop-shadow(0 0 20px #ff9e00);
+  animation: floatSky 8s linear forwards;
+}
+
+@keyframes floatSky {
+  0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 1; }
+  80% { opacity: 0.9; }
+  100% { transform: translateY(-130vh) scale(1.3) rotate(20deg); opacity: 0; }
+}
+
+/* SECTION 7: SURPRISE ENVELOPE */
+.envelope-container {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 35px 20px;
+  backdrop-filter: blur(10px);
+}
+
+.envelope-wrapper {
+  font-size: 85px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.envelope-wrapper:hover {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.parchment-letter {
+  display: none;
+  background: #fff6e8;
+  color: #531c12;
+  padding: 32px 24px;
+  border-radius: 18px;
+  margin-top: 25px;
+  text-align: left;
+  border: 2px solid #e7bb73;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: unfoldLetter 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes unfoldLetter {
+  from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.letter-title {
+  font-family: 'Rozha One', serif;
+  font-size: 24px;
+  color: #7b1f13;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #d19567;
+  padding-bottom: 8px;
+}
+
+.letter-body {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #4e1a10;
+}
+
+.letter-signature {
+  margin-top: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #8c2314;
+}
+
+/* SECTION 8: FESTIVE CARDS GRID */
+.thoughts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.thought-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.thought-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.thought-card h3 {
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: 'Rozha One', serif;
+}
+
+.thought-card p {
+  font-size: 13.5px;
+  color: #ffdbaa;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  background: #07020a;
+  border-top: 1px solid rgba(255, 207, 86, 0.2);
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-credit {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.footer-sub {
+  font-size: 13px;
+  color: #d1b199;
+  margin-top: 6px;
+}
+
+/* Raining Flower Petal Style */
+.flower-petal {
+  position: fixed;
+  top: -40px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: petalFall linear forwards;
+}
+
+@keyframes petalFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(115vh) rotate(360deg); opacity: 0; }
+}
+
+/* Fullscreen Firework Confetti Particle */
+.confetti-piece {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  border-radius: 50%;
+  animation: confettiExplode 1.8s ease-out forwards;
+}
+
+@keyframes confettiExplode {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
 }
 </style>
 </head>
 
 <body>
 
-<div id="toast"></div>
-<button id="musicToggle">🎵 Music OFF</button>
+<!-- Background Ambient Music Switch -->
+<button id="musicToggle">🎵 Peaceful Tanpura ON</button>
 
+<!-- SECTION 1: HERO & 3D TEMPLE ENTRANCE -->
 <section class="hero" id="home">
- <div class="banner">॥ ॐ श्री गणेशाय नमः ॥ ॐ महालक्ष्म्यै नमः ॥</div>
- <h1>Happy Diwali</h1>
- <div class="hero-sub">THE FESTIVAL OF DIVINE LIGHT</div>
- <p class="subtitle">May your life shine with happiness, peace, love and endless prosperity.</p>
+  <div class="shloka-banner">॥ ॐ श्री गणेशाय नमः ॥ ॐ महालक्ष्म्यै नमः ॥</div>
+  <h1>Happy Diwali</h1>
+  <div class="hero-subtitle">✨ THE CELEBRATION OF DIVINE LIGHTS ✨</div>
+  <p class="subtitle">Enter the sacred realm of happiness, wisdom, and eternal prosperity with loved ones.</p>
 
- <div class="gate" id="gate">
-  <div class="arch"><span>🛕</span><b>शुभ दीपावली</b></div>
-  <div class="door left"><span>卐</span><i class="gate-handle"></i></div>
-  <div class="door right"><span>🪷</span><i class="gate-handle"></i></div>
- </div>
- <button class="gold-btn" id="enter">🚪 Open Temple Sanctum</button>
- <p id="gateText" style="color:var(--gold);font-size:12px;margin-top:10px">Open the doors to begin your journey</p>
-</section>
-
-<section class="sanctum" id="mandir">
- <h2 class="section-title">श्री दिव्य गर्भगृह दर्शन</h2>
- <p class="subtitle">May Lord Ganesha remove every obstacle and Goddess Lakshmi bless every home.</p>
- <div class="deities">
-  <div class="deity"><span class="emoji">🙏</span><strong>श्री गणेश जी</strong></div>
-  <div class="deity"><span class="emoji">🪷</span><strong>माँ लक्ष्मी जी</strong></div>
- </div>
- <div class="aarti-ring" id="aarti"><span>🪔</span></div>
- <button class="gold-btn" id="aartiBtn">🪔 Begin Digital Aarti</button>
- <div class="subtitle" style="margin-top:20px">
-  ॐ जय लक्ष्मी माता, मैया जय लक्ष्मी माता।<br>
-  तुमको निशदिन सेवत, हरि विष्णु विधाता॥
- </div>
-</section>
-
-<section id="diyas">
- <h2 class="section-title">Seven Sacred Diyas</h2>
- <p class="subtitle">Light each diya and fill the world with a beautiful blessing.</p>
- <div class="diyas" id="diyaGrid"></div>
- <div class="counter" id="counter">0 / 7 Diyas Illuminated ✨</div>
-</section>
-
-<section class="crackers" id="fireworksSection">
- <h2 class="section-title">✨ Magical Fireworks</h2>
- <p class="subtitle">Tap anywhere in the sky to create your own digital fireworks!</p>
- <div class="canvas-box"><canvas id="fireworks"></canvas></div>
- <button class="gold-btn" id="autoFireworks">🎆 Auto Fireworks ON</button>
- <button class="gold-btn outline-btn" id="clearFireworks">Clear Sky</button>
-</section>
-
-<section id="rangoli">
- <h2 class="section-title">🎨 Rangoli Art Studio</h2>
- <p class="subtitle">Create a colourful rangoli and decorate your virtual home.</p>
- <div class="rangoli-box">
-  <div class="palette" id="palette"></div>
-  <canvas id="rangoliCanvas" class="rangoli-canvas" width="600" height="600"></canvas>
-  <button class="gold-btn" id="design">✨ Add Flower Design</button>
-  <button class="gold-btn outline-btn" id="clearRangoli">Clear</button>
-  <button class="gold-btn outline-btn" id="downloadRangoli">⬇ Download Rangoli</button>
- </div>
-</section>
-
-<section id="wishes">
- <h2 class="section-title">🏮 Wish Lantern</h2>
- <p class="subtitle">Write a beautiful wish and send it into the magical night sky.</p>
- <div class="wish-box">
-  <label>Your beautiful wish</label>
-  <textarea id="wishText" maxlength="180" placeholder="May everyone stay happy and healthy..."></textarea>
-  <button class="gold-btn" id="sendWish">🏮 Release My Wish</button>
-  <p id="wishResult" style="color:var(--gold);margin-top:15px;font-size:13px"></p>
- </div>
-</section>
-
-<section id="letterSection">
- <h2 class="section-title">💌 A Surprise For You</h2>
- <p class="subtitle">There is a little message waiting inside this envelope.</p>
- <div class="letter-box">
-  <div class="envelope" id="envelope">💌</div>
-  <p style="color:var(--gold)">Tap the envelope to open your surprise</p>
-  <div class="letter" id="letter">
-   <h2 style="font-family:'Rozha One';margin-bottom:15px">Dear Family & Friends ❤️</h2>
-   <p>May this Diwali bring endless smiles, beautiful memories and countless reasons to celebrate.</p>
-   <p>May your home always be filled with love, laughter, good health and peace.</p>
-   <p>May every new beginning bring hope and every dream find its way to reality.</p>
-   <p style="margin-top:20px;font-family:'Great Vibes';font-size:32px">With warm wishes,</p>
-   <strong style="color:#8d3218">Aditya Singh ✨</strong>
+  <!-- 3D Dual Split Temple Gate -->
+  <div class="temple-gate-container" id="templeGate">
+    <div class="temple-arch-bg">
+      <div class="inner-deity-peek">🛕</div>
+      <span style="font-size:13px; color:#421100; font-weight:700; margin-top:8px;">श्री गणेशाय & श्री महालक्ष्मी</span>
+    </div>
+    <div class="door-leaf door-left">
+      <div class="door-pattern">卐</div>
+      <div class="door-handle"></div>
+    </div>
+    <div class="door-leaf door-right">
+      <div class="door-pattern">🪷</div>
+      <div class="door-handle"></div>
+    </div>
   </div>
- </div>
+
+  <div>
+    <button class="btn-gold" id="btnEnterMandir">
+      <span>🚪 Open Temple Sanctum</span>
+    </button>
+  </div>
+  <p id="gateStatusText" style="font-size:13px; color:#ffcf56; margin-top:10px;">Touch above to enter the sanctum...</p>
 </section>
 
-<section id="thoughts">
- <h2 class="section-title">Beautiful Diwali Thoughts</h2>
- <p class="subtitle">A little light can make even the darkest night beautiful.</p>
- <div class="thoughts">
-  <div class="thought"><h3>🪔 The Light of Hope</h3><p>May every diya remind us that hope is stronger than darkness and kindness makes life brighter.</p></div>
-  <div class="thought"><h3>❤️ The Gift of Family</h3><p>The greatest celebration is being surrounded by people who make our lives meaningful.</p></div>
-  <div class="thought"><h3>✨ A New Beginning</h3><p>Let go of yesterday's worries and welcome tomorrow with courage, gratitude and positivity.</p></div>
-  <div class="thought"><h3>🌸 Spread Happiness</h3><p>Real celebration begins when we share our happiness, help others and spread smiles.</p></div>
- </div>
-</section>
+<!-- SECTION 2: GARBHAGRIHA & INTERACTIVE AARTI -->
+<section class="garbhagriha" id="garbhagriha">
+  <div class="sanctum-frame">
+    <h2 class="section-title">श्री दिव्य गर्भगृह दर्शन</h2>
+    <p class="subtitle">Seek blessings from Lord Vighnaharta Ganesha and Goddess Mahalakshmi.</p>
 
-<section id="blessings">
- <h2 class="section-title">🌺 Divine Blessings</h2>
- <p class="subtitle">May the blessings of Maa Lakshmi and Lord Ganesha always remain with you.</p>
- <div class="thoughts">
-  <div class="thought"><h3>🙏 सुखम्</h3><p>May your family always stay happy, healthy and united.</p></div>
-  <div class="thought"><h3>🌸 समृद्धि</h3><p>May your home be filled with prosperity and abundance.</p></div>
-  <div class="thought"><h3>🕊️ शांति</h3><p>May peace, love and positivity guide every step of your journey.</p></div>
- </div>
-</section>
+    <div class="mandir-halo"></div>
 
-<section>
- <h2 class="section-title">Share the Light ❤️</h2>
- <p class="subtitle">Spread the joy of Diwali with your family and friends.</p>
- <button class="gold-btn" id="share">🔗 Share This Celebration</button>
- <button class="gold-btn outline-btn" id="saveMemory">💾 Save My Celebration</button>
- <p id="memoryStatus" style="color:var(--gold);font-size:12px;margin-top:10px"></p>
-</section>
+    <!-- Sacred Deities Artwork -->
+    <div class="deities-stage">
+      
+      <!-- Lord Ganesha -->
+      <div class="deity-card">
+        <div class="deity-svg-wrapper">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+            <!-- Crown -->
+            <polygon points="50,12 63,32 37,32" fill="#ffd700" stroke="#ff8c00" stroke-width="2"/>
+            <circle cx="50" cy="18" r="4" fill="#ff4500"/>
+            <!-- Head & Ears -->
+            <ellipse cx="50" cy="48" rx="20" ry="18" fill="#ffcc80"/>
+            <path d="M 30 42 Q 16 38 24 55 Q 32 60 33 50 Z" fill="#ffa726"/>
+            <path d="M 70 42 Q 84 38 76 55 Q 68 60 67 50 Z" fill="#ffa726"/>
+            <!-- Trunk -->
+            <path d="M 50 48 Q 45 68 56 74 Q 63 76 65 70" fill="none" stroke="#e65100" stroke-width="6" stroke-linecap="round"/>
+            <!-- Tilak -->
+            <path d="M 47 38 Q 50 43 53 38" stroke="#d50000" stroke-width="2" fill="none"/>
+            <line x1="50" y1="36" x2="50" y2="44" stroke="#ffeb3b" stroke-width="2"/>
+            <circle cx="43" cy="42" r="2.5" fill="#212121"/>
+            <circle cx="57" cy="42" r="2.5" fill="#212121"/>
+            <!-- Modak / Laddu in hand -->
+            <circle cx="70" cy="74" r="5" fill="#ffd700"/>
+          </svg>
+        </div>
+        <div class="deity-name">भगवान श्री गणेश</div>
+        <div class="deity-title">विघ्नहर्ता एवं बुद्धि प्रदाता</div>
+      </div>
 
-<footer>
- <div style="font-size:35px">🪔 ✨ 🪷</div>
- <strong>Made with ❤️ by Aditya Singh</strong>
- <p>Wishing You and Your Family a Very Happy Diwali 2026</p>
- <p>May the light of happiness shine forever.</p>
-</footer>
-
-<script>
-/* UTILITIES */
-const $=id=>document.getElementById(id);
-function toast(message){
- const t=$('toast');t.textContent=message;t.style.display='block';
- clearTimeout(window.toastTimer);
- window.toastTimer=setTimeout(()=>t.style.display='none',2500);
-}
-
-/* TEMPLE DOORS */
-$('enter').addEventListener('click',()=>{
- $('gate').classList.add('open');
- $('gateText').textContent='Welcome to the divine sanctum ✨';
- $('enter').textContent='🛕 Temple Opened';
- setTimeout(()=>$('mandir').scrollIntoView({behavior:'smooth'}),1100);
-});
-
-/* AARTI */
-$('aartiBtn').addEventListener('click',()=>{
- const ring=$('aarti');
- ring.classList.toggle('active');
- $('aartiBtn').textContent=ring.classList.contains('active')?'⏸ Pause Aarti':'🪔 Begin Digital Aarti';
- toast(ring.classList.contains('active')?'शुभ दीपावली 🙏':'Aarti paused');
-});
-
-/* DIYAS */
-const diyaData=[
- ['Hope','New beginnings'],['Love','Togetherness'],['Peace','Inner calm'],
- ['Health','Good health'],['Joy','Endless smiles'],['Wisdom','Knowledge'],['Prosperity','Abundance']
-];
-const saved=JSON.parse(localStorage.getItem('diwaliDiyas')||'[]');
-const grid=$('diyaGrid');
-diyaData.forEach((d,i)=>{
- const card=document.createElement('button');
- card.className='diya'+(saved.includes(i)?' lit':'');
- card.innerHTML=`<span class="flame">🪔</span><strong>${d[0]}</strong><small>${d[1]}</small>`;
- card.addEventListener('click',()=>{
-  card.classList.toggle('lit');
-  const current=[...grid.children].map((c,n)=>c.classList.contains('lit')?n:-1).filter(n=>n>=0);
-  localStorage.setItem('diwaliDiyas',JSON.stringify(current));
-  $('counter').textContent=current.length+' / 7 Diyas Illuminated ✨';
-  toast(card.classList.contains('lit')?'A new diya is glowing! 🪔':'Diya switched off');
- });
- grid.appendChild(card);
-});
-$('counter').textContent=grid.querySelectorAll('.lit').length+' / 7 Diyas Illuminated ✨';
-
-/* ORIGINAL TANPURA-STYLE AUDIO USING WEB AUDIO */
-let audioCtx=null,oscillators=[],master=null,musicOn=false;
-function startMusic(){
- const AudioContext=window.AudioContext||window.webkitAudioContext;
- if(!AudioContext){toast('Audio is not supported in this browser');return}
- if(!audioCtx)audioCtx=new AudioContext();
- audioCtx.resume().then(()=>{
-  if(musicOn)return;
-  master=audioCtx.createGain();
-  master.gain.value=.035;
-  master.connect(audioCtx.destination);
-  [110,165,220,330].forEach((freq,i)=>{
-   const osc=audioCtx.createOscillator();
-   const gain=audioCtx.createGain();
-   osc.type=i===0?'sine':'triangle';
-   osc.frequency.value=freq;
-   gain.gain.value=i===0?.55:.12;
-   osc.connect(gain);gain.connect(master);osc.start();
-   oscillators.push(osc);
-  });
-  musicOn=true;
-  $('musicToggle').textContent='🎵 Music ON';
- });
-}
-function stopMusic(){
- if(!musicOn)return;
- oscillators.forEach(o=>{try{o.stop()}catch(e){}});
- oscillators=[];musicOn=false;
- if(master){master.disconnect();master=null}
- $('musicToggle').textContent='🎵 Music OFF';
-}
-$('musicToggle').addEventListener('click',()=>{
- if(musicOn)stopMusic();else startMusic();
-});
-
-/* FIREWORKS CANVAS */
-const fc=$('fireworks'),ctx=fc.getContext('2d');
-let particles=[],autoFire=true;
-function resizeFireworks(){
- const r=fc.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);
- fc.width=Math.round(r.width*dpr);fc.height=Math.round(r.height*dpr);
- ctx.setTransform(dpr,0,0,dpr,0,0);
-}
-window.addEventListener('resize',resizeFireworks);resizeFireworks();
-function burst(x,y){
- const colors=['#ffcf56','#ff5733','#ff4fa3','#6be7ff','#c59cff','#8aff9c'];
- for(let i=0;i<65;i++){
-  const a=Math.random()*Math.PI*2,s=1+Math.random()*5;
-  particles.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,
-   life:1,color:colors[Math.floor(Math.random()*colors.length)]});
- }
-}
-fc.addEventListener('pointerdown',e=>{
- const r=fc.getBoundingClientRect();burst(e.clientX-r.left,e.clientY-r.top);
-});
-let lastBurst=0;
-function animateFireworks(time){
- const w=fc.clientWidth,h=fc.clientHeight;
- ctx.clearRect(0,0,w,h);
- if(autoFire&&time-lastBurst>900){
-  burst(Math.random()*w,Math.random()*h*.65);lastBurst=time;
- }
- particles=particles.filter(p=>p.life>.02);
- particles.forEach(p=>{
-  p.x+=p.vx;p.y+=p.vy;p.vx*=.985;p.vy=p.vy*.985+.035;p.life-=.012;
-  ctx.globalAlpha=Math.max(0,p.life);
-  ctx.fillStyle=p.color;ctx.beginPath();
-  ctx.arc(p.x,p.y,2.2,0,Math.PI*2);ctx.fill();
- });
- ctx.globalAlpha=1;
- requestAnimationFrame(animateFireworks);
-}
-requestAnimationFrame(animateFireworks);
-$('autoFireworks').onclick=()=>{
- autoFire=!autoFire;
- $('autoFireworks').textContent=autoFire?'🎆 Auto Fireworks ON':'🎆 Auto Fireworks OFF';
-};
-$('clearFireworks').onclick=()=>{particles=[];ctx.clearRect(0,0,fc.clientWidth,fc.clientHeight)};
-
-/* RANGOLI STUDIO */
-const rc=$('rangoliCanvas'),rctx=rc.getContext('2d');
-let color='#ffcf56',drawing=false,lastPoint=null;
-const colors=['#ffcf56','#ff4b4b','#ff70c5','#69dbff','#83ed87','#c69bff','#ffffff','#ff922e'];
-colors.forEach(c=>{
- const b=document.createElement('button');b.className='color'+(c===color?' selected':'');
- b.style.background=c;b.setAttribute('aria-label','Select '+c);
- b.onclick=()=>{
-  color=c;
-  document.querySelectorAll('.color').forEach(x=>x.classList.remove('selected'));
-  b.classList.add('selected');
- };
- $('palette').appendChild(b);
-});
-function point(e){
- const r=rc.getBoundingClientRect();
- return {x:(e.clientX-r.left)*rc.width/r.width,y:(e.clientY-r.top)*rc.height/r.height};
-}
-rc.addEventListener('pointerdown',e=>{
- drawing=true;lastPoint=point(e);rc.setPointerCapture(e.pointerId);
-});
-rc.addEventListener('pointermove',e=>{
- if(!drawing)return;
- const p=point(e);
- rctx.strokeStyle=color;rctx.lineWidth=8;rctx.lineCap='round';
- rctx.beginPath();rctx.moveTo(lastPoint.x,lastPoint.y);
- rctx.lineTo(p.x,p.y);rctx.stroke();lastPoint=p;
-});
-function stopDraw(){drawing=false;lastPoint=null}
-rc.addEventListener('pointerup',stopDraw);
-rc.addEventListener('pointercancel',stopDraw);
-$('design').onclick=()=>{
- rctx.save();rctx.translate(300,300);
- for(let i=0;i<12;i++){
-  rctx.rotate(Math.PI/6);
-  rctx.fillStyle=colors[i%colors.length]
+      <!-- Goddess Lakshmi -->
+      <div class="deity-card">
+        <div class="deity-svg-wrapper">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+            <!-- Mukut / Crown -->
+            <polygon points="50,10 65,28 35,28" fill="#ffd700" stroke="#ff8c00" stroke-width="2"/>
+            <circle cx="50" cy="16" r="3" fill="#e91e63"/>
+            <!-- Face -->
+            <circle cx="50" cy="42" r="16" fill="#ffe0b2"/>
+            <circle cx="44" cy="40" r="2" fill="#212
