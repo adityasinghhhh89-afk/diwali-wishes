@@ -1,11 +1,10 @@
 
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Diwali | Aditya Singh</title>
+<title>Divine Diwali | Aditya Singh</title>
 
 <style>
 * {
@@ -15,121 +14,270 @@
 }
 
 body {
-  background: #080706;
-  color: #fff;
+  background: #090604;
+  color: #fff2d5;
   font-family: Georgia, serif;
-  text-align: center;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --gold: #edc477;
+  --orange: #c66b22;
+  --dark: #120b06;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--gold);
+  background: linear-gradient(135deg,#f8d994,#b7792b);
+  color: #241204;
+  padding: 13px 23px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #d99a42;
 }
 
 .hero {
   min-height: 100vh;
-  padding: 25px 18px;
+  padding: 25px 15px 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
   background:
-  linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.88)),
-  url("https://images.unsplash.com/photo-1604608672516-1b7f5f5f5f5f?auto=format&fit=crop&w=1500&q=80");
-  background-size: cover;
-  background-position: center;
+  radial-gradient(ellipse at center,#623516 0%,#1d0d05 48%,#080503 100%);
 }
 
-.top {
-  color: #e8bd68;
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #b88646;
+  pointer-events: none;
+}
+
+.tag {
+  color: var(--gold);
   letter-spacing: 5px;
-  font-size: 13px;
+  font-size: 11px;
   margin-bottom: 25px;
 }
 
 h1 {
-  font-size: clamp(42px, 9vw, 85px);
-  color: #f5d58b;
-  text-shadow: 0 0 25px #b87922;
-  margin: 20px 0;
+  font-size: clamp(42px,9vw,82px);
+  color: #ffdc91;
+  text-shadow: 0 0 25px #d98a2c;
+  margin: 15px 0;
 }
 
-.subtitle {
-  color: #f2d9a3;
-  font-size: 20px;
-  line-height: 1.7;
-}
-
-.lamp {
-  font-size: 75px;
-  margin: 20px;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from { filter: drop-shadow(0 0 5px orange); }
-  to { filter: drop-shadow(0 0 25px gold); }
-}
-
-.card {
-  max-width: 700px;
-  width: 100%;
-  margin: 25px auto;
-  padding: 30px 20px;
-  border: 1px solid #b98b3f;
-  border-radius: 18px;
-  background: rgba(35,23,10,.75);
-  box-shadow: 0 0 25px #6e491b33;
-}
-
-h2 {
-  color: #f3ce80;
-  margin-bottom: 18px;
-  font-size: 27px;
-}
-
-p {
-  color: #eee0c4;
-  line-height: 1.8;
+.hero p {
+  line-height: 1.9;
+  color: #f5dfb8;
   font-size: 17px;
 }
 
-button {
-  background: linear-gradient(135deg,#f8dc9a,#b77a25);
-  color: #170d03;
-  border: none;
-  padding: 13px 22px;
-  margin: 9px 5px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
+.temple {
+  width: min(100%,430px);
+  margin: 20px auto;
+  padding: 22px 15px 28px;
+  position: relative;
+  border: 2px solid #b88646;
+  border-radius: 160px 160px 12px 12px;
+  background:
+  linear-gradient(180deg,#572b10,#180c06);
+  box-shadow: 0 0 45px #d08a2d55,
+  inset 0 0 25px #e0a64a22;
 }
 
-button:hover {
-  transform: scale(1.04);
+.temple-roof {
+  color: #f3cc7b;
+  font-size: 65px;
+  line-height: 1;
 }
 
-#surprise {
-  display: none;
-  margin-top: 20px;
-  color: #ffdf91;
+.deities {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  align-items: center;
+  margin: 18px 0;
 }
 
-footer {
-  padding: 30px 15px;
-  color: #c69d59;
-  letter-spacing: 2px;
+.deity {
+  width: 125px;
+  height: 145px;
+  border-radius: 65px 65px 8px 8px;
+  background: linear-gradient(#e4ad50,#642d13);
+  border: 2px solid #e9c47e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 22px #ffb74766;
+}
+
+.deity span {
+  font-size: 65px;
+}
+
+.deity small {
+  color: #ffe2a0;
+  margin-top: 7px;
+}
+
+.temple-bottom {
+  color: #f5d18c;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.section {
+  padding: 75px 18px;
+  text-align: center;
+  background: #100905;
+}
+
+.section:nth-child(even) {
+  background: #1c0f08;
+}
+
+.heading {
+  color: var(--gold);
+  font-size: clamp(27px,5vw,39px);
+  margin-bottom: 17px;
+}
+
+.subheading {
+  color: #d8b887;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.panel {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 28px 20px;
+  border: 1px solid #8e652f;
+  border-radius: 18px;
+  background: linear-gradient(145deg,#2b170b,#100905);
+  box-shadow: 0 10px 35px #0008;
+}
+
+.thali-area {
+  margin: 25px auto;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thali {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 7px double #e6b85d;
+  background: radial-gradient(circle,#e7b657,#9b4c12 70%);
+  box-shadow: 0 0 30px #edb84b66,
+  inset 0 0 20px #fff0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 1.1s ease-in-out;
+}
+
+.thali:before {
+  content: "✿  ✦  ✿";
+  position: absolute;
+  color: #fff0c0;
+  font-size: 21px;
+}
+
+.thali-center {
+  font-size: 75px;
+  z-index: 1;
+  filter: drop-shadow(0 0 12px #ffde72);
+}
+
+.thali.ghoom {
+  transform: rotate(360deg);
+}
+
+.message {
+  max-width: 760px;
+  margin: auto;
+  padding: 35px 22px;
+  border: 1px solid #986b37;
+  border-radius: 15px;
+  background: #211209;
+  line-height: 2;
+  color: #f6dfb9;
+  font-size: 17px;
+}
+
+.quote {
+  max-width: 750px;
+  margin: 18px auto;
+  padding: 23px;
+  border-left: 3px solid #e9b95e;
+  background: #281609;
+  border-radius: 7px;
+  line-height: 1.9;
+  color: #f8dfb6;
+}
+
+.quote strong {
+  color: #f0c477;
+}
+
+.music-status {
+  color: #e5bd7a;
+  margin: 15px;
   font-size: 13px;
 }
 
-.stars {
-  color: #f5d58b;
-  font-size: 22px;
-  letter-spacing: 10px;
+.diya {
+  font-size: 28px;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  from {filter:drop-shadow(0 0 4px orange);}
+  to {filter:drop-shadow(0 0 16px gold);}
+}
+
+footer {
+  padding: 55px 15px;
+  text-align: center;
+  background: #080503;
+  border-top: 1px solid #a77937;
+  line-height: 2;
+}
+
+footer strong {
+  color: #f0c477;
+  letter-spacing: 3px;
+  font-size: 19px;
 }
 
 canvas {
   position: fixed;
   inset: 0;
+  z-index: 10;
   pointer-events: none;
-  z-index: 5;
 }
 </style>
 </head>
@@ -138,184 +286,339 @@ canvas {
 
 <canvas id="fireworks"></canvas>
 
+<!-- HERO -->
 <section class="hero">
 
-  <div class="top">✨ FESTIVAL OF LIGHTS ✨</div>
+  <div class="tag">✦ THE FESTIVAL OF LIGHTS ✦</div>
 
-  <div class="lamp">🪔</div>
+  <div class="diya">🪔</div>
 
   <h1>Happy Diwali</h1>
 
-  <div class="subtitle">
+  <p>
     शुभ दीपावली 2026<br>
-    A Festival of Light, Happiness & Prosperity
-  </div>
+    A Celebration of Light, Love & Blessings
+  </p>
 
-  <div class="stars">✦ ✧ ✦</div>
+  <!-- TEMPLE -->
+  <div class="temple">
 
-  <div class="card">
-    <h2>🙏 दिवाली की हार्दिक शुभकामनाएँ</h2>
+    <div class="temple-roof">ॐ</div>
 
-    <p>
-      माँ लक्ष्मी की कृपा आपके जीवन में सुख,
-      शांति और समृद्धि लेकर आए।
-      भगवान गणेश आपके हर कार्य को सफल बनाएं।
-    </p>
+    <div class="deities">
 
-    <br>
+      <div class="deity">
+        <span>🐘</span>
+        <small>श्री गणेश</small>
+      </div>
 
-    <p>
-      May this Diwali illuminate your life
-      with happiness, success, peace and endless blessings.
-    </p>
-  </div>
+      <div class="deity">
+        <span>🪷</span>
+        <small>माँ लक्ष्मी</small>
+      </div>
 
-  <div class="card">
-    <h2>🎁 A Special Surprise</h2>
-
-    <p>There is a little Diwali message for you.</p>
-
-    <button onclick="showSurprise()">
-      Open Your Surprise ✨
-    </button>
-
-    <div id="surprise">
-      May your home shine with happiness
-      and your heart glow with positivity.
-      <br><br>
-      Stay Blessed! ❤️
     </div>
+
+    <div class="temple-bottom">
+      शुभम् भवतु
+    </div>
+
   </div>
 
-  <div class="card">
-    <h2>🎵 Divine Aarti</h2>
+  <button onclick="startExperience()">
+    ✨ Enter Divine Celebration
+  </button>
 
-    <p>Choose your favourite Aarti</p>
+  <p style="font-size:12px;margin-top:15px">
+    May divine blessings illuminate your home.
+  </p>
 
-    <button onclick="playAarti('lakshmi')">
-      🪔 Lakshmi Aarti
-    </button>
+</section>
 
-    <button onclick="playAarti('ganesh')">
-      🙏 Ganesh Aarti
-    </button>
 
-    <button onclick="stopAarti()">
-      ⏸ Stop Music
-    </button>
+<!-- MUSIC -->
+<section class="section">
 
-    <p id="musicStatus" style="font-size:13px;margin-top:12px">
-      Music is off. Choose an Aarti to play.
-    </p>
+  <h2 class="heading">🎵 Divine Music</h2>
+
+  <p class="subheading">
+    Let peaceful instrumental music fill your celebration.
+  </p>
+
+  <button id="musicBtn" onclick="toggleMusic()">
+    ▶ Start Background Music
+  </button>
+
+  <p class="music-status" id="musicStatus">
+    Music is currently off.
+  </p>
+
+</section>
+
+
+<!-- AARTI THALI -->
+<section class="section">
+
+  <h2 class="heading">🙏 Digital Aarti</h2>
+
+  <p class="subheading">
+    श्रद्धा और प्रेम के साथ भगवान की आरती करें।
+    <br>
+    Offer your prayers with devotion.
+  </p>
+
+  <div class="thali-area">
+
+    <div class="thali" id="thali">
+      <div class="thali-center">🪔</div>
+    </div>
+
+  </div>
+
+  <button onclick="rotateThali()">
+    🪔 Rotate Aarti Thali
+  </button>
+
+  <p class="music-status" id="thaliStatus">
+    आपकी श्रद्धा ही सबसे सुंदर भेंट है। ❤️
+  </p>
+
+</section>
+
+
+<!-- FAMILY WISHES -->
+<section class="section">
+
+  <h2 class="heading">❤️ For My Family</h2>
+
+  <p class="subheading">
+    A little message for the most special people.
+  </p>
+
+  <div class="message">
+
+    <div class="diya">🪔</div>
+
+    <h2 style="color:#f0c477;margin:15px">
+      मेरा प्यारा परिवार
+    </h2>
+
+    घर में खुशियों की रोशनी हमेशा बनी रहे,
+    अपनों का साथ और प्यार कभी कम न हो।
+    माँ लक्ष्मी की कृपा और गणेश जी का आशीर्वाद
+    हर कदम पर आप सभी के साथ रहे।
+
+    <br><br>
+
+    May our family always stay united,
+    healthy, happy and blessed.
+    May every Diwali bring us more beautiful
+    memories and endless reasons to smile.
+
+    <br><br>
+
+    <strong style="color:#f0c477">
+      Happy Diwali to my beautiful family! ❤️
+    </strong>
+
   </div>
 
 </section>
 
+
+<!-- QUOTES -->
+<section class="section">
+
+  <h2 class="heading">✨ Diwali Thoughts</h2>
+
+  <div class="quote">
+    "जहाँ अपनों का प्यार होता है,
+    वहीं हर दिन दीपावली का त्योहार होता है।"
+  </div>
+
+  <div class="quote">
+    "May your life shine brighter than a thousand diyas."
+  </div>
+
+  <div class="quote">
+    "रिश्तों में मिठास, दिलों में प्यार,
+    यही है दीपावली का असली उपहार।"
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
-  ✨ MADE WITH LOVE ✨
-  <br><br>
-  Designed & Developed by
+
+  <div class="diya">🪔</div>
+
+  <p style="color:#d9b77c">
+    Wishing You Peace, Prosperity & Happiness
+  </p>
+
   <br>
+
   <strong>ADITYA SINGH</strong>
-  <br><br>
-  © 2026 | Happy Diwali
+
+  <p style="font-size:12px;color:#c49c62">
+    Designed & Developed by Aditya Singh
+  </p>
+
+  <p style="font-size:11px;color:#8f7551;margin-top:18px">
+    © 2026 | Divine Diwali Celebration
+  </p>
+
 </footer>
 
-<audio id="audio" controls style="display:none"></audio>
 
 <script>
 
-// Surprise message
-function showSurprise() {
-  document.getElementById("surprise").style.display = "block";
+// BACKGROUND INSTRUMENTAL MUSIC
+let audioContext;
+let musicTimer;
+let musicOn = false;
+let noteIndex = 0;
+
+const notes = [
+  261.63, 329.63, 392.00, 329.63,
+  293.66, 349.23, 440.00, 349.23
+];
+
+function playNote() {
+
+  if (!musicOn || !audioContext) return;
+
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+
+  oscillator.type = "sine";
+  oscillator.frequency.value = notes[noteIndex % notes.length];
+
+  gain.gain.setValueAtTime(0.0001,audioContext.currentTime);
+  gain.gain.linearRampToValueAtTime(0.045,audioContext.currentTime + 0.3);
+  gain.gain.exponentialRampToValueAtTime(0.0001,audioContext.currentTime + 2);
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start();
+  oscillator.stop(audioContext.currentTime + 2.1);
+
+  noteIndex++;
 }
 
-// Add your own Aarti audio URLs here
-const aartis = {
-  lakshmi: "",
-  ganesh: ""
-};
+async function toggleMusic() {
 
-const audio = document.getElementById("audio");
-
-function playAarti(type) {
-  const status = document.getElementById("musicStatus");
-
-  if (!aartis[type]) {
-    status.innerText =
-      "Please add the " + type +
-      " Aarti audio URL in the code first.";
-    return;
+  if (!audioContext) {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
   }
 
-  audio.src = aartis[type];
-  audio.play().then(() => {
-    status.innerText = "Now Playing: " + type + " Aarti";
-  }).catch(() => {
-    status.innerText = "Please tap play to start music.";
+  if (audioContext.state === "suspended") {
+    await audioContext.resume();
+  }
+
+  musicOn = !musicOn;
+
+  const btn = document.getElementById("musicBtn");
+  const status = document.getElementById("musicStatus");
+
+  if (musicOn) {
+    btn.innerText = "⏸ Pause Background Music";
+    status.innerText = "♪ Peaceful instrumental music playing";
+
+    playNote();
+    musicTimer = setInterval(playNote, 1800);
+
+  } else {
+    clearInterval(musicTimer);
+    btn.innerText = "▶ Start Background Music";
+    status.innerText = "Music paused.";
+  }
+}
+
+// ENTER EXPERIENCE
+function startExperience() {
+  document.getElementById("musicBtn").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
   });
+  toggleMusic();
 }
 
-function stopAarti() {
-  audio.pause();
-  audio.currentTime = 0;
-  document.getElementById("musicStatus").innerText =
-    "Aarti stopped.";
+// AARTI THALI
+let rotations = 0;
+
+function rotateThali() {
+
+  rotations += 360;
+
+  const thali = document.getElementById("thali");
+
+  thali.style.transform = "rotate(" + rotations + "deg)";
+
+  document.getElementById("thaliStatus").innerText =
+    "जय श्री गणेश! जय माँ लक्ष्मी! 🙏";
 }
 
-// Fireworks animation
+// FIREWORKS
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
 
-function resize() {
+function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-resize();
-window.addEventListener("resize", resize);
+
+resizeCanvas();
+window.addEventListener("resize",resizeCanvas);
 
 let particles = [];
 
 function burst() {
-  const x = Math.random() * canvas.width;
-  const y = Math.random() * canvas.height * 0.65;
 
-  for (let i = 0; i < 35; i++) {
+  const x = Math.random() * canvas.width;
+  const y = Math.random() * canvas.height * 0.6;
+
+  for(let i=0;i<32;i++) {
+
     const angle = Math.random() * Math.PI * 2;
     const speed = Math.random() * 3 + 1;
 
     particles.push({
-      x, y,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      life: 50,
-      size: Math.random() * 2 + 1
+      x:x,
+      y:y,
+      vx:Math.cos(angle)*speed,
+      vy:Math.sin(angle)*speed,
+      life:55
     });
   }
 }
 
 function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  particles.forEach((p, index) => {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach((p,i)=>{
+
     p.x += p.vx;
     p.y += p.vy;
     p.life--;
 
-    ctx.fillStyle = "rgba(255,200,80," +
-      (p.life / 50) + ")";
+    ctx.fillStyle = "rgba(255,194,80,"+(p.life/55)+")";
 
     ctx.beginPath();
-    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.arc(p.x,p.y,2,0,Math.PI*2);
     ctx.fill();
 
-    if (p.life <= 0) particles.splice(index, 1);
+    if(p.life<=0) particles.splice(i,1);
+
   });
 
   requestAnimationFrame(animate);
 }
 
-setInterval(burst, 1600);
+setInterval(burst,2300);
 animate();
 
 </script>
