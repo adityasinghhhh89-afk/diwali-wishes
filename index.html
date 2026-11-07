@@ -1,1104 +1,465 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#100905">
-<title>Happy Diwali | Aditya Singh</title>
+<meta name="theme-color" content="#09080d">
+<title>Shubh Deepawali | By Aditya Singh</title>
 
 <style>
 :root {
-  --gold: #f6ca78;
-  --gold2: #d99a35;
-  --cream: #fff1d5;
-  --bg: #100905;
-  --panel: #21150e;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
-}
-
-body {
-  background: var(--bg);
-  color: var(--cream);
-  font-family: Georgia, serif;
-  overflow-x: hidden;
-}
-
-button, input, textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-#stars {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background:
-    radial-gradient(ellipse at top, #482916, #1a100a 55%, #080503);
-}
-
-#stars::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(#ffe4aa 1px, transparent 1.5px),
-    radial-gradient(#fff 1px, transparent 1.5px);
-  background-size: 90px 90px, 140px 140px;
-  background-position: 0 0, 40px 50px;
-  opacity: .3;
-  pointer-events: none;
-}
-
-#fireworks {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 50;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(15, 9, 5, .96);
-  border-bottom: 1px solid #b78a493d;
-  backdrop-filter: blur(12px);
-}
-
-.nav {
-  max-width: 1150px;
-  margin: auto;
-  padding: 13px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.brand {
-  color: var(--gold);
-  font-size: 19px;
-  white-space: nowrap;
-  letter-spacing: 2px;
-}
-
-nav {
-  display: flex;
-  gap: 15px;
-}
-
-nav a {
-  color: #f6dfb8;
-  text-decoration: none;
-  font: 12px Arial, sans-serif;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-button {
-  transition: .25s ease;
-}
-
-button:hover {
-  transform: translateY(-2px);
-}
-
-.gold-btn, .ghost-btn, .music-btn {
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-}
-
-.gold-btn {
-  border: 1px solid var(--gold);
-  color: #261508;
-  background: linear-gradient(135deg, #ffe5a6, #d99a35);
-  box-shadow: 0 5px 20px #d99a3530;
-}
-
-.ghost-btn {
-  background: transparent;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-}
-
-.music-btn {
-  background: transparent;
-  border: 1px solid #d99a35;
-  color: var(--gold);
-  font: 12px Arial;
-  padding: 10px 13px;
-  white-space: nowrap;
-}
-
-.hero {
-  min-height: 90vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 65px 18px;
-  position: relative;
-}
-
-.hero-content {
-  max-width: 800px;
-}
-
-.eyebrow, .kicker {
-  color: var(--gold2);
-  font: 11px Arial, sans-serif;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  color: #ffe5a8;
-  font-size: clamp(48px, 10vw, 100px);
-  margin: 25px 0;
-  text-shadow: 0 0 30px #ffbd5260;
-}
-
-.hero p {
-  color: #ead8bd;
-  font-size: 19px;
-  line-height: 1.8;
-  max-width: 650px;
-  margin: auto;
-}
-
-.hero-lamps {
-  font-size: 45px;
-  margin: 20px;
-  letter-spacing: 10px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-section {
-  max-width: 1100px;
-  padding: 75px 18px;
-  margin: auto;
-}
-
-.section-head {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-h2 {
-  font-size: clamp(30px, 5vw, 46px);
-  font-weight: normal;
-  color: #ffe1a1;
-  margin: 12px 0;
-}
-
-.section-head p {
-  color: #d4bea0;
-  line-height: 1.7;
-}
-
-.card {
-  background: linear-gradient(145deg, #291b12, #160e09);
-  border: 1px solid #b9853e55;
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 15px 35px #0005;
-}
-
-.center {
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-/* TEMPLE */
-
-.door-scene {
-  min-height: 420px;
-  background: radial-gradient(ellipse, #68421e, #24150e 65%);
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.temple-glow {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  font-size: 65px;
-  background: radial-gradient(ellipse, #ffe6a3, #a75b1d 35%, #241109 75%);
-}
-
-.temple-glow small {
-  font: 12px Arial;
-  color: #fff1d5;
-  letter-spacing: 3px;
-}
-
-.door-frame {
-  position: relative;
-  width: 260px;
-  height: 350px;
-  padding: 9px;
-  background: #7e4a1e;
-  border: 8px solid #d49a43;
-  border-radius: 130px 130px 5px 5px;
-  z-index: 2;
-  perspective: 1000px;
-}
-
-.door {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-origin: left;
-  transition: transform 1.5s ease;
-  background: repeating-linear-gradient(
-    90deg, #51270f 0 48%, #7a421e 49% 52%
-  );
-  border: 3px solid #e9b95f;
-  border-radius: 110px 110px 0 0;
-  box-shadow: inset 0 0 30px #160800;
-}
-
-.door::before {
-  content: "✺";
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 75px;
-  color: var(--gold);
-}
-
-.door.open {
-  transform: rotateY(-110deg);
-}
-
-.handle {
-  position: absolute;
-  right: 15px;
-  top: 55%;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #ffe2a0;
-  z-index: 3;
-}
-
-.door-controls {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* AARTI */
-
-.aarti-area {
-  text-align: center;
-  margin-top: 18px;
-}
-
-.flame {
-  display: inline-block;
-  font-size: 65px;
-  filter: drop-shadow(0 0 15px orange);
-  animation: flicker 1s infinite alternate;
-}
-
-.flame.spin {
-  animation: rotate 3s linear infinite;
-}
-
-@keyframes flicker {
-  to { transform: scale(1.1); }
-}
-
-@keyframes rotate {
-  to { transform: rotate(360deg); }
-}
-
-/* DIYA */
-
-.diya-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 25px 0;
-}
-
-.diya {
-  font-size: 48px;
-  filter: grayscale(1);
-  opacity: .6;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.diya.lit {
-  filter: drop-shadow(0 0 15px orange);
-  opacity: 1;
-}
-
-.small-note {
-  font: 12px Arial;
-  color: #c4a77f;
-  margin: 15px 0;
-}
-
-/* QUOTES */
-
-.quote {
-  color: #ffe5b1;
-  font-size: 27px;
-  line-height: 1.5;
-  text-align: center;
-  min-height: 110px;
-  display: grid;
-  place-items: center;
-}
-
-.family-text {
-  color: #ead8bd;
-  line-height: 1.9;
-  margin-top: 15px;
-}
-
-/* INPUTS */
-
-input, textarea {
-  width: 100%;
-  background: #100a07;
-  color: white;
-  border: 1px solid #a9775366;
-  border-radius: 12px;
-  padding: 14px;
-  outline: none;
-}
-
-textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-label {
-  display: block;
-  color: var(--gold);
-  font: 13px Arial;
-  margin: 15px 0 8px;
-}
-
-/* RANGOLI */
-
-.rangoli-wrap {
-  display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 20px;
-}
-
-#rangoliCanvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  background: #100a08;
-  border: 1px solid #a9775366;
-  border-radius: 15px;
-  touch-action: none;
-  cursor: crosshair;
-}
-
-.tools {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
-
-.colors {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.color-dot {
-  width: 29px;
-  height: 29px;
-  border-radius: 50%;
-  border: 2px solid white;
-  cursor: pointer;
-}
-
-.color-dot.selected {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-
-/* WISH LANTERN */
-
-.lantern-stage {
-  height: 300px;
-  background: linear-gradient(#120d20, #33203b, #100a08);
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  margin-top: 20px;
-  border: 1px solid #9b7b6344;
-}
-
-.lantern {
-  position: absolute;
-  left: 50%;
-  bottom: -80px;
-  font-size: 60px;
-  opacity: 0;
-  transform: translateX(-50%);
-}
-
-.lantern.fly {
-  animation: fly 6s ease-out forwards;
-}
-
-@keyframes fly {
-  0% { bottom: -80px; opacity: 0; }
-  15% { opacity: 1; }
-  100% {
-    bottom: 350px;
-    opacity: 0;
-    transform: translateX(calc(-50% + 50px)) scale(.5);
-  }
-}
-
-.lantern-message {
-  position: absolute;
-  bottom: 15px;
-  left: 10px;
-  right: 10px;
-  text-align: center;
-  color: #ffe8b5;
-  font-size: 14px;
-}
-
-/* LETTER */
-
-.envelope-area {
-  display: grid;
-  place-items: center;
-  padding: 35px 10px;
-}
-
-.envelope {
-  width: min(320px, 85vw);
-  height: 200px;
-  position: relative;
-  background: #9a5428;
-  border-radius: 7px;
-  cursor: pointer;
-  perspective: 700px;
-}
-
-.letter {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 8px;
-  height: 175px;
-  background: #fff0cc;
-  color: #603719;
-  padding: 17px 12px;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.6;
-  border-radius: 5px;
-  transition: transform .8s;
-  z-index: 1;
-}
-
-.envelope::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #b96d35;
-  clip-path: polygon(0 100%, 0 0, 50% 55%, 100% 0, 100% 100%);
-  z-index: 2;
-}
-
-.envelope::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #d49a53;
-  clip-path: polygon(0 0, 50% 58%, 100% 0);
-  transform-origin: top;
-  transition: transform .8s;
-  z-index: 4;
-}
-
-.envelope.open::before {
-  transform: rotateX(180deg);
-}
-
-.envelope.open .letter {
-  transform: translateY(-115px);
-}
-
-.seal {
-  position: absolute;
-  top: 45%;
-  left: calc(50% - 19px);
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #f0bd5d;
-  color: #663414;
-  display: grid;
-  place-items: center;
-  z-index: 5;
-}
-
-/* BLESSINGS */
-
-.blessings {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.blessing {
-  text-align: center;
-}
-
-.blessing .emoji {
-  font-size: 40px;
-}
-
-.blessing h3 {
-  color: var(--gold);
-  font-weight: normal;
-  margin: 12px 0;
-}
-
-.blessing p {
-  color: #d4bea0;
-  font: 13px/1.7 Arial;
-}
-
-/* FOOTER */
-
-footer {
-  text-align: center;
-  padding: 50px 15px;
-  border-top: 1px solid #a9773533;
-  color: #b89b72;
-}
-
-footer h2 {
-  color: var(--gold);
-}
-
-/* TOAST */
-
-.toast {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 100px);
-  background: #f2d08a;
-  color: #241408;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font: 13px Arial;
-  z-index: 200;
-  transition: .3s;
-  max-width: 90%;
-  text-align: center;
-}
-
-.toast.show {
-  transform: translate(-50%, 0);
-}
-
-/* MOBILE */
-
-@media(max-width: 760px) {
-  nav { display: none; }
-
-  .nav { padding: 12px; }
-
-  .hero { min-height: 78vh; }
-
-  .grid, .rangoli-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .blessings {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 55px 14px;
-  }
-
-  .door-scene {
-    min-height: 390px;
-  }
-
-  .tools {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .tools label:first-child {
-    margin-top: 0;
-  }
-
-  .quote { font-size: 22px; }
-}
-
-@media(prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
-  }
+  --gold:#f6d47a;
+  --gold2:#c99a3b;
+  --dark:#09080d;
+  --panel:#17131d;
+  --cream:#fff4d6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--dark);color:var(--cream);
+  font-family:Georgia,serif;overflow-x:hidden;
+}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+section{padding:75px 20px;scroll-margin-top:65px}
+h1,h2,h3{color:var(--gold)}
+p{line-height:1.8;color:#e5d9c1}
+.gold{color:var(--gold)}
+.muted{color:#b9a98d}
+.btn{
+  border:1px solid var(--gold2);background:linear-gradient(135deg,#f8df98,#b9822d);
+  color:#201506;padding:12px 22px;border-radius:30px;font-weight:bold;
+  transition:.3s;display:inline-block;margin:6px;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 25px #d5a84966}
+.btn.outline{background:transparent;color:var(--gold)}
+.section-title{text-align:center;font-size:clamp(28px,5vw,42px);margin-bottom:12px}
+.section-sub{text-align:center;max-width:650px;margin:0 auto 35px}
+.card{
+  background:linear-gradient(145deg,#211a26,#100e15);
+  border:1px solid #a77e3d55;border-radius:22px;padding:25px;
+  box-shadow:0 12px 40px #0008;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;max-width:1100px;margin:auto}
+input,textarea,select{
+  background:#0d0b11;color:white;border:1px solid #80633a;
+  padding:12px;border-radius:10px;width:100%;margin:8px 0;
+}
+textarea{min-height:100px;resize:vertical}
+nav{
+  position:fixed;top:0;width:100%;z-index:20;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:13px 5%;background:#09080deF;border-bottom:1px solid #c69c4a44;
+}
+nav strong{color:var(--gold);letter-spacing:2px}
+nav a{color:#f4dfb0;text-decoration:none;font-size:13px;margin:0 7px}
+nav .links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at center,#38251b 0%,#17101a 45%,#07070b 100%);
+  padding:100px 20px 50px;
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;width:300px;height:300px;border-radius:50%;
+  background:#d89b35;filter:blur(120px);opacity:.15;
+}
+.hero:before{top:10%;left:5%}.hero:after{bottom:5%;right:5%}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero h1{font-size:clamp(42px,9vw,85px);text-shadow:0 0 30px #e3b45266}
+.hero p{font-size:18px;margin:18px auto;max-width:650px}
+.eyebrow{letter-spacing:5px;color:#e8bd69;font-size:12px;margin-bottom:20px}
+.door-scene{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle,#3c2417,#100d13 65%,#07070b);
+  text-align:center;padding:100px 20px;
+}
+.door{
+  width:min(290px,75vw);height:430px;max-height:65vh;
+  border:9px solid #a87935;border-radius:130px 130px 8px 8px;
+  background:linear-gradient(90deg,#4c2113,#9a5a25,#3a1b11);
+  box-shadow:0 0 55px #d59b3a55,inset 0 0 20px #000;
+  margin:25px auto;display:flex;align-items:center;justify-content:center;
+  font-size:65px;position:relative;transition:1.5s;transform-origin:left;
+}
+.door.open{transform:perspective(900px) rotateY(-100deg);opacity:.1}
+.door .knob{position:absolute;right:23px;top:52%;font-size:24px}
+.mandir{
+  display:none;text-align:center;padding:40px 15px;
+  background:radial-gradient(ellipse,#412a1d,#100d14 65%);
+}
+.mandir.show{display:block;animation:fade .9s}
+.temple-art{font-size:clamp(85px,18vw,150px);margin:20px}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.lamp{font-size:38px;display:inline-block;margin:8px;cursor:pointer;transition:.3s}
+.lamp.lit{filter:drop-shadow(0 0 15px orange);transform:scale(1.15)}
+.diya-area{text-align:center;max-width:900px;margin:auto}
+.diya-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:25px 0}
+.diya{
+  width:75px;height:65px;border-radius:50% 50% 40% 40%;
+  background:linear-gradient(#f6bd59,#8c401c);display:grid;
+  place-items:center;font-size:33px;border:1px solid #e9b85e;
+}
+.diya.lit{filter:drop-shadow(0 0 16px #ff9c29);background:linear-gradient(#ffe4a1,#a64a12)}
+.aarti-flame{font-size:65px;animation:glow 1.4s infinite alternate}
+@keyframes glow{to{filter:drop-shadow(0 0 25px orange);transform:scale(1.08)}}
+.quote{
+  font-size:clamp(20px,4vw,29px);text-align:center;
+  max-width:800px;margin:25px auto;color:#f5d991;font-style:italic;
+}
+.rangoli-wrap{max-width:750px;margin:auto;text-align:center}
+canvas#rangoli{
+  width:100%;max-width:600px;aspect-ratio:1;
+  background:#100d15;border:2px solid #a77e3d;border-radius:18px;
+  touch-action:none;display:block;margin:20px auto;
+}
+.tools{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.tools button{padding:9px 14px;border-radius:20px;border:1px solid #98733d;background:#201a20;color:white}
+.tools input[type=color]{width:48px;height:38px;padding:2px}
+.lantern{
+  display:inline-block;font-size:40px;animation:float 4s ease-in-out infinite;
+}
+@keyframes float{50%{transform:translateY(-35px)}}
+.sky{
+  height:240px;position:relative;overflow:hidden;border-radius:20px;
+  background:linear-gradient(#101528,#291a2b);border:1px solid #8d703e;
+  margin-top:20px;
+}
+.sky .lantern{position:absolute;bottom:5px;animation:rise 7s linear forwards}
+@keyframes rise{to{bottom:270px;opacity:0;transform:translateY(-100px) scale(.5)}}
+.envelope{
+  width:230px;height:150px;margin:30px auto;background:#a66a36;
+  border-radius:8px;display:grid;place-items:center;font-size:65px;
+  cursor:pointer;box-shadow:0 0 30px #d9a64b33;
+}
+.letter{display:none;max-width:550px;margin:15px auto;background:#f6e5b8;color:#462b15;padding:28px;border-radius:8px;line-height:1.8}
+.letter.show{display:block;animation:fade .7s}
+.letter p{color:#462b15}
+.firework{
+  position:fixed;pointer-events:none;font-size:25px;
+  animation:burst 1.5s forwards;z-index:50;
+}
+@keyframes burst{0%{transform:scale(.1);opacity:1}100%{transform:scale(4) translateY(-50px);opacity:0}}
+footer{text-align:center;padding:40px 20px;border-top:1px solid #9a713c55;background:#08070a}
+footer p{font-size:13px}
+#musicStatus{font-size:12px;color:#e9c77e}
+@media(max-width:650px){
+ nav{padding:12px 3%;align-items:flex-start}
+ nav .links{max-width:70%;gap:5px}
+ nav a{font-size:11px}
+ section{padding:60px 15px}
+ .door{height:350px}
 }
 </style>
 </head>
 
 <body>
 
-<div id="stars"></div>
-<canvas id="fireworks"></canvas>
-
-<header>
-  <div class="nav">
-    <div class="brand">🪔 DEEPOTSAV</div>
-
-    <nav>
-      <a href="#temple">Temple</a>
-      <a href="#diya">Diya</a>
-      <a href="#wishes">Wishes</a>
-      <a href="#rangoli">Rangoli</a>
-      <a href="#lantern">Lantern</a>
-      <a href="#firework-zone">Fireworks</a>
-    </nav>
-
-    <button class="music-btn" id="musicBtn">♫ Music OFF</button>
+<nav>
+  <strong>✦ DEEPAWALI ✦</strong>
+  <div class="links">
+    <a href="#home">Home</a>
+    <a href="#diya">Diyas</a>
+    <a href="#rangoli">Rangoli</a>
+    <a href="#wishes">Wishes</a>
   </div>
+</nav>
+
+<header class="hero" id="home">
+ <div class="hero-content">
+  <div class="eyebrow">A FESTIVAL OF LIGHT • LOVE • HAPPINESS</div>
+  <h1>शुभ दीपावली</h1>
+  <h2 style="font-size:clamp(20px,4vw,32px);margin-top:15px">May Your Life Shine Like A Million Diyas ✨</h2>
+  <p>May every corner of your home glow with happiness, every heart be filled with love, and every dream find its light.</p>
+  <a href="#entrance" class="btn">Enter The Celebration ✨</a>
+  <button class="btn outline" onclick="toggleMusic()">♫ Play Music</button>
+  <p id="musicStatus">Music is off — tap to play</p>
+ </div>
 </header>
 
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="eyebrow">A Festival of Lights · Love · Togetherness</div>
-
-    <h1>शुभ दीपावली</h1>
-
-    <div class="hero-lamps">🪔 ✨ 🪔</div>
-
-    <p>
-      May every diya bring a new hope, every prayer bring peace,
-      and every home shine with love and happiness.
-    </p>
-
-    <div class="hero-buttons">
-      <button class="gold-btn" onclick="goTo('temple')">
-        Enter Celebration ✨
-      </button>
-
-      <button class="ghost-btn" onclick="goTo('firework-zone')">
-        Fireworks 🎆
-      </button>
-    </div>
+<section class="door-scene" id="entrance">
+ <div>
+  <div class="eyebrow">A LITTLE MAGIC AWAITS YOU</div>
+  <h2 class="section-title">Open The Sacred Doors</h2>
+  <p>Step inside and experience the warmth of Diwali.</p>
+  <div class="door" id="door" onclick="openTemple()">
+   <span>🪔</span><span class="knob">◉</span>
   </div>
+  <button class="btn" onclick="openTemple()">Open Mandir Doors</button>
+  <p class="muted">Tap the door to enter the celebration</p>
+ </div>
 </section>
 
-<!-- TEMPLE -->
-
-<section id="temple">
-  <div class="section-head">
-    <div class="kicker">01 · A Divine Beginning</div>
-    <h2>Open the Temple Doors</h2>
-    <p>Tap the doors and enter a peaceful digital mandir.</p>
-  </div>
-
-  <div class="card">
-    <div class="door-scene">
-
-      <div class="temple-glow">
-        🛕
-        <small>ॐ शुभमस्तु</small>
-      </div>
-
-      <div class="door-frame">
-        <div class="door" id="door"></div>
-        <div class="handle"></div>
-      </div>
-
-    </div>
-
-    <div class="door-controls">
-      <button class="gold-btn" id="doorBtn">Open the Doors</button>
-    </div>
-  </div>
-
-  <div class="card aarti-area">
-    <div class="flame" id="aarti">🪔</div>
-    <h3 style="color:var(--gold);margin:12px">Digital Aarti</h3>
-    <p class="small-note">A peaceful moment of prayer and devotion.</p>
-    <button class="ghost-btn" id="aartiBtn">Start Aarti 🔔</button>
-  </div>
-</section>
-
-<!-- DIYA -->
+<div class="mandir" id="mandir">
+ <div class="eyebrow">WELCOME TO THE DIVINE SPACE</div>
+ <h2 class="section-title">श्री गणेशाय नमः</h2>
+ <div class="temple-art">🪷🙏🪷</div>
+ <h2>ॐ श्री महालक्ष्म्यै नमः</h2>
+ <p style="max-width:650px;margin:15px auto">May Maa Lakshmi bless every home with prosperity and Lord Ganesha remove every obstacle from your path.</p>
+ <div class="aarti-flame">🪔</div>
+ <button class="btn" onclick="startAarti()">Begin Digital Aarti</button>
+ <p id="aartiMessage" style="margin-top:15px"></p>
+ <a class="btn outline" href="#diya">Light Diyas ↓</a>
+</div>
 
 <section id="diya">
-  <div class="section-head">
-    <div class="kicker">02 · Spread the Light</div>
-    <h2>Light Your Digital Diya</h2>
-    <p>Tap the diyas and fill your screen with festive light.</p>
+ <h2 class="section-title">Light Up Your Happiness 🪔</h2>
+ <p class="section-sub">Every little light brings a little more hope. Tap the diyas to light them.</p>
+ <div class="diya-area">
+  <div class="diya-row" id="diyaRow">
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
+   <div class="diya" onclick="lightDiya(this)">🪔</div>
   </div>
-
-  <div class="card center">
-    <div class="diya-row" id="diyaRow">
-      <span class="diya">🪔</span>
-      <span class="diya">🪔</span>
-      <span class="diya">🪔</span>
-      <span class="diya">🪔</span>
-      <span class="diya">🪔</span>
-      <span class="diya">🪔</span>
-      <span class="diya">🪔</span>
-    </div>
-
-    <p id="diyaCount" class="small-note">
-      0 diyas glowing · Tap to light them
-    </p>
-
-    <button class="gold-btn" id="lightAll">
-      Light All Diyas ✨
-    </button>
-  </div>
+  <button class="btn" onclick="lightAll()">Light All Diyas ✨</button>
+  <button class="btn outline" onclick="resetDiyas()">Reset Diyas</button>
+ </div>
 </section>
 
-<!-- FAMILY WISHES -->
-
-<section id="wishes">
-  <div class="section-head">
-    <div class="kicker">03 · From the Heart</div>
-    <h2>Family Wishes & Diwali Thoughts</h2>
-    <p>A little message for every home and every heart.</p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <div style="font-size:40px">❤️</div>
-      <h3 style="color:var(--gold);margin:12px 0">
-        For Your Family
-      </h3>
-
-      <p class="family-text">
-        Aapki family hamesha aise hi hansti-khelti rahe.
-        Har din pyaar, sehat, sukoon aur khushiyon se bhara rahe.
-        May your home always shine with togetherness.
-        Happy Diwali!
-      </p>
-    </div>
-
-    <div class="card">
-      <div style="font-size:40px">✨</div>
-      <h3 style="color:var(--gold);margin:12px 0">
-        Diwali Thoughts
-      </h3>
-
-      <div class="quote" id="quote">
-        A single diya can brighten a room;
-        a little kindness can brighten a life.
-      </div>
-
-      <div class="center">
-        <button class="ghost-btn" id="nextQuote">
-          Another Thought ↗
-        </button>
-      </div>
-    </div>
-
-  </div>
+<section style="background:#100d14">
+ <h2 class="section-title">A Thought For Diwali</h2>
+ <p class="quote" id="quote">"Let the light within you shine brighter than the lights around you."</p>
+ <div style="text-align:center"><button class="btn outline" onclick="newQuote()">Another Thought ✨</button></div>
 </section>
-
-<!-- RANGOLI -->
 
 <section id="rangoli">
-  <div class="section-head">
-    <div class="kicker">04 · Create Something Beautiful</div>
-    <h2>Digital Rangoli Studio</h2>
-    <p>Choose colours and create your own beautiful rangoli.</p>
+ <h2 class="section-title">Create Your Own Rangoli 🌸</h2>
+ <p class="section-sub">Make a colourful design and save your creation.</p>
+ <div class="rangoli-wrap card">
+  <div class="tools">
+   <label style="display:flex;align-items:center;gap:5px">Colour <input type="color" id="paint" value="#ffbf45"></label>
+   <button onclick="setSize(5)">Small</button>
+   <button onclick="setSize(12)">Medium</button>
+   <button onclick="setSize(22)">Large</button>
+   <button onclick="undoDraw()">Undo</button>
+   <button onclick="clearCanvas()">Clear</button>
+   <button onclick="addFlower()">Flower</button>
+   <button onclick="addCircle()">Circle</button>
+   <button onclick="downloadRangoli()">Save Rangoli</button>
   </div>
-
-  <div class="card rangoli-wrap">
-
-    <canvas id="rangoliCanvas"
-      width="600"
-      height="600">
-    </canvas>
-
-    <div class="tools">
-
-      <div>
-        <label>Choose a Colour</label>
-        <div class="colors" id="colors"></div>
-      </div>
-
-      <div>
-        <label>Brush Size</label>
-        <input id="brush" type="range" min="3" max="35" value="12">
-      </div>
-
-      <div>
-        <label>Ready-made Designs</label>
-        <button class="ghost-btn" id="presetFlower">Flower</button>
-        <button class="ghost-btn" id="presetMandala">Mandala</button>
-      </div>
-
-      <button class="gold-btn" id="clearRangoli">
-        Clear Canvas
-      </button>
-
-      <p class="small-note">Draw using your finger or mouse.</p>
-
-    </div>
-  </div>
+  <canvas id="rangoli" width="600" height="600"></canvas>
+  <p class="muted">Draw with your finger or mouse. Choose colours and create!</p>
+ </div>
 </section>
 
-<!-- WISH LANTERN -->
-
-<section id="lantern">
-  <div class="section-head">
-    <div class="kicker">05 · Send a Little Hope</div>
-    <h2>Wish Lantern 🏮</h2>
-    <p>Write your wish and watch your lantern fly into the sky.</p>
-  </div>
-
-  <div class="card">
-    <label for="wishInput">Write Your Wish</label>
-
-    <textarea id="wishInput"
-      maxlength="110"
-      placeholder="May everyone stay happy, healthy and together...">
-    </textarea>
-
-    <div class="center" style="margin-top:18px">
-      <button class="gold-btn" id="sendWish">
-        Send My Wish 🏮
-      </button>
-    </div>
-
-    <div class="lantern-stage">
-      <div class="lantern" id="lantern">🏮</div>
-
-      <div class="lantern-message" id="lanternMessage">
-        Your wish will shine here ✨
-      </div>
-    </div>
-  </div>
+<section style="background:#100d14" id="wishes">
+ <h2 class="section-title">Send A Wish To The Universe 🏮</h2>
+ <p class="section-sub">Write a little wish and watch your lantern rise into the sky.</p>
+ <div class="card" style="max-width:650px;margin:auto;text-align:center">
+  <input id="wishInput" maxlength="120" placeholder="Write your beautiful wish...">
+  <button class="btn" onclick="releaseLantern()">Release My Lantern 🏮</button>
+  <div class="sky" id="sky"></div>
+  <p id="wishMessage" class="gold"></p>
+ </div>
 </section>
 
-<!-- LETTER -->
-
-<section id="letter">
-  <div class="section-head">
-    <div class="kicker">06 · A Little Surprise</div>
-    <h2>A Letter for You 💌</h2>
-    <p>There is a special Diwali message waiting inside.</p>
-  </div>
-
-  <div class="card envelope-area">
-
-    <div class="envelope" id="envelope"
-      role="button" tabindex="0">
-
-      <div class="letter">
-        <strong>Dear Friend,</strong><br><br>
-
-        May the light of Diwali guide you towards new hopes,
-        kind moments and beautiful beginnings.
-
-        Keep smiling and keep spreading happiness.
-
-        <br><br>
-        <strong>Happy Diwali! ❤️</strong>
-      </div>
-
-      <div class="seal">✦</div>
-
-    </div>
-
-    <p class="small-note" id="letterHint">
-      Tap the envelope to open your letter.
-    </p>
-  </div>
+<section>
+ <h2 class="section-title">A Little Surprise For You 💌</h2>
+ <p class="section-sub">There is a special Diwali message waiting inside.</p>
+ <div class="envelope" onclick="openLetter()">💌</div>
+ <div class="letter" id="letter">
+  <h2 style="color:#86531e;text-align:center">Dear You,</h2>
+  <p>May your home be filled with laughter, your days with sunshine, and your heart with endless peace.</p>
+  <p>May every diya bring a new hope, every prayer bring strength, and every moment become a beautiful memory.</p>
+  <p style="text-align:right;margin-top:15px"><b>With warm wishes ❤️</b></p>
+  <p style="text-align:right">Happy Diwali!</p>
+ </div>
 </section>
 
-<!-- BLESSINGS -->
-
-<section id="blessings">
-  <div class="section-head">
-    <div class="kicker">07 · Prayers for Everyone</div>
-    <h2>Blessings & Good Fortune</h2>
-    <p>May this festival bring warmth and goodness to every family.</p>
-  </div>
-
-  <div class="blessings">
-
-    <div class="card blessing">
-      <div class="emoji">🕊️</div>
-      <h3>Peace</h3>
-      <p>
-        May your heart and home always be filled
-        with peace and calm.
-      </p>
-    </div>
-
-    <div class="card blessing">
-      <div class="emoji">🌼</div>
-      <h3>Happiness</h3>
-      <p>
-        May laughter, love and beautiful memories
-        find their way to you.
-      </p>
-    </div>
-
-    <div class="card blessing">
-      <div class="emoji">🌟</div>
-      <h3>Prosperity</h3>
-      <p>
-        May every new beginning bring hope,
-        growth and good fortune.
-      </p>
-    </div>
-
-  </div>
+<section style="background:#100d14">
+ <h2 class="section-title">For My Beautiful Family ❤️</h2>
+ <div class="card" style="max-width:750px;margin:auto;text-align:center">
+  <h2 style="font-size:30px">मेरा परिवार, मेरी खुशियाँ</h2>
+  <p class="quote">"May our family always stay together, keep smiling, keep laughing, and fill every day with love."</p>
+  <p>आप सभी के जीवन में सुख, शांति, समृद्धि और खुशियाँ हमेशा बनी रहें। हमारे घर का प्यार और अपनापन कभी कम न हो।</p>
+  <input id="familyName" placeholder="Enter your family name (optional)">
+  <button class="btn" onclick="familyWish()">Personalise Family Wish</button>
+  <p id="familyMessage" class="gold"></p>
+ </div>
 </section>
 
-<!-- FIREWORKS -->
-
-<section id="firework-zone">
-  <div class="section-head">
-    <div class="kicker">08 · Let the Sky Sparkle</div>
-    <h2>Digital Fireworks Festival 🎆</h2>
-    <p>Launch beautiful digital fireworks and celebrate Diwali!</p>
-  </div>
-
-  <div class="card center">
-    <div style="font-size:65px;margin-bottom:15px">
-      🎆 ✨ 🎇
-    </div>
-
-    <p style="color:#d9c5a5;margin-bottom:20px">
-      A little sparkle, a lot of happiness!
-    </p>
-
-    <button class="gold-btn" id="burstBtn">
-      Launch Fireworks 🎆
-    </button>
-
-    <button class="ghost-btn" id="grandBtn">
-      Grand Celebration 🎉
-    </button>
-
-    <p class="small-note">
-      Digital animation only · Enjoy the celebration on screen.
-    </p>
-  </div>
+<section>
+ <h2 class="section-title">Blessings & Good Fortune 🌟</h2>
+ <div class="grid">
+  <div class="card"><div style="font-size:35px">🌸</div><h3>Prosperity</h3><p>May abundance and success find their way into your home.</p></div>
+  <div class="card"><div style="font-size:35px">🕊️</div><h3>Peace</h3><p>May your heart always find calmness, hope and inner peace.</p></div>
+  <div class="card"><div style="font-size:35px">❤️</div><h3>Happiness</h3><p>May laughter, love and beautiful memories surround you.</p></div>
+  <div class="card"><div style="font-size:35px">✨</div><h3>New Beginnings</h3><p>May every new morning bring courage and fresh opportunities.</p></div>
+ </div>
 </section>
 
-</main>
+<section style="background:#100d14;text-align:center">
+ <h2 class="section-title">A Sky Full Of Celebration 🎆</h2>
+ <p class="section-sub">Celebrate with a beautiful digital fireworks show!</p>
+ <button class="btn" onclick="fireworks()">Start Fireworks ✨</button>
+ <p class="muted">A digital celebration on your screen.</p>
+ <div id="fireworkArea" style="height:120px"></div>
+</section>
+
+<section style="text-align:center">
+ <h2 class="section-title">Share The Light 💛</h2>
+ <p class="section-sub">Spread happiness. Send this Diwali celebration to your loved ones.</p>
+ <button class="btn" onclick="shareSite()">Share This Celebration</button>
+ <button class="btn outline" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back To Top ↑</button>
+</section>
 
 <footer>
-  <div style="font-size:40px">🪔 ✨ 🪔</div>
-  <h2>Happy Diwali</h2>
-  <p style="margin:12px">With warm wishes · By Aditya Singh</p>
-  <p class="small-note">
-    May your life always shine with light, love and happiness.
-  </p>
-  <a href="#home" style="color:var(--gold)">Back to Top ↑</a>
+ <div style="font-size:30px;margin-bottom:12px">🪔 ✨ 🪷</div>
+ <h2>शुभ दीपावली</h2>
+ <p style="margin:12px">May light always win, love always grow, and happiness always stay.</p>
+ <p class="gold">A Festival Of Love & Light</p>
+ <p style="margin-top:20px">Made with ❤️ by <b>Aditya Singh</b></p>
+ <p>© 2026 • Happy Diwali</p>
 </footer>
 
-<div class="toast" id="toast"></div>
-
 <script>
-"use strict";
-
-/* BASIC HELPERS */
-
-const $ = id => document.getElementById(id);
-
-function goTo(id) {
-  $(id).scrollIntoView({behavior:"smooth"});
+// MUSIC: original instrumental-style tones generated by the browser.
+let audioCtx=null, musicTimer=null, musicOn=false, noteIndex=0;
+const notes=[261.63,329.63,392,523.25,392,329.63,293.66,349.23];
+function playNote(){
+ if(!audioCtx || !musicOn)return;
+ const osc=audioCtx.createOscillator();
+ const gain=audioCtx.createGain();
+ osc.type="sine";
+ osc.frequency.value=notes[noteIndex++%notes.length];
+ gain.gain.setValueAtTime(.0001,audioCtx.currentTime);
+ gain.gain.exponentialRampToValueAtTime(.045,audioCtx.currentTime+.08);
+ gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.65);
+ osc.connect(gain);gain.connect(audioCtx.destination);
+ osc.start();osc.stop(audioCtx.currentTime+.7);
+}
+async function toggleMusic(){
+ if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+ if(audioCtx.state==="suspended")await audioCtx.resume();
+ musicOn=!musicOn;
+ if(musicOn){playNote();musicTimer=setInterval(playNote,700)}
+ else{clearInterval(musicTimer)}
+ document.getElementById("musicStatus").textContent=musicOn?"♫ Music is playing":"Music is off — tap to play";
 }
 
-let toastTimer;
-
-function showToast(message) {
-  const toast = $("toast");
-  toast.textContent = message;
-  toast.classList.add("show");
-
-  clearTimeout(toastTimer);
-
-  toastTimer = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2500);
+// TEMPLE
+function openTemple(){
+ document.getElementById("door").classList.add("open");
+ setTimeout(()=>{
+  document.getElementById("mandir").classList.add("show");
+  document.getElementById("mandir").scrollIntoView({behavior:"smooth"});
+ },900);
+}
+function startAarti(){
+ document.getElementById("aartiMessage").textContent="🙏 जय माता दी • गणपति बप्पा मोरया • शुभ दीपावली 🙏";
 }
 
-/* BACKGROUND MUSIC */
+// DIYAS
+function lightDiya(el){el.classList.toggle("lit")}
+function lightAll(){document.querySelectorAll(".diya").forEach(d=>d.classList.add("lit"))}
+function resetDiyas(){document.querySelectorAll(".diya").forEach(d=>d.classList.remove("lit"))}
 
-let audioContext = null;
-let musicTimer = null;
-let musicOn = false;
-let noteIndex = 0;
-
-const notes = [
-  523.25, 659.25, 783.99, 659.25,
-  587.33, 698.46, 880, 698.46
+// QUOTES
+const quotes=[
+ "Let the light within you shine brighter than the lights around you.",
+ "A little kindness can light up the darkest day.",
+ "May your home be full of laughter and your heart full of gratitude.",
+ "The beauty of Diwali is not just in the lights, but in the love we share.",
+ "Every diya is a reminder that hope always finds a way."
 ];
+function newQuote(){
+ document.getElementById("quote").textContent='"'+quotes[Math.floor(Math.random()*quotes.length)]+'"';
+}
 
-function getAudio() {
-  const AudioClass = window.AudioContext ||
-                     window.webkitAudioContext;
+// RANGOLI
+const canvas=document.getElementById("rangoli");
+const ctx=canvas.getContext("2d");
+let drawing=false,brush=8,history=[];
+function saveState(){history.push(canvas.toDataURL());if(history.length>20)history.shift()}
+function restoreImage(src){
+ const img=new Image();img.onload=()=>ctx.drawImage(img,0,0);img.src=src;
+}
+function clearCanvas(){saveState();ctx.clearRect(0,0,600,600)}
+function setSize(n){brush=n}
+function point(e){
+ const r=canvas.getBoundingClientRect();
+ return {x:(e.clientX-r.left)*600/r.width,y:(e.clientY-r.top)*600/r.height};
+}
+canvas.addEventListener("pointerdown",e=>{
+ drawing=true;saveState();canvas.setPointerCapture(e.pointerId);
+ const p=point(e);ctx.beginPath();ctx.moveTo(p.x,p.y);
+});
+canvas.addEventListener("pointermove",e=>{
+ if(!drawing)return;
+ const p=point(e);ctx.lineWidth=brush;ctx.lineCap="round";
+ ctx.strokeStyle=document.getElementById("paint").value;
+ ctx.lineTo(p.x,p.y);ctx.stroke();
+});
+canvas.addEventListener("pointerup",()=>drawing=false);
+canvas.addEventListener("pointercancel",()=>drawing=false);
+function undoDraw(){if(history.length)restoreImage(history.pop());else clearCanvas()}
+function addFlower(){
+ saveState();const color=document.getElementById("paint").value;
+ ctx.save();ctx.translate(300,300);ctx.fillStyle=color;
+ for(let i=0;i<12;i++){
+  ctx.rotate(Math.PI/6);ctx.beginPath();ctx.ellipse(0,-85,20,55,0,0,Math.PI*2);ctx.fill();
+ }
+ ctx.beginPath();ctx.arc(0,0,30,0,Math.PI*2);ctx.fillStyle="#f8d36e";ctx.fill();
+ ctx.restore();
+}
+function addCircle(){
+ saveState();ctx.beginPath();ctx.arc(300,300,120,0,Math.PI*2);
+ ctx.strokeStyle=document.getElementById("paint").value;ctx.lineWidth=8;ctx.stroke();
+}
+function downloadRangoli(){
+ const a=document.createElement("a");a.download="my-diwali-rangoli.png";
+ a.href=canvas.toDataURL("image/png");a.click();
+}
 
-  if (!AudioClass) {
-    showToast("Audio is not supported 
+// WISH LANTERN
+function releaseLantern(){
+ const input=document.getElementById("wishInput");
+ const wish=input.value.trim();
+ if(!wish){alert("Please write a wish first!");return}
+ const sky=document.getElementById("sky");
+ const l=document.createElement("div");l.className="lantern";l.textContent="🏮";
+ l.style.left=(10+Math.random()*80)+"%";sky.appendChild(l);
+ document.getElementById("wishMessage").textContent="Your wish is on its way: "+wish;
+ try{
+  const saved=JSON.parse(localStorage.getItem("diwaliWishes")||"[]");
+  saved.push(wish);localStorage.setItem("diwaliWishes",JSON.stringify(saved.slice(-20)));
+ }catch(e){}
+ input.value="";
+ setTimeout(()=>l.remove(),7000);
+}
+
+// GREETING LETTER
+function openLetter(){document.getElementById("letter").classList.toggle("show")}
+
+// FAMILY MESSAGE
+function familyWish(){
+ const name=document.getElementById("familyName").value.trim();
+ document.getElementById("familyMessage").textContent=
+ name? "Wishing "+name+" a Diwali full of love, laughter and togetherness! ❤️":
+ "Wishing your beautiful family a Diwali full of love and togetherness! ❤️";
+}
+
+// DIGITAL FIREWORKS
+function fireworks(){
+ const area=document.getElementById("fireworkArea");
+ const symbols=["✨","🎆","🌟","💥","🎇"];
+ for(let i=0;i<22;i++){
+  setTimeout(()=>{
+   const f=document.createElement("span");f.className="firework";
+   f.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+   f.style.left=Math.random()*95+"%";f.style.top=Math.random()*100+"%";
+   area.appendChild(f);setTimeout(()=>f.remove(),1600);
+  },i*90);
+ }
+}
+
+// SHARE
+async function shareSite(){
+ const data={title:"Shubh Deepawali",text:"Wishing you and your family a beautiful Diwa
